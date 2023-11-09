@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OscorpGames
+namespace OscorpGames.Pac_Man
 {
-    public partial class PacMan : Form
+    public partial class Pac_Man : Form
     {
-        public PacMan()
+        public Pac_Man()
         {
             InitializeComponent();
         }
