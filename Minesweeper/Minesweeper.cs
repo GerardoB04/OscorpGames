@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OscorpGames
-{
-    public partial class Minesweeper : Form
-    {
-        public Minesweeper()
-        {
-            InitializeComponent();
-        }
-    }
+namespace OscorpGames {
+	public partial class Minesweeper : Form {
+		public Minesweeper() {
+			InitializeComponent();
+		}
+
+		private void StartGame() {
+			Label label = new Label();
+			label.Text = "AAAAAAAAAAAAA";
+		}
+	}
 }
