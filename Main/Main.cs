@@ -11,5 +11,9 @@ namespace OscorpGames {
 		private void MainMenu_Load(object sender, EventArgs e) {
 			//
 		}
+
+		private void OpenGame(Form game) {
+			game.ShowDialog();
+		}
 	}
 }
