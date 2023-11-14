@@ -23,67 +23,66 @@
 		///  the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			button1 = new Button();
-			label1 = new Label();
-			button2 = new Button();
-			button3 = new Button();
-			button4 = new Button();
+			gameThreeButton = new Button();
+			titleLabel = new Label();
+			gameOneButton = new Button();
+			gameTwoButton = new Button();
+			gameFourButton = new Button();
 			exitButton = new Button();
-			label2 = new Label();
-			label3 = new Label();
-			label4 = new Label();
-			label5 = new Label();
-			label6 = new Label();
-			label7 = new Label();
-			label8 = new Label();
+			creatorLabel1 = new Label();
+			creatorLabel2 = new Label();
+			teamMemberLabel5 = new Label();
+			teamMemberLabel4 = new Label();
+			teamMemberLabel3 = new Label();
+			teamMemberLabel2 = new Label();
+			teamMemberLabel1 = new Label();
 			SuspendLayout();
 			// 
-			// button1
+			// gameThreeButton
 			// 
-			button1.Location = new Point(212, 465);
-			button1.Name = "button1";
-			button1.Size = new Size(188, 85);
-			button1.TabIndex = 0;
-			button1.Text = "Game3";
-			button1.UseVisualStyleBackColor = true;
+			gameThreeButton.Location = new Point(212, 465);
+			gameThreeButton.Name = "gameThreeButton";
+			gameThreeButton.Size = new Size(188, 85);
+			gameThreeButton.TabIndex = 0;
+			gameThreeButton.Text = "Game3";
+			gameThreeButton.UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// titleLabel
 			// 
-			label1.AutoSize = true;
-			label1.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
-			label1.Location = new Point(254, 49);
-			label1.Name = "label1";
-			label1.Size = new Size(481, 106);
-			label1.TabIndex = 1;
-			label1.Text = "MINIGAMES";
-			label1.Click += label1_Click;
+			titleLabel.AutoSize = true;
+			titleLabel.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
+			titleLabel.Location = new Point(254, 49);
+			titleLabel.Name = "titleLabel";
+			titleLabel.Size = new Size(481, 106);
+			titleLabel.TabIndex = 1;
+			titleLabel.Text = "MINIGAMES";
 			// 
-			// button2
+			// gameOneButton
 			// 
-			button2.Location = new Point(212, 249);
-			button2.Name = "button2";
-			button2.Size = new Size(188, 85);
-			button2.TabIndex = 2;
-			button2.Text = "Game1";
-			button2.UseVisualStyleBackColor = true;
+			gameOneButton.Location = new Point(212, 249);
+			gameOneButton.Name = "gameOneButton";
+			gameOneButton.Size = new Size(188, 85);
+			gameOneButton.TabIndex = 2;
+			gameOneButton.Text = "Game1";
+			gameOneButton.UseVisualStyleBackColor = true;
 			// 
-			// button3
+			// gameTwoButton
 			// 
-			button3.Location = new Point(603, 249);
-			button3.Name = "button3";
-			button3.Size = new Size(188, 85);
-			button3.TabIndex = 3;
-			button3.Text = "Game2";
-			button3.UseVisualStyleBackColor = true;
+			gameTwoButton.Location = new Point(603, 249);
+			gameTwoButton.Name = "gameTwoButton";
+			gameTwoButton.Size = new Size(188, 85);
+			gameTwoButton.TabIndex = 3;
+			gameTwoButton.Text = "Game2";
+			gameTwoButton.UseVisualStyleBackColor = true;
 			// 
-			// button4
+			// gameFourButton
 			// 
-			button4.Location = new Point(603, 465);
-			button4.Name = "button4";
-			button4.Size = new Size(188, 85);
-			button4.TabIndex = 4;
-			button4.Text = "Game4";
-			button4.UseVisualStyleBackColor = true;
+			gameFourButton.Location = new Point(603, 465);
+			gameFourButton.Name = "gameFourButton";
+			gameFourButton.Size = new Size(188, 85);
+			gameFourButton.TabIndex = 4;
+			gameFourButton.Text = "Game4";
+			gameFourButton.UseVisualStyleBackColor = true;
 			// 
 			// exitButton
 			// 
@@ -95,109 +94,108 @@
 			exitButton.UseVisualStyleBackColor = true;
 			exitButton.Click += exitButton_Click;
 			// 
-			// label2
+			// creatorLabel1
 			// 
-			label2.AutoSize = true;
-			label2.Location = new Point(12, 612);
-			label2.Name = "label2";
-			label2.Size = new Size(113, 25);
-			label2.TabIndex = 6;
-			label2.Text = "CREATED BY:";
+			creatorLabel1.AutoSize = true;
+			creatorLabel1.Location = new Point(12, 612);
+			creatorLabel1.Name = "creatorLabel1";
+			creatorLabel1.Size = new Size(113, 25);
+			creatorLabel1.TabIndex = 6;
+			creatorLabel1.Text = "CREATED BY:";
 			// 
-			// label3
+			// creatorLabel2
 			// 
-			label3.AutoSize = true;
-			label3.Location = new Point(12, 762);
-			label3.Name = "label3";
-			label3.Size = new Size(113, 25);
-			label3.TabIndex = 7;
-			label3.Text = "CREATED BY:";
+			creatorLabel2.AutoSize = true;
+			creatorLabel2.Location = new Point(12, 762);
+			creatorLabel2.Name = "creatorLabel2";
+			creatorLabel2.Size = new Size(113, 25);
+			creatorLabel2.TabIndex = 7;
+			creatorLabel2.Text = "CREATED BY:";
 			// 
-			// label4
+			// teamMemberLabel5
 			// 
-			label4.AutoSize = true;
-			label4.Location = new Point(12, 737);
-			label4.Name = "label4";
-			label4.Size = new Size(173, 25);
-			label4.TabIndex = 8;
-			label4.Text = "GERARDO BARAJAS";
+			teamMemberLabel5.AutoSize = true;
+			teamMemberLabel5.Location = new Point(12, 737);
+			teamMemberLabel5.Name = "teamMemberLabel5";
+			teamMemberLabel5.Size = new Size(173, 25);
+			teamMemberLabel5.TabIndex = 8;
+			teamMemberLabel5.Text = "GERARDO BARAJAS";
 			// 
-			// label5
+			// teamMemberLabel4
 			// 
-			label5.AutoSize = true;
-			label5.Location = new Point(12, 712);
-			label5.Name = "label5";
-			label5.Size = new Size(117, 25);
-			label5.TabIndex = 9;
-			label5.Text = "CURTIS LANE";
+			teamMemberLabel4.AutoSize = true;
+			teamMemberLabel4.Location = new Point(12, 712);
+			teamMemberLabel4.Name = "teamMemberLabel4";
+			teamMemberLabel4.Size = new Size(117, 25);
+			teamMemberLabel4.TabIndex = 9;
+			teamMemberLabel4.Text = "CURTIS LANE";
 			// 
-			// label6
+			// teamMemberLabel3
 			// 
-			label6.AutoSize = true;
-			label6.Location = new Point(12, 687);
-			label6.Name = "label6";
-			label6.Size = new Size(149, 25);
-			label6.TabIndex = 10;
-			label6.Text = "WYATT CROCKER";
+			teamMemberLabel3.AutoSize = true;
+			teamMemberLabel3.Location = new Point(12, 687);
+			teamMemberLabel3.Name = "teamMemberLabel3";
+			teamMemberLabel3.Size = new Size(149, 25);
+			teamMemberLabel3.TabIndex = 10;
+			teamMemberLabel3.Text = "WYATT CROCKER";
 			// 
-			// label7
+			// teamMemberLabel2
 			// 
-			label7.AutoSize = true;
-			label7.Location = new Point(12, 662);
-			label7.Name = "label7";
-			label7.Size = new Size(163, 25);
-			label7.TabIndex = 11;
-			label7.Text = "SURYA NANDEESH";
+			teamMemberLabel2.AutoSize = true;
+			teamMemberLabel2.Location = new Point(12, 662);
+			teamMemberLabel2.Name = "teamMemberLabel2";
+			teamMemberLabel2.Size = new Size(163, 25);
+			teamMemberLabel2.TabIndex = 11;
+			teamMemberLabel2.Text = "SURYA NANDEESH";
 			// 
-			// label8
+			// teamMemberLabel1
 			// 
-			label8.AutoSize = true;
-			label8.Location = new Point(12, 637);
-			label8.Name = "label8";
-			label8.Size = new Size(133, 25);
-			label8.TabIndex = 12;
-			label8.Text = "COLLIN GREISS";
-			label8.Click += label8_Click;
+			teamMemberLabel1.AutoSize = true;
+			teamMemberLabel1.Location = new Point(12, 637);
+			teamMemberLabel1.Name = "teamMemberLabel1";
+			teamMemberLabel1.Size = new Size(133, 25);
+			teamMemberLabel1.TabIndex = 12;
+			teamMemberLabel1.Text = "COLLIN GREISS";
 			// 
 			// Main
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(1007, 807);
-			Controls.Add(label8);
-			Controls.Add(label7);
-			Controls.Add(label6);
-			Controls.Add(label5);
-			Controls.Add(label4);
-			Controls.Add(label3);
-			Controls.Add(label2);
+			Controls.Add(teamMemberLabel1);
+			Controls.Add(teamMemberLabel2);
+			Controls.Add(teamMemberLabel3);
+			Controls.Add(teamMemberLabel4);
+			Controls.Add(teamMemberLabel5);
+			Controls.Add(creatorLabel2);
+			Controls.Add(creatorLabel1);
 			Controls.Add(exitButton);
-			Controls.Add(button4);
-			Controls.Add(button3);
-			Controls.Add(button2);
-			Controls.Add(label1);
-			Controls.Add(button1);
+			Controls.Add(gameFourButton);
+			Controls.Add(gameTwoButton);
+			Controls.Add(gameOneButton);
+			Controls.Add(titleLabel);
+			Controls.Add(gameThreeButton);
 			Name = "Main";
-			Text = "Form1";
-			Load += Form1_Load;
+			Text = "Minigames";
+			Load += MainMenu_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}
 
 		#endregion
 
-		private Button button1;
-		private Label label1;
-		private Button button2;
-		private Button button3;
-		private Button button4;
+		private Button gameThreeButton;
+		private Label titleLabel;
+		private Button gameOneButton;
+		private Button gameTwoButton;
+		private Button gameFourButton;
 		private Button exitButton;
-		private Label label2;
-		private Label label3;
-		private Label label4;
-		private Label label5;
-		private Label label6;
-		private Label label7;
-		private Label label8;
+		private Label creatorLabel1;
+		private Label creatorLabel2;
+		private Label teamMemberLabel5;
+		private Label teamMemberLabel4;
+		private Label teamMemberLabel3;
+		private Label teamMemberLabel2;
+		private Label teamMemberLabel1;
 	}
 }
