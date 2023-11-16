@@ -23,18 +23,30 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+			bombField = new GroupBox();
 			SuspendLayout();
+			// 
+			// bombField
+			// 
+			bombField.Location = new Point(89, 79);
+			bombField.Name = "bombField";
+			bombField.Size = new Size(625, 322);
+			bombField.TabIndex = 0;
+			bombField.TabStop = false;
 			// 
 			// Minesweeper
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(bombField);
 			Name = "Minesweeper";
 			Text = "Minesweeper";
 			ResumeLayout(false);
 		}
 
 		#endregion
+
+		private GroupBox bombField;
 	}
 }
