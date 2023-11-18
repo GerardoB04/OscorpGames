@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Minesweeper\Images\" />
+    <Folder Include="Snake\Assets\" />
   </ItemGroup>
 
 </Project>
