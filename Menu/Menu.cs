@@ -1,3 +1,5 @@
+using OscorpGames.Pac_Man;
+
 namespace OscorpGames {
     public partial class Menu : Form
     {
@@ -26,7 +28,28 @@ namespace OscorpGames {
 
         }
 
+
+        //minesweeper
         private void gameOneButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //snake
+        private void gameTwoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //pac man
+        private void gameThreeButton_Click(object sender, EventArgs e)
+        {
+            var pacMan = new PacManGame();
+            pacMan.Show();
+        }
+
+        //tetris
+        private void gameFourButton_Click(object sender, EventArgs e)
         {
 
         }
