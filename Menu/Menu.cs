@@ -20,38 +20,33 @@ namespace OscorpGames {
 
         private void OpenGame(Form game)
         {
+            this.Hide();
             game.ShowDialog();
+            this.Show();
         }
 
-        private void creatorLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //minesweeper
+        // Minesweeper
         private void gameOneButton_Click(object sender, EventArgs e)
         {
-
+            OpenGame(new Minesweeper());
         }
 
-        //snake
+        // Snake
         private void gameTwoButton_Click(object sender, EventArgs e)
         {
-
+            //OpenGame(new Snake());
         }
 
-        //pac man
+        // Pac-Man
         private void gameThreeButton_Click(object sender, EventArgs e)
         {
-            var pacMan = new PacManGame();
-            pacMan.Show();
+            OpenGame(new PacManGame());
         }
 
-        //tetris
+        // Tetris
         private void gameFourButton_Click(object sender, EventArgs e)
         {
-
+            OpenGame(new Tetris());
         }
     }
 }
