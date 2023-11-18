@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define _DEBUG
+#define _RELEASE
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +13,9 @@ using System.Windows.Forms;
 
 namespace OscorpGames {
 	public partial class Minesweeper : Form {
+		private Bitmap FLAG = new Bitmap("../../../Minesweeper/Images/Flag.png");
 		private Bitmap BOMB = new Bitmap("../../../Minesweeper/Images/Bomb.png");
+		private Bitmap UNKNOWN = new Bitmap("../../../Minesweeper/Images/Unknown.png");
 		private Bitmap NO_BOMB = new Bitmap("../../../Minesweeper/Images/None.png");
 		private Bitmap ONE_BOMB = new Bitmap("../../../Minesweeper/Images/One.png");
 		private Bitmap TWO_BOMB = new Bitmap("../../../Minesweeper/Images/Two.png");
@@ -22,8 +27,10 @@ namespace OscorpGames {
 		private Bitmap EIGHT_BOMB = new Bitmap("../../../Minesweeper/Images/Eight.png");
 
 		private int width = 16, height = 9;
-		private int numBombs = 600;
+		private int numBombs = 50;
 		private bool[,] mineField;
+
+		private bool firstMove = true;
 
 		public Minesweeper() {
 			InitializeComponent();
@@ -49,11 +56,12 @@ namespace OscorpGames {
 
 				mineField[bombX, bombY] = true;
 			}
-
+			#region Setting pictures based on bomb count
 			for(int i = 0; i < width; i++) {
 				for(int j = 0; j < height; j++) {
 					PictureBox pictureBox = new PictureBox();
 
+					#if _DEBUG
 					switch(CountSurroundingBombs(new int[] {i, j})) {
 						case 0:
 							pictureBox.Image = NO_BOMB;
@@ -87,12 +95,18 @@ namespace OscorpGames {
 					if(mineField[i, j]) {
 						pictureBox.Image = BOMB;
 					}
-
+					#elif _RELEASE
+					pictureBox.Image = UNKNOWN;
+					#endif
 					pictureBox.Size = new Size(NO_BOMB.Width, NO_BOMB.Height);
 					pictureBox.Location = new Point(i * NO_BOMB.Width, j * NO_BOMB.Height);
+
+					pictureBox.Click += tile_Click;
+
 					bombField.Controls.Add(pictureBox);
 				}
 			}
+			#endregion
 		}
 
 		private int CountSurroundingBombs(int[] pos) {
@@ -131,6 +145,87 @@ namespace OscorpGames {
 				return false;
 			}
 			return true;
+		}
+
+		private void tile_Click(object sender, EventArgs e) {
+			PictureBox tile = (PictureBox) sender;
+
+			switch(((MouseEventArgs) e).Button) {
+				case MouseButtons.Left:
+					if(tile.Image != FLAG) {
+						Point location = tile.Location;
+						location.X /= 32;
+						location.Y /= 32;
+
+						if(mineField[location.X, location.Y]) {
+							if(!firstMove) {
+								tile.Image = BOMB;
+							} else {
+								firstMove = false;
+								MoveBomb(location.X, location.Y);
+								tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new int[] {location.X, location.Y}));
+							}
+						} else {
+							firstMove = false;
+							tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new int[] {location.X, location.Y}));
+						}
+					}
+					break;
+				case MouseButtons.Right:
+					if(tile.Image == UNKNOWN) {
+						tile.Image = FLAG;
+						numBombs -= 1;
+					} else if(tile.Image == FLAG) {
+						tile.Image = UNKNOWN;
+						numBombs += 1;
+					}
+					break;
+			}
+		}
+
+		private void MoveBomb(int x, int y) {
+			if(mineField[x, y]) {
+				mineField[x, y] = false;
+
+				Random random = new Random();
+				while(true) {
+					int bombX = random.Next(0, width);
+					int bombY = random.Next(0, height);
+
+					if(bombX == x && bombY == y) {
+						continue;
+					}
+					if(mineField[bombX, bombY]) {
+						continue;
+					}
+
+					mineField[bombX, bombY] = true;
+					break;
+				}
+			}
+		}
+
+		private Bitmap ConvertIntToBitmap(int numBombs) {
+			switch(numBombs) {
+				case 1:
+					return ONE_BOMB;
+				case 2:
+					return TWO_BOMB;
+				case 3:
+					return THREE_BOMB;
+				case 4:
+					return FOUR_BOMB;
+				case 5:
+					return FIVE_BOMB;
+				case 6:
+					return SIX_BOMB;
+				case 7:
+					return SEVEN_BOMB;
+				case 8:
+					return EIGHT_BOMB;
+				default:
+					return NO_BOMB;
+			}
 		}
 	}
 }
