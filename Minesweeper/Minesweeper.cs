@@ -27,10 +27,9 @@ namespace OscorpGames {
 		private Bitmap EIGHT_BOMB = new Bitmap("../../../Minesweeper/Images/Eight.png");
 
 		private int width = 16, height = 9;
-		private int numBombs = 50;
+		private int numBombs = 30;
 		private bool[,] mineField;
-
-		private bool firstMove = true;
+		private PictureBox[,] tiles;
 
 		public Minesweeper() {
 			InitializeComponent();
@@ -39,6 +38,7 @@ namespace OscorpGames {
 
 		private void StartGame() {
 			mineField = new bool[width, height];
+			tiles = new PictureBox[width, height];
 
 			if(numBombs > ((width * height) * 0.9f)) {
 				numBombs = (int) ((width * height) * 0.9f);
@@ -56,88 +56,93 @@ namespace OscorpGames {
 
 				mineField[bombX, bombY] = true;
 			}
-			#region Setting pictures based on bomb count
+
 			for(int i = 0; i < width; i++) {
 				for(int j = 0; j < height; j++) {
 					PictureBox pictureBox = new PictureBox();
 
-					#if _DEBUG
-					switch(CountSurroundingBombs(new int[] {i, j})) {
-						case 0:
-							pictureBox.Image = NO_BOMB;
-							break;
-						case 1:
-							pictureBox.Image = ONE_BOMB;
-							break;
-						case 2:
-							pictureBox.Image = TWO_BOMB;
-							break;
-						case 3:
-							pictureBox.Image = THREE_BOMB;
-							break;
-						case 4:
-							pictureBox.Image = FOUR_BOMB;
-							break;
-						case 5:
-							pictureBox.Image = FIVE_BOMB;
-							break;
-						case 6:
-							pictureBox.Image = SIX_BOMB;
-							break;
-						case 7:
-							pictureBox.Image = SEVEN_BOMB;
-							break;
-						case 8:
-							pictureBox.Image = EIGHT_BOMB;
-							break;
-					}
-
-					if(mineField[i, j]) {
-						pictureBox.Image = BOMB;
-					}
-					#elif _RELEASE
 					pictureBox.Image = UNKNOWN;
-					#endif
 					pictureBox.Size = new Size(NO_BOMB.Width, NO_BOMB.Height);
 					pictureBox.Location = new Point(i * NO_BOMB.Width, j * NO_BOMB.Height);
 
 					pictureBox.Click += tile_Click;
 
 					bombField.Controls.Add(pictureBox);
+					tiles[i, j] = pictureBox;
 				}
 			}
-			#endregion
+
+			#if _DEBUG
+			for(int i = 0; i < width; i++) {
+				for(int j = 0; j < height; j++) {
+					PictureBox tile = tiles[i, j];
+					if(mineField[i, j]) {
+						tile.Image = BOMB;
+					} else {
+						tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new Point(tile.Location.X / 32, tile.Location.Y / 32)));
+					}
+				}
+			}
+			#elif _RELEASE
+			for(int i = 0; i < width; i++) {
+				for(int j = 0; j < height; j++) {
+					if(CountSurroundingBombs(new Point(i, j)) == 0 && !mineField[i, j]) {
+						RevealEmptyTiles(new Point(i, j));
+						return;
+					}
+				}
+			}
+			#endif
 		}
 
-		private int CountSurroundingBombs(int[] pos) {
+		private int CountSurroundingBombs(Point location) {
+			PictureBox?[] tiles = GetSurroundingTiles(location);
 			int bombs = 0;
 
-			if(IsValidPosition(pos[0], pos[1] - 1) && mineField[pos[0], pos[1] - 1]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] + 1, pos[1] - 1) && mineField[pos[0] + 1, pos[1] - 1]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] + 1, pos[1]) && mineField[pos[0] + 1, pos[1]]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] + 1, pos[1] + 1) && mineField[pos[0] + 1, pos[1] + 1]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0], pos[1] + 1) && mineField[pos[0], pos[1] + 1]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] - 1, pos[1] + 1) && mineField[pos[0] - 1, pos[1] + 1]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] - 1, pos[1]) && mineField[pos[0] - 1, pos[1]]) {
-				bombs += 1;
-			}
-			if(IsValidPosition(pos[0] - 1, pos[1] - 1) && mineField[pos[0] - 1, pos[1] - 1]) {
-				bombs += 1;
+			foreach(PictureBox? tile in tiles) {
+				if(tile != null) {
+					if(mineField[tile.Location.X / 32, tile.Location.Y / 32]) {
+						bombs += 1;
+					}
+				}
 			}
 
 			return bombs;
+		}
+
+		private PictureBox?[] GetSurroundingTiles(Point location) {
+			PictureBox?[] tiles = new PictureBox[8];
+
+			for(int i = 0; i < 8; i++) {
+				tiles[i] = null;
+			}
+
+			if(IsValidPosition(location.X, location.Y - 1)) {
+				tiles[0] = this.tiles[location.X, location.Y - 1];
+			}
+			if(IsValidPosition(location.X + 1, location.Y - 1)) {
+				tiles[1] = this.tiles[location.X + 1, location.Y - 1];
+			}
+			if(IsValidPosition(location.X + 1, location.Y)) {
+				tiles[2] = this.tiles[location.X + 1, location.Y];
+			}
+			if(IsValidPosition(location.X + 1, location.Y + 1)) {
+				tiles[3] = this.tiles[location.X + 1, location.Y + 1];
+			}
+			if(IsValidPosition(location.X, location.Y + 1)) {
+				tiles[4] = this.tiles[location.X, location.Y + 1];
+			}
+			if(IsValidPosition(location.X - 1, location.Y + 1)) {
+				tiles[5] = this.tiles[location.X - 1, location.Y + 1];
+			}
+			if(IsValidPosition(location.X - 1, location.Y)) {
+				tiles[6] = this.tiles[location.X - 1, location.Y];
+			}
+			if(IsValidPosition(location.X - 1, location.Y - 1)) {
+				tiles[7] = this.tiles[location.X - 1, location.Y - 1];
+			}
+
+			return tiles;
 		}
 
 		private bool IsValidPosition(int x, int y) {
@@ -158,16 +163,10 @@ namespace OscorpGames {
 						location.Y /= 32;
 
 						if(mineField[location.X, location.Y]) {
-							if(!firstMove) {
-								tile.Image = BOMB;
-							} else {
-								firstMove = false;
-								MoveBomb(location.X, location.Y);
-								tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new int[] {location.X, location.Y}));
-							}
+							tile.Image = BOMB;
 						} else {
-							firstMove = false;
-							tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new int[] {location.X, location.Y}));
+							tile.Image = ConvertIntToBitmap(CountSurroundingBombs(new Point(location.X, location.Y)));
+							RevealEmptyTiles(location);
 						}
 					}
 					break;
@@ -183,6 +182,7 @@ namespace OscorpGames {
 			}
 		}
 
+		/*
 		private void MoveBomb(int x, int y) {
 			if(mineField[x, y]) {
 				mineField[x, y] = false;
@@ -201,6 +201,29 @@ namespace OscorpGames {
 
 					mineField[bombX, bombY] = true;
 					break;
+				}
+			}
+		}
+		*/
+
+		private void RevealEmptyTiles(Point startingLocation) {
+			if(CountSurroundingBombs(startingLocation) == 0) {
+				PictureBox?[] tiles = GetSurroundingTiles(startingLocation);
+
+				foreach(PictureBox? currentTile in tiles) {
+					if(currentTile != null) {
+						Point currentTileLocation = currentTile.Location;
+						currentTileLocation.X /= 32;
+						currentTileLocation.Y /= 32;
+						if(!mineField[currentTileLocation.X, currentTileLocation.Y]) {
+							if(CountSurroundingBombs(currentTileLocation) == 0 && currentTile.Image != NO_BOMB) {
+								currentTile.Image = NO_BOMB;
+								RevealEmptyTiles(currentTileLocation);
+							} else {
+								currentTile.Image = ConvertIntToBitmap(CountSurroundingBombs(currentTileLocation));
+							}
+						}
+					}
 				}
 			}
 		}

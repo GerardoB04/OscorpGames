@@ -28,7 +28,7 @@
 			// 
 			// bombField
 			// 
-			bombField.Location = new Point(89, 79);
+			bombField.Location = new Point(89, 112);
 			bombField.Name = "bombField";
 			bombField.Size = new Size(625, 322);
 			bombField.TabIndex = 0;
@@ -38,7 +38,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(800, 446);
 			Controls.Add(bombField);
 			Name = "Minesweeper";
 			Text = "Minesweeper";
