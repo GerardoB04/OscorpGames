@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="Screen.svg"
-   inkscape:export-filename="Screen.png"
+   inkscape:export-filename="..\Screen.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -62,7 +62,7 @@
        width="253.26822"
        height="433.50543"
        x="202.81145"
-       y="209.84685"
+       y="217.84685"
        rx="10.130729"
        ry="12.385869" />
     <rect
@@ -71,7 +71,7 @@
        width="209.64027"
        height="394.17691"
        x="224.62543"
-       y="229.51112"
+       y="237.51112"
        rx="8.3856106"
        ry="11.262197" />
     <rect
@@ -80,19 +80,19 @@
        width="150.91173"
        height="49.380291"
        x="253.98969"
-       y="304.918"
+       y="312.918"
        rx="10.695664"
        ry="10.908813" />
     <text
        xml:space="preserve"
        style="font-size:41.6823px;font-family:GosmickSans;-inkscape-font-specification:GosmickSans;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:24.0372;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        x="275.0564"
-       y="290.06113"
+       y="298.06113"
        id="text20186"><tspan
          sodipodi:role="line"
          id="tspan20184"
          x="275.0564"
-         y="290.06113"
+         y="298.06113"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:24.0372">Score</tspan></text>
     <rect
        style="fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:32.8086;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -100,19 +100,19 @@
        width="150.91173"
        height="49.380291"
        x="253.98969"
-       y="427.80829"
+       y="435.80829"
        rx="10.695664"
        ry="10.908813" />
     <text
        xml:space="preserve"
        style="font-size:41.6823px;font-family:GosmickSans;-inkscape-font-specification:GosmickSans;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:24.0372;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        x="274.93088"
-       y="412.9718"
+       y="420.9718"
        id="text21698"><tspan
          sodipodi:role="line"
          id="tspan21696"
          x="274.93088"
-         y="412.9718"
+         y="420.9718"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:24.0372">Level</tspan></text>
     <rect
        style="fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:32.8086;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
@@ -120,19 +120,19 @@
        width="150.91173"
        height="49.380291"
        x="253.98969"
-       y="552.69861"
+       y="560.69861"
        rx="10.695664"
        ry="10.908813" />
     <text
        xml:space="preserve"
        style="font-size:41.6823px;font-family:GosmickSans;-inkscape-font-specification:GosmickSans;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:24.0372;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        x="274.93088"
-       y="535.86212"
+       y="543.86212"
        id="text21704"><tspan
          sodipodi:role="line"
          id="tspan21702"
          x="274.93088"
-         y="535.86212"
+         y="543.86212"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:24.0372">Lines</tspan></text>
   </g>
   <g
@@ -146,9 +146,18 @@
        width="250"
        height="450"
        x="202.81145"
-       y="209.84685"
+       y="206.49203"
        rx="10"
        ry="12.857142" />
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:22.098;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15701-6-3"
+       width="250"
+       height="180.68304"
+       x="-430.25491"
+       y="206.49203"
+       rx="10"
+       ry="5.1623721" />
     <rect
        style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:14.7041;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect16429-3"
@@ -156,6 +165,15 @@
        height="100"
        x="228.19287"
        y="296.83356"
+       rx="7.9999995"
+       ry="2.8571427" />
+    <rect
+       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:14.7041;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect16429-3-5"
+       width="200"
+       height="100"
+       x="-405.25491"
+       y="274.78677"
        rx="7.9999995"
        ry="2.8571427" />
     <rect
@@ -187,6 +205,17 @@
          x="261.73691"
          y="276.28778"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#808080;stroke-width:36.0693">Next</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:62.5468px;font-family:GosmickSans;-inkscape-font-specification:GosmickSans;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:36.0693;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="-371.71088"
+       y="264.90002"
+       id="text20186-8-3"><tspan
+         sodipodi:role="line"
+         x="-371.71088"
+         y="264.90002"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#808080;stroke-width:36.0693"
+         id="tspan2297">Hold</tspan></text>
   </g>
   <g
      inkscape:label="Background"
