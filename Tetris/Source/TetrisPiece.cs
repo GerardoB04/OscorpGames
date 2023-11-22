@@ -58,7 +58,7 @@ public class TetrisPiece {
 	};
 
 	public int[,] Piece = new int[4, 4];
-	public int[] Position = { 3, 0 };
+	public int[] Position = { 3, 2 };
 	public int RotationState = 0;
 
 	public TetrisPiece( int piece ) {
@@ -72,6 +72,7 @@ public class TetrisPiece {
 	public void Rotate(bool cw = false) {
 
 		int[,] newPiece = new int[4, 4];
+
 
         for (int i = 0; i < 4; i++) {
 

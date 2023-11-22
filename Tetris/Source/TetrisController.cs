@@ -10,17 +10,17 @@ public class TetrisController {
     public Panel BoardUI;
     private PictureBox[,] _display = new PictureBox[10, 22];
 
-    public string[] Paths = { "I.png", "O.png", "L.png", "J.png", "S.png", "Z.png", "T.png" };
-    public string BasePath = " ../../../../../Tetris/Assets/";
+    private string[] _paths = { "I.png", "O.png", "L.png", "J.png", "S.png", "Z.png", "T.png" };
+    private string _basePath = " ../../../../../Tetris/Assets/";
 
     private int[,] _board = new int[10, 22];
 
-    public List<int> Pieces = new List<int>();
+    private List<int> _pieces = new List<int>();
 
-    public TetrisPiece Piece;
+    private TetrisPiece _piece;
     private bool _pieceActive = false;
 
-    public bool GameRunning = false;
+    private bool _gameRunning = false;
 
     private Stopwatch timer = new Stopwatch();
     private float _dropRate = 0.5f;
@@ -33,18 +33,7 @@ public class TetrisController {
 
     public void Start() {
 
-        var temp = new int[] { 0, 1, 2, 3, 4, 5, 6 }.ToList();
-
-        for ( int i = 0; i < 7; i++ ) {
-
-            int num = new Random().Next( temp.Count );
-            Pieces.Add( temp[num] );
-            temp.RemoveAt( num );
-
-        }
-
-
-        for ( int i = 0; i < _display.GetLength(0); i++) {
+        for (int i = 0; i < _display.GetLength(0); i++) {
         
             for (int j = 0;  j < _display.GetLength(1); j++) {
 
@@ -61,7 +50,7 @@ public class TetrisController {
 
         timer.Start();
 
-        GameRunning = true;
+        _gameRunning = true;
         Update();
         ShowBoard();
 
@@ -74,11 +63,11 @@ public class TetrisController {
             int index = GetRandomPiece();
 
             _pieceActive = true;
-            Piece = new TetrisPiece( index );
+            _piece = new TetrisPiece( index );
 
             DrawPiece();
             CheckClear();
-            ShowBoard();
+
 
             return;
 
@@ -172,7 +161,7 @@ public class TetrisController {
         ClearPiece();
 
         if ( CheckValidMove( dir, 0 ) )
-            Piece.Position[0] += dir;
+            _piece.Position[0] += dir;
         DrawPiece();
 
 
@@ -182,9 +171,9 @@ public class TetrisController {
 
         ClearPiece();
 
-        Piece.Rotate( cw );
+        _piece.Rotate( cw );
         if ( !CheckValidMove( 0, 0 ) )
-            Piece.Rotate( !cw );
+            _piece.Rotate( !cw );
      
         DrawPiece();
 
@@ -192,20 +181,20 @@ public class TetrisController {
 
     private bool CheckValidMove( int x, int y ) {
 
-        for ( int i = 0; i < Piece.Piece.GetLength( 0 ); i++ ) {
+        for ( int i = 0; i < _piece.Piece.GetLength( 0 ); i++ ) {
 
-            for ( int j = 0; j < Piece.Piece.GetLength( 1 ); j++ ) {
+            for ( int j = 0; j < _piece.Piece.GetLength( 1 ); j++ ) {
 
-                if ( !IsInBounds( i + Piece.Position[0] + x, j + Piece.Position[1] + y ) ) {
+                if ( !IsInBounds( i + _piece.Position[0] + x, j + _piece.Position[1] + y ) ) {
 
-                    if ( Piece.Piece[i, j] == 0 ) continue;
+                    if ( _piece.Piece[i, j] == 0 ) continue;
 
                     return false;
 
                 }
 
-                if ( _board[i + Piece.Position[0] + x, j + Piece.Position[1] + y] != 0 )
-                    if ( Piece.Piece[i, j] != 0 )
+                if ( _board[i + _piece.Position[0] + x, j + _piece.Position[1] + y] != 0 )
+                    if ( _piece.Piece[i, j] != 0 )
                         return false;
 
             }
@@ -217,16 +206,16 @@ public class TetrisController {
     }
     private void DrawPiece() {
 
-        for ( int i = 0; i < Piece.Piece.GetLength( 0 ); i++ ) {
+        for ( int i = 0; i < _piece.Piece.GetLength( 0 ); i++ ) {
 
-            for ( int j = 0; j < Piece.Piece.GetLength( 1 ); j++ ) {
+            for ( int j = 0; j < _piece.Piece.GetLength( 1 ); j++ ) {
 
-                if ( Piece.Piece[i, j] == 0 ) continue;
+                if ( _piece.Piece[i, j] == 0 ) continue;
 
-                if ( !IsInBounds( i + Piece.Position[0], j + Piece.Position[1] ) )
+                if ( !IsInBounds( i + _piece.Position[0], j + _piece.Position[1] ) )
                     continue;
 
-                _board[i + Piece.Position[0], j + Piece.Position[1]] = Piece.Piece[i, j];
+                _board[i + _piece.Position[0], j + _piece.Position[1]] = _piece.Piece[i, j];
 
             }
 
@@ -236,13 +225,13 @@ public class TetrisController {
 
     private void ClearPiece() {
 
-        for ( int i = 0; i < Piece.Piece.GetLength( 0 ); i++ ) {
+        for ( int i = 0; i < _piece.Piece.GetLength( 0 ); i++ ) {
 
-            for ( int j = 0; j < Piece.Piece.GetLength( 1 ); j++ ) {
+            for ( int j = 0; j < _piece.Piece.GetLength( 1 ); j++ ) {
 
-                if ( Piece.Piece[i, j] == 0 ) continue;
-                if ( !IsInBounds( i + Piece.Position[0], j + Piece.Position[1] ) ) continue;
-                _board[i + Piece.Position[0], j + Piece.Position[1]] = 0;
+                if ( _piece.Piece[i, j] == 0 ) continue;
+                if ( !IsInBounds( i + _piece.Position[0], j + _piece.Position[1] ) ) continue;
+                _board[i + _piece.Position[0], j + _piece.Position[1]] = 0;
 
             }
 
@@ -268,7 +257,7 @@ public class TetrisController {
             _pieceActive = false;
 
         } else
-            Piece.Position[1]++;
+            _piece.Position[1]++;
 
         DrawPiece();
 
@@ -283,7 +272,7 @@ public class TetrisController {
                 if ( _board[i, j] == 0 && _display[i, j].Image != null)
                     _display[i, j].Image = null;
                 else if ( _board[i, j] != 0 )
-                    _display[i, j].Image = Image.FromFile( BasePath + Paths[_board[i, j] - 1] );
+                    _display[i, j].Image = Image.FromFile( _basePath + _paths[_board[i, j] - 1] );
 
             }
 
@@ -293,7 +282,7 @@ public class TetrisController {
 
     public void GameLoop() {
 
-        if ( !GameRunning ) return;
+        if ( !_gameRunning ) return;
 
         Update();
         ShowBoard();
@@ -302,22 +291,22 @@ public class TetrisController {
 
     private int GetRandomPiece() {
 
-        if ( Pieces.Count <= 4 ) {
+        if ( _pieces.Count <= 4 ) {
         
             var temp = new int[] { 0, 1, 2, 3, 4, 5, 6 }.ToList();
 
-            for ( int i = 0; i < 7; i++ ) {
+            for ( int i = 0; i < temp.Count - 1; i++ ) {
 
                 int num = new Random().Next( temp.Count );
-                Pieces.Add( temp[num] );
+                _pieces.Add( temp[num] );
                 temp.RemoveAt( num );
 
             }
 
         }
 
-        int result = Pieces[0];
-        Pieces.RemoveAt( 0 );
+        int result = _pieces[0];
+        _pieces.RemoveAt( 0 );
 
         return result;
 
