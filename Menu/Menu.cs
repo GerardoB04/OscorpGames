@@ -48,5 +48,15 @@ namespace OscorpGames {
         {
             OpenGame(new Tetris());
         }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
