@@ -42,6 +42,10 @@ namespace OscorpGames.Pac_Man
             {
                 goright = true;
             }
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();
+            }
         }
 
         private void keyisup(object sender, KeyEventArgs e)
@@ -82,8 +86,7 @@ namespace OscorpGames.Pac_Man
 
             isGameOver = false;
 
-            pacman.Left = 102;
-            pacman.Top = 604;
+            pacman.Location = new Point(40, 365);
 
             redGhost.Left = 612;
             redGhost.Top = 345;
@@ -117,32 +120,61 @@ namespace OscorpGames.Pac_Man
 
             MessageBox.Show(message);
         }
-
+        private bool IntersectsWithWall(PictureBox picture)
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if ((string)x.Tag == "wall")
+                    {
+                        if (picture.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            pacBBTop.Location = new Point(pacman.Location.X, pacman.Location.Y - 15);
+            pacBBBottom.Location = new Point(pacman.Location.X, pacman.Location.Y + 64);
+            pacBBLeft.Location = new Point(pacman.Location.X - 15, pacman.Location.Y);
+            pacBBRight.Location = new Point(pacman.Location.X + 64, pacman.Location.Y);
+
             score.Text = "Score: " + scoreCount;
             if (goleft)
             {
-                pacman.Left -= playerSpeed;
-                //pacman.Location = new Point(pacman.Location.X - playerSpeed, pacman.Location.Y);
-                if(pacman.Image != PacManResource.left) pacman.Image = PacManResource.left;
+                if (!IntersectsWithWall(pacBBLeft))
+                {
+                    pacman.Left -= playerSpeed;
+                }
+                if (pacman.Image != PacManResource.left) pacman.Image = PacManResource.left;
             }
             if (goright)
             {
-                pacman.Left += playerSpeed;
-                //pacman.Location = new Point(pacman.Location.X + playerSpeed, pacman.Location.Y);
+                if (!IntersectsWithWall(pacBBRight))
+                {
+                    pacman.Left += playerSpeed;
+                }
                 if (pacman.Image != PacManResource.right) pacman.Image = PacManResource.right;
             }
             if (godown)
             {
-                pacman.Top += playerSpeed;
-                //pacman.Location = new Point(pacman.Location.X, pacman.Location.Y + playerSpeed);
+                if (!IntersectsWithWall(pacBBBottom))
+                {
+                    pacman.Top += playerSpeed;
+                }
                 if (pacman.Image != PacManResource.down) pacman.Image = PacManResource.down;
             }
             if (goup)
             {
-                pacman.Top -= playerSpeed;
-                //pacman.Location = new Point(pacman.Location.X, pacman.Location.Y - playerSpeed);
+                if (!IntersectsWithWall(pacBBTop))
+                {
+                    pacman.Top -= playerSpeed;
+                }
                 if (pacman.Image != PacManResource.Up) pacman.Image = PacManResource.Up;
             }
 
@@ -179,12 +211,6 @@ namespace OscorpGames.Pac_Man
 
                     if ((string)x.Tag == "wall")
                     {
-                        if (pacman.Bounds.IntersectsWith(x.Bounds))
-                        {
-                            gameOver("You Lose!");
-                        }
-
-
                         if (pinkGhost.Bounds.IntersectsWith(x.Bounds))
                         {
                             pinkGhostX = -pinkGhostX;
@@ -282,6 +308,21 @@ namespace OscorpGames.Pac_Man
             {
                 gameOver("You Win!");
             }
+        }
+
+        private void PacManGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pacman_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void score_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
