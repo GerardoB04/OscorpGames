@@ -177,10 +177,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.HotTrack;
-            pictureBox1.Location = new Point(291, -20);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(416, -33);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(33, 131);
+            pictureBox1.Size = new Size(47, 218);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Tag = "wall";
@@ -188,10 +187,9 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.HotTrack;
-            pictureBox2.Location = new Point(316, 512);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(451, 853);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(30, 178);
+            pictureBox2.Size = new Size(43, 297);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Tag = "wall";
@@ -199,10 +197,9 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.HotTrack;
-            pictureBox3.Location = new Point(950, 88);
-            pictureBox3.Margin = new Padding(2);
+            pictureBox3.Location = new Point(1357, 147);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(30, 105);
+            pictureBox3.Size = new Size(43, 175);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "wall";
@@ -210,10 +207,9 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = SystemColors.HotTrack;
-            pictureBox4.Location = new Point(461, -20);
-            pictureBox4.Margin = new Padding(2);
+            pictureBox4.Location = new Point(659, -33);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(30, 225);
+            pictureBox4.Size = new Size(43, 375);
             pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             pictureBox4.Tag = "wall";
@@ -221,10 +217,9 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = SystemColors.HotTrack;
-            pictureBox5.Location = new Point(889, 473);
-            pictureBox5.Margin = new Padding(2);
+            pictureBox5.Location = new Point(1270, 788);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(30, 217);
+            pictureBox5.Size = new Size(43, 362);
             pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             pictureBox5.Tag = "wall";
@@ -232,10 +227,9 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = SystemColors.HotTrack;
-            pictureBox6.Location = new Point(812, 473);
-            pictureBox6.Margin = new Padding(2);
+            pictureBox6.Location = new Point(1160, 788);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(168, 30);
+            pictureBox6.Size = new Size(240, 50);
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             pictureBox6.Tag = "wall";
@@ -243,10 +237,9 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = SystemColors.HotTrack;
-            pictureBox7.Location = new Point(950, 175);
-            pictureBox7.Margin = new Padding(2);
+            pictureBox7.Location = new Point(1357, 292);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(363, 30);
+            pictureBox7.Size = new Size(519, 50);
             pictureBox7.TabIndex = 6;
             pictureBox7.TabStop = false;
             pictureBox7.Tag = "wall";
@@ -254,10 +247,9 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = SystemColors.HotTrack;
-            pictureBox8.Location = new Point(113, 99);
-            pictureBox8.Margin = new Padding(2);
+            pictureBox8.Location = new Point(161, 165);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(211, 30);
+            pictureBox8.Size = new Size(301, 50);
             pictureBox8.TabIndex = 7;
             pictureBox8.TabStop = false;
             pictureBox8.Tag = "wall";
@@ -265,10 +257,9 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = SystemColors.HotTrack;
-            pictureBox9.Location = new Point(178, 512);
-            pictureBox9.Margin = new Padding(2);
+            pictureBox9.Location = new Point(254, 853);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(168, 30);
+            pictureBox9.Size = new Size(240, 50);
             pictureBox9.TabIndex = 8;
             pictureBox9.TabStop = false;
             pictureBox9.Tag = "wall";
@@ -276,10 +267,9 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = SystemColors.HotTrack;
-            pictureBox10.Location = new Point(461, 175);
-            pictureBox10.Margin = new Padding(2);
+            pictureBox10.Location = new Point(659, 292);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(168, 30);
+            pictureBox10.Size = new Size(240, 50);
             pictureBox10.TabIndex = 9;
             pictureBox10.TabStop = false;
             pictureBox10.Tag = "wall";
@@ -287,9 +277,10 @@
             // pacman
             // 
             pacman.Image = PacMan.PacManResource.right;
-            pacman.Location = new Point(102, 604);
+            pacman.Location = new Point(146, 1007);
+            pacman.Margin = new Padding(4, 5, 4, 5);
             pacman.Name = "pacman";
-            pacman.Size = new Size(45, 45);
+            pacman.Size = new Size(64, 75);
             pacman.SizeMode = PictureBoxSizeMode.StretchImage;
             pacman.TabIndex = 10;
             pacman.TabStop = false;
@@ -298,9 +289,10 @@
             // yellowGhost
             // 
             yellowGhost.Image = PacMan.PacManResource.yellow_guy;
-            yellowGhost.Location = new Point(597, 542);
+            yellowGhost.Location = new Point(853, 903);
+            yellowGhost.Margin = new Padding(4, 5, 4, 5);
             yellowGhost.Name = "yellowGhost";
-            yellowGhost.Size = new Size(45, 60);
+            yellowGhost.Size = new Size(64, 100);
             yellowGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             yellowGhost.TabIndex = 12;
             yellowGhost.TabStop = false;
@@ -309,9 +301,10 @@
             // redGhost
             // 
             redGhost.Image = PacMan.PacManResource.red_guy;
-            redGhost.Location = new Point(612, 345);
+            redGhost.Location = new Point(874, 575);
+            redGhost.Margin = new Padding(4, 5, 4, 5);
             redGhost.Name = "redGhost";
-            redGhost.Size = new Size(45, 60);
+            redGhost.Size = new Size(64, 100);
             redGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             redGhost.TabIndex = 14;
             redGhost.TabStop = false;
@@ -320,9 +313,10 @@
             // pinkGhost
             // 
             pinkGhost.Image = PacMan.PacManResource.pink_guy;
-            pinkGhost.Location = new Point(755, 82);
+            pinkGhost.Location = new Point(1079, 137);
+            pinkGhost.Margin = new Padding(4, 5, 4, 5);
             pinkGhost.Name = "pinkGhost";
-            pinkGhost.Size = new Size(45, 60);
+            pinkGhost.Size = new Size(64, 100);
             pinkGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             pinkGhost.TabIndex = 15;
             pinkGhost.TabStop = false;
@@ -337,9 +331,10 @@
             // pictureBox11
             // 
             pictureBox11.Image = PacMan.PacManResource.coin;
-            pictureBox11.Location = new Point(755, 301);
+            pictureBox11.Location = new Point(1079, 502);
+            pictureBox11.Margin = new Padding(4, 5, 4, 5);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(25, 25);
+            pictureBox11.Size = new Size(36, 42);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 16;
             pictureBox11.TabStop = false;
@@ -348,9 +343,10 @@
             // pictureBox12
             // 
             pictureBox12.Image = PacMan.PacManResource.coin;
-            pictureBox12.Location = new Point(786, 301);
+            pictureBox12.Location = new Point(1123, 502);
+            pictureBox12.Margin = new Padding(4, 5, 4, 5);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(25, 25);
+            pictureBox12.Size = new Size(36, 42);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 17;
             pictureBox12.TabStop = false;
@@ -359,9 +355,10 @@
             // pictureBox13
             // 
             pictureBox13.Image = PacMan.PacManResource.coin;
-            pictureBox13.Location = new Point(847, 301);
+            pictureBox13.Location = new Point(1210, 502);
+            pictureBox13.Margin = new Padding(4, 5, 4, 5);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(25, 25);
+            pictureBox13.Size = new Size(36, 42);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 19;
             pictureBox13.TabStop = false;
@@ -370,9 +367,10 @@
             // pictureBox14
             // 
             pictureBox14.Image = PacMan.PacManResource.coin;
-            pictureBox14.Location = new Point(816, 301);
+            pictureBox14.Location = new Point(1166, 502);
+            pictureBox14.Margin = new Padding(4, 5, 4, 5);
             pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(25, 25);
+            pictureBox14.Size = new Size(36, 42);
             pictureBox14.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox14.TabIndex = 18;
             pictureBox14.TabStop = false;
@@ -381,9 +379,10 @@
             // pictureBox15
             // 
             pictureBox15.Image = PacMan.PacManResource.coin;
-            pictureBox15.Location = new Point(972, 301);
+            pictureBox15.Location = new Point(1389, 502);
+            pictureBox15.Margin = new Padding(4, 5, 4, 5);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(25, 25);
+            pictureBox15.Size = new Size(36, 42);
             pictureBox15.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox15.TabIndex = 23;
             pictureBox15.TabStop = false;
@@ -392,9 +391,10 @@
             // pictureBox16
             // 
             pictureBox16.Image = PacMan.PacManResource.coin;
-            pictureBox16.Location = new Point(941, 301);
+            pictureBox16.Location = new Point(1344, 502);
+            pictureBox16.Margin = new Padding(4, 5, 4, 5);
             pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(25, 25);
+            pictureBox16.Size = new Size(36, 42);
             pictureBox16.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox16.TabIndex = 22;
             pictureBox16.TabStop = false;
@@ -403,9 +403,10 @@
             // pictureBox17
             // 
             pictureBox17.Image = PacMan.PacManResource.coin;
-            pictureBox17.Location = new Point(911, 301);
+            pictureBox17.Location = new Point(1301, 502);
+            pictureBox17.Margin = new Padding(4, 5, 4, 5);
             pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(25, 25);
+            pictureBox17.Size = new Size(36, 42);
             pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox17.TabIndex = 21;
             pictureBox17.TabStop = false;
@@ -414,9 +415,10 @@
             // pictureBox18
             // 
             pictureBox18.Image = PacMan.PacManResource.coin;
-            pictureBox18.Location = new Point(880, 301);
+            pictureBox18.Location = new Point(1257, 502);
+            pictureBox18.Margin = new Padding(4, 5, 4, 5);
             pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(25, 25);
+            pictureBox18.Size = new Size(36, 42);
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 20;
             pictureBox18.TabStop = false;
@@ -425,9 +427,10 @@
             // pictureBox19
             // 
             pictureBox19.Image = PacMan.PacManResource.coin;
-            pictureBox19.Location = new Point(336, 345);
+            pictureBox19.Location = new Point(480, 575);
+            pictureBox19.Margin = new Padding(4, 5, 4, 5);
             pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(25, 25);
+            pictureBox19.Size = new Size(36, 42);
             pictureBox19.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox19.TabIndex = 27;
             pictureBox19.TabStop = false;
@@ -436,9 +439,10 @@
             // pictureBox20
             // 
             pictureBox20.Image = PacMan.PacManResource.coin;
-            pictureBox20.Location = new Point(305, 345);
+            pictureBox20.Location = new Point(436, 575);
+            pictureBox20.Margin = new Padding(4, 5, 4, 5);
             pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(25, 25);
+            pictureBox20.Size = new Size(36, 42);
             pictureBox20.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox20.TabIndex = 26;
             pictureBox20.TabStop = false;
@@ -447,9 +451,10 @@
             // pictureBox21
             // 
             pictureBox21.Image = PacMan.PacManResource.coin;
-            pictureBox21.Location = new Point(275, 345);
+            pictureBox21.Location = new Point(393, 575);
+            pictureBox21.Margin = new Padding(4, 5, 4, 5);
             pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(25, 25);
+            pictureBox21.Size = new Size(36, 42);
             pictureBox21.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox21.TabIndex = 25;
             pictureBox21.TabStop = false;
@@ -458,9 +463,10 @@
             // pictureBox22
             // 
             pictureBox22.Image = PacMan.PacManResource.coin;
-            pictureBox22.Location = new Point(244, 345);
+            pictureBox22.Location = new Point(349, 575);
+            pictureBox22.Margin = new Padding(4, 5, 4, 5);
             pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(25, 25);
+            pictureBox22.Size = new Size(36, 42);
             pictureBox22.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox22.TabIndex = 24;
             pictureBox22.TabStop = false;
@@ -469,9 +475,10 @@
             // pictureBox23
             // 
             pictureBox23.Image = PacMan.PacManResource.coin;
-            pictureBox23.Location = new Point(336, 301);
+            pictureBox23.Location = new Point(480, 502);
+            pictureBox23.Margin = new Padding(4, 5, 4, 5);
             pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(25, 25);
+            pictureBox23.Size = new Size(36, 42);
             pictureBox23.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox23.TabIndex = 31;
             pictureBox23.TabStop = false;
@@ -480,9 +487,10 @@
             // pictureBox24
             // 
             pictureBox24.Image = PacMan.PacManResource.coin;
-            pictureBox24.Location = new Point(305, 301);
+            pictureBox24.Location = new Point(436, 502);
+            pictureBox24.Margin = new Padding(4, 5, 4, 5);
             pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(25, 25);
+            pictureBox24.Size = new Size(36, 42);
             pictureBox24.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox24.TabIndex = 30;
             pictureBox24.TabStop = false;
@@ -491,9 +499,10 @@
             // pictureBox25
             // 
             pictureBox25.Image = PacMan.PacManResource.coin;
-            pictureBox25.Location = new Point(275, 301);
+            pictureBox25.Location = new Point(393, 502);
+            pictureBox25.Margin = new Padding(4, 5, 4, 5);
             pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(25, 25);
+            pictureBox25.Size = new Size(36, 42);
             pictureBox25.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox25.TabIndex = 29;
             pictureBox25.TabStop = false;
@@ -502,9 +511,10 @@
             // pictureBox26
             // 
             pictureBox26.Image = PacMan.PacManResource.coin;
-            pictureBox26.Location = new Point(244, 301);
+            pictureBox26.Location = new Point(349, 502);
+            pictureBox26.Margin = new Padding(4, 5, 4, 5);
             pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(25, 25);
+            pictureBox26.Size = new Size(36, 42);
             pictureBox26.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox26.TabIndex = 28;
             pictureBox26.TabStop = false;
@@ -513,9 +523,10 @@
             // pictureBox27
             // 
             pictureBox27.Image = PacMan.PacManResource.coin;
-            pictureBox27.Location = new Point(1175, 104);
+            pictureBox27.Location = new Point(1679, 173);
+            pictureBox27.Margin = new Padding(4, 5, 4, 5);
             pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(25, 25);
+            pictureBox27.Size = new Size(36, 42);
             pictureBox27.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox27.TabIndex = 35;
             pictureBox27.TabStop = false;
@@ -524,9 +535,10 @@
             // pictureBox28
             // 
             pictureBox28.Image = PacMan.PacManResource.coin;
-            pictureBox28.Location = new Point(1144, 104);
+            pictureBox28.Location = new Point(1634, 173);
+            pictureBox28.Margin = new Padding(4, 5, 4, 5);
             pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(25, 25);
+            pictureBox28.Size = new Size(36, 42);
             pictureBox28.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox28.TabIndex = 34;
             pictureBox28.TabStop = false;
@@ -535,9 +547,10 @@
             // pictureBox29
             // 
             pictureBox29.Image = PacMan.PacManResource.coin;
-            pictureBox29.Location = new Point(1114, 104);
+            pictureBox29.Location = new Point(1591, 173);
+            pictureBox29.Margin = new Padding(4, 5, 4, 5);
             pictureBox29.Name = "pictureBox29";
-            pictureBox29.Size = new Size(25, 25);
+            pictureBox29.Size = new Size(36, 42);
             pictureBox29.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox29.TabIndex = 33;
             pictureBox29.TabStop = false;
@@ -546,9 +559,10 @@
             // pictureBox30
             // 
             pictureBox30.Image = PacMan.PacManResource.coin;
-            pictureBox30.Location = new Point(1083, 104);
+            pictureBox30.Location = new Point(1547, 173);
+            pictureBox30.Margin = new Padding(4, 5, 4, 5);
             pictureBox30.Name = "pictureBox30";
-            pictureBox30.Size = new Size(25, 25);
+            pictureBox30.Size = new Size(36, 42);
             pictureBox30.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox30.TabIndex = 32;
             pictureBox30.TabStop = false;
@@ -557,9 +571,10 @@
             // pictureBox31
             // 
             pictureBox31.Image = PacMan.PacManResource.coin;
-            pictureBox31.Location = new Point(597, 117);
+            pictureBox31.Location = new Point(853, 195);
+            pictureBox31.Margin = new Padding(4, 5, 4, 5);
             pictureBox31.Name = "pictureBox31";
-            pictureBox31.Size = new Size(25, 25);
+            pictureBox31.Size = new Size(36, 42);
             pictureBox31.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox31.TabIndex = 39;
             pictureBox31.TabStop = false;
@@ -568,9 +583,10 @@
             // pictureBox32
             // 
             pictureBox32.Image = PacMan.PacManResource.coin;
-            pictureBox32.Location = new Point(566, 117);
+            pictureBox32.Location = new Point(809, 195);
+            pictureBox32.Margin = new Padding(4, 5, 4, 5);
             pictureBox32.Name = "pictureBox32";
-            pictureBox32.Size = new Size(25, 25);
+            pictureBox32.Size = new Size(36, 42);
             pictureBox32.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox32.TabIndex = 38;
             pictureBox32.TabStop = false;
@@ -579,9 +595,10 @@
             // pictureBox33
             // 
             pictureBox33.Image = PacMan.PacManResource.coin;
-            pictureBox33.Location = new Point(536, 117);
+            pictureBox33.Location = new Point(766, 195);
+            pictureBox33.Margin = new Padding(4, 5, 4, 5);
             pictureBox33.Name = "pictureBox33";
-            pictureBox33.Size = new Size(25, 25);
+            pictureBox33.Size = new Size(36, 42);
             pictureBox33.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox33.TabIndex = 37;
             pictureBox33.TabStop = false;
@@ -590,9 +607,10 @@
             // pictureBox34
             // 
             pictureBox34.Image = PacMan.PacManResource.coin;
-            pictureBox34.Location = new Point(505, 117);
+            pictureBox34.Location = new Point(721, 195);
+            pictureBox34.Margin = new Padding(4, 5, 4, 5);
             pictureBox34.Name = "pictureBox34";
-            pictureBox34.Size = new Size(25, 25);
+            pictureBox34.Size = new Size(36, 42);
             pictureBox34.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox34.TabIndex = 36;
             pictureBox34.TabStop = false;
@@ -601,9 +619,10 @@
             // pictureBox35
             // 
             pictureBox35.Image = PacMan.PacManResource.coin;
-            pictureBox35.Location = new Point(786, 593);
+            pictureBox35.Location = new Point(1123, 988);
+            pictureBox35.Margin = new Padding(4, 5, 4, 5);
             pictureBox35.Name = "pictureBox35";
-            pictureBox35.Size = new Size(25, 25);
+            pictureBox35.Size = new Size(36, 42);
             pictureBox35.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox35.TabIndex = 43;
             pictureBox35.TabStop = false;
@@ -612,9 +631,10 @@
             // pictureBox36
             // 
             pictureBox36.Image = PacMan.PacManResource.coin;
-            pictureBox36.Location = new Point(755, 593);
+            pictureBox36.Location = new Point(1079, 988);
+            pictureBox36.Margin = new Padding(4, 5, 4, 5);
             pictureBox36.Name = "pictureBox36";
-            pictureBox36.Size = new Size(25, 25);
+            pictureBox36.Size = new Size(36, 42);
             pictureBox36.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox36.TabIndex = 42;
             pictureBox36.TabStop = false;
@@ -623,9 +643,10 @@
             // pictureBox37
             // 
             pictureBox37.Image = PacMan.PacManResource.coin;
-            pictureBox37.Location = new Point(725, 593);
+            pictureBox37.Location = new Point(1036, 988);
+            pictureBox37.Margin = new Padding(4, 5, 4, 5);
             pictureBox37.Name = "pictureBox37";
-            pictureBox37.Size = new Size(25, 25);
+            pictureBox37.Size = new Size(36, 42);
             pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox37.TabIndex = 41;
             pictureBox37.TabStop = false;
@@ -634,9 +655,10 @@
             // pictureBox38
             // 
             pictureBox38.Image = PacMan.PacManResource.coin;
-            pictureBox38.Location = new Point(694, 593);
+            pictureBox38.Location = new Point(991, 988);
+            pictureBox38.Margin = new Padding(4, 5, 4, 5);
             pictureBox38.Name = "pictureBox38";
-            pictureBox38.Size = new Size(25, 25);
+            pictureBox38.Size = new Size(36, 42);
             pictureBox38.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox38.TabIndex = 40;
             pictureBox38.TabStop = false;
@@ -645,9 +667,10 @@
             // pictureBox39
             // 
             pictureBox39.Image = PacMan.PacManResource.coin;
-            pictureBox39.Location = new Point(501, 593);
+            pictureBox39.Location = new Point(716, 988);
+            pictureBox39.Margin = new Padding(4, 5, 4, 5);
             pictureBox39.Name = "pictureBox39";
-            pictureBox39.Size = new Size(25, 25);
+            pictureBox39.Size = new Size(36, 42);
             pictureBox39.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox39.TabIndex = 47;
             pictureBox39.TabStop = false;
@@ -656,9 +679,10 @@
             // pictureBox40
             // 
             pictureBox40.Image = PacMan.PacManResource.coin;
-            pictureBox40.Location = new Point(470, 593);
+            pictureBox40.Location = new Point(671, 988);
+            pictureBox40.Margin = new Padding(4, 5, 4, 5);
             pictureBox40.Name = "pictureBox40";
-            pictureBox40.Size = new Size(25, 25);
+            pictureBox40.Size = new Size(36, 42);
             pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox40.TabIndex = 46;
             pictureBox40.TabStop = false;
@@ -667,9 +691,10 @@
             // pictureBox41
             // 
             pictureBox41.Image = PacMan.PacManResource.coin;
-            pictureBox41.Location = new Point(440, 593);
+            pictureBox41.Location = new Point(629, 988);
+            pictureBox41.Margin = new Padding(4, 5, 4, 5);
             pictureBox41.Name = "pictureBox41";
-            pictureBox41.Size = new Size(25, 25);
+            pictureBox41.Size = new Size(36, 42);
             pictureBox41.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox41.TabIndex = 45;
             pictureBox41.TabStop = false;
@@ -678,9 +703,10 @@
             // pictureBox42
             // 
             pictureBox42.Image = PacMan.PacManResource.coin;
-            pictureBox42.Location = new Point(409, 593);
+            pictureBox42.Location = new Point(584, 988);
+            pictureBox42.Margin = new Padding(4, 5, 4, 5);
             pictureBox42.Name = "pictureBox42";
-            pictureBox42.Size = new Size(25, 25);
+            pictureBox42.Size = new Size(36, 42);
             pictureBox42.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox42.TabIndex = 44;
             pictureBox42.TabStop = false;
@@ -689,9 +715,10 @@
             // pictureBox43
             // 
             pictureBox43.Image = PacMan.PacManResource.coin;
-            pictureBox43.Location = new Point(847, 345);
+            pictureBox43.Location = new Point(1210, 575);
+            pictureBox43.Margin = new Padding(4, 5, 4, 5);
             pictureBox43.Name = "pictureBox43";
-            pictureBox43.Size = new Size(25, 25);
+            pictureBox43.Size = new Size(36, 42);
             pictureBox43.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox43.TabIndex = 51;
             pictureBox43.TabStop = false;
@@ -700,9 +727,10 @@
             // pictureBox44
             // 
             pictureBox44.Image = PacMan.PacManResource.coin;
-            pictureBox44.Location = new Point(816, 345);
+            pictureBox44.Location = new Point(1166, 575);
+            pictureBox44.Margin = new Padding(4, 5, 4, 5);
             pictureBox44.Name = "pictureBox44";
-            pictureBox44.Size = new Size(25, 25);
+            pictureBox44.Size = new Size(36, 42);
             pictureBox44.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox44.TabIndex = 50;
             pictureBox44.TabStop = false;
@@ -711,9 +739,10 @@
             // pictureBox45
             // 
             pictureBox45.Image = PacMan.PacManResource.coin;
-            pictureBox45.Location = new Point(786, 345);
+            pictureBox45.Location = new Point(1123, 575);
+            pictureBox45.Margin = new Padding(4, 5, 4, 5);
             pictureBox45.Name = "pictureBox45";
-            pictureBox45.Size = new Size(25, 25);
+            pictureBox45.Size = new Size(36, 42);
             pictureBox45.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox45.TabIndex = 49;
             pictureBox45.TabStop = false;
@@ -722,9 +751,10 @@
             // pictureBox46
             // 
             pictureBox46.Image = PacMan.PacManResource.coin;
-            pictureBox46.Location = new Point(755, 345);
+            pictureBox46.Location = new Point(1079, 575);
+            pictureBox46.Margin = new Padding(4, 5, 4, 5);
             pictureBox46.Name = "pictureBox46";
-            pictureBox46.Size = new Size(25, 25);
+            pictureBox46.Size = new Size(36, 42);
             pictureBox46.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox46.TabIndex = 48;
             pictureBox46.TabStop = false;
@@ -733,9 +763,10 @@
             // pictureBox47
             // 
             pictureBox47.Image = PacMan.PacManResource.coin;
-            pictureBox47.Location = new Point(970, 345);
+            pictureBox47.Location = new Point(1386, 575);
+            pictureBox47.Margin = new Padding(4, 5, 4, 5);
             pictureBox47.Name = "pictureBox47";
-            pictureBox47.Size = new Size(25, 25);
+            pictureBox47.Size = new Size(36, 42);
             pictureBox47.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox47.TabIndex = 55;
             pictureBox47.TabStop = false;
@@ -744,9 +775,10 @@
             // pictureBox48
             // 
             pictureBox48.Image = PacMan.PacManResource.coin;
-            pictureBox48.Location = new Point(939, 345);
+            pictureBox48.Location = new Point(1341, 575);
+            pictureBox48.Margin = new Padding(4, 5, 4, 5);
             pictureBox48.Name = "pictureBox48";
-            pictureBox48.Size = new Size(25, 25);
+            pictureBox48.Size = new Size(36, 42);
             pictureBox48.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox48.TabIndex = 54;
             pictureBox48.TabStop = false;
@@ -755,9 +787,10 @@
             // pictureBox49
             // 
             pictureBox49.Image = PacMan.PacManResource.coin;
-            pictureBox49.Location = new Point(909, 345);
+            pictureBox49.Location = new Point(1299, 575);
+            pictureBox49.Margin = new Padding(4, 5, 4, 5);
             pictureBox49.Name = "pictureBox49";
-            pictureBox49.Size = new Size(25, 25);
+            pictureBox49.Size = new Size(36, 42);
             pictureBox49.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox49.TabIndex = 53;
             pictureBox49.TabStop = false;
@@ -766,9 +799,10 @@
             // pictureBox50
             // 
             pictureBox50.Image = PacMan.PacManResource.coin;
-            pictureBox50.Location = new Point(878, 345);
+            pictureBox50.Location = new Point(1254, 575);
+            pictureBox50.Margin = new Padding(4, 5, 4, 5);
             pictureBox50.Name = "pictureBox50";
-            pictureBox50.Size = new Size(25, 25);
+            pictureBox50.Size = new Size(36, 42);
             pictureBox50.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox50.TabIndex = 52;
             pictureBox50.TabStop = false;
@@ -777,9 +811,10 @@
             // pictureBox51
             // 
             pictureBox51.Image = PacMan.PacManResource.coin;
-            pictureBox51.Location = new Point(1175, 232);
+            pictureBox51.Location = new Point(1679, 387);
+            pictureBox51.Margin = new Padding(4, 5, 4, 5);
             pictureBox51.Name = "pictureBox51";
-            pictureBox51.Size = new Size(25, 25);
+            pictureBox51.Size = new Size(36, 42);
             pictureBox51.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox51.TabIndex = 59;
             pictureBox51.TabStop = false;
@@ -788,9 +823,10 @@
             // pictureBox52
             // 
             pictureBox52.Image = PacMan.PacManResource.coin;
-            pictureBox52.Location = new Point(1144, 232);
+            pictureBox52.Location = new Point(1634, 387);
+            pictureBox52.Margin = new Padding(4, 5, 4, 5);
             pictureBox52.Name = "pictureBox52";
-            pictureBox52.Size = new Size(25, 25);
+            pictureBox52.Size = new Size(36, 42);
             pictureBox52.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox52.TabIndex = 58;
             pictureBox52.TabStop = false;
@@ -799,9 +835,10 @@
             // pictureBox53
             // 
             pictureBox53.Image = PacMan.PacManResource.coin;
-            pictureBox53.Location = new Point(1114, 232);
+            pictureBox53.Location = new Point(1591, 387);
+            pictureBox53.Margin = new Padding(4, 5, 4, 5);
             pictureBox53.Name = "pictureBox53";
-            pictureBox53.Size = new Size(25, 25);
+            pictureBox53.Size = new Size(36, 42);
             pictureBox53.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox53.TabIndex = 57;
             pictureBox53.TabStop = false;
@@ -810,9 +847,10 @@
             // pictureBox54
             // 
             pictureBox54.Image = PacMan.PacManResource.coin;
-            pictureBox54.Location = new Point(1083, 232);
+            pictureBox54.Location = new Point(1547, 387);
+            pictureBox54.Margin = new Padding(4, 5, 4, 5);
             pictureBox54.Name = "pictureBox54";
-            pictureBox54.Size = new Size(25, 25);
+            pictureBox54.Size = new Size(36, 42);
             pictureBox54.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox54.TabIndex = 56;
             pictureBox54.TabStop = false;
@@ -821,9 +859,10 @@
             // pictureBox55
             // 
             pictureBox55.Image = PacMan.PacManResource.coin;
-            pictureBox55.Location = new Point(955, 542);
+            pictureBox55.Location = new Point(1364, 903);
+            pictureBox55.Margin = new Padding(4, 5, 4, 5);
             pictureBox55.Name = "pictureBox55";
-            pictureBox55.Size = new Size(25, 25);
+            pictureBox55.Size = new Size(36, 42);
             pictureBox55.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox55.TabIndex = 60;
             pictureBox55.TabStop = false;
@@ -832,9 +871,10 @@
             // pictureBox56
             // 
             pictureBox56.Image = PacMan.PacManResource.coin;
-            pictureBox56.Location = new Point(955, 573);
+            pictureBox56.Location = new Point(1364, 955);
+            pictureBox56.Margin = new Padding(4, 5, 4, 5);
             pictureBox56.Name = "pictureBox56";
-            pictureBox56.Size = new Size(25, 25);
+            pictureBox56.Size = new Size(36, 42);
             pictureBox56.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox56.TabIndex = 61;
             pictureBox56.TabStop = false;
@@ -843,9 +883,10 @@
             // pictureBox57
             // 
             pictureBox57.Image = PacMan.PacManResource.coin;
-            pictureBox57.Location = new Point(955, 604);
+            pictureBox57.Location = new Point(1364, 1007);
+            pictureBox57.Margin = new Padding(4, 5, 4, 5);
             pictureBox57.Name = "pictureBox57";
-            pictureBox57.Size = new Size(25, 25);
+            pictureBox57.Size = new Size(36, 42);
             pictureBox57.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox57.TabIndex = 62;
             pictureBox57.TabStop = false;
@@ -854,9 +895,10 @@
             // pictureBox58
             // 
             pictureBox58.Image = PacMan.PacManResource.coin;
-            pictureBox58.Location = new Point(955, 635);
+            pictureBox58.Location = new Point(1364, 1058);
+            pictureBox58.Margin = new Padding(4, 5, 4, 5);
             pictureBox58.Name = "pictureBox58";
-            pictureBox58.Size = new Size(25, 25);
+            pictureBox58.Size = new Size(36, 42);
             pictureBox58.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox58.TabIndex = 63;
             pictureBox58.TabStop = false;
@@ -865,9 +907,10 @@
             // pictureBox59
             // 
             pictureBox59.Image = PacMan.PacManResource.coin;
-            pictureBox59.Location = new Point(380, 127);
+            pictureBox59.Location = new Point(543, 212);
+            pictureBox59.Margin = new Padding(4, 5, 4, 5);
             pictureBox59.Name = "pictureBox59";
-            pictureBox59.Size = new Size(25, 25);
+            pictureBox59.Size = new Size(36, 42);
             pictureBox59.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox59.TabIndex = 67;
             pictureBox59.TabStop = false;
@@ -876,9 +919,10 @@
             // pictureBox60
             // 
             pictureBox60.Image = PacMan.PacManResource.coin;
-            pictureBox60.Location = new Point(380, 96);
+            pictureBox60.Location = new Point(543, 160);
+            pictureBox60.Margin = new Padding(4, 5, 4, 5);
             pictureBox60.Name = "pictureBox60";
-            pictureBox60.Size = new Size(25, 25);
+            pictureBox60.Size = new Size(36, 42);
             pictureBox60.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox60.TabIndex = 66;
             pictureBox60.TabStop = false;
@@ -887,9 +931,10 @@
             // pictureBox61
             // 
             pictureBox61.Image = PacMan.PacManResource.coin;
-            pictureBox61.Location = new Point(380, 65);
+            pictureBox61.Location = new Point(543, 108);
+            pictureBox61.Margin = new Padding(4, 5, 4, 5);
             pictureBox61.Name = "pictureBox61";
-            pictureBox61.Size = new Size(25, 25);
+            pictureBox61.Size = new Size(36, 42);
             pictureBox61.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox61.TabIndex = 65;
             pictureBox61.TabStop = false;
@@ -898,9 +943,10 @@
             // pictureBox62
             // 
             pictureBox62.Image = PacMan.PacManResource.coin;
-            pictureBox62.Location = new Point(380, 34);
+            pictureBox62.Location = new Point(543, 57);
+            pictureBox62.Margin = new Padding(4, 5, 4, 5);
             pictureBox62.Name = "pictureBox62";
-            pictureBox62.Size = new Size(25, 25);
+            pictureBox62.Size = new Size(36, 42);
             pictureBox62.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox62.TabIndex = 64;
             pictureBox62.TabStop = false;
@@ -909,9 +955,10 @@
             // pictureBox63
             // 
             pictureBox63.Image = PacMan.PacManResource.coin;
-            pictureBox63.Location = new Point(244, 34);
+            pictureBox63.Location = new Point(349, 57);
+            pictureBox63.Margin = new Padding(4, 5, 4, 5);
             pictureBox63.Name = "pictureBox63";
-            pictureBox63.Size = new Size(25, 25);
+            pictureBox63.Size = new Size(36, 42);
             pictureBox63.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox63.TabIndex = 71;
             pictureBox63.TabStop = false;
@@ -920,9 +967,10 @@
             // pictureBox64
             // 
             pictureBox64.Image = PacMan.PacManResource.coin;
-            pictureBox64.Location = new Point(213, 34);
+            pictureBox64.Location = new Point(304, 57);
+            pictureBox64.Margin = new Padding(4, 5, 4, 5);
             pictureBox64.Name = "pictureBox64";
-            pictureBox64.Size = new Size(25, 25);
+            pictureBox64.Size = new Size(36, 42);
             pictureBox64.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox64.TabIndex = 70;
             pictureBox64.TabStop = false;
@@ -931,9 +979,10 @@
             // pictureBox65
             // 
             pictureBox65.Image = PacMan.PacManResource.coin;
-            pictureBox65.Location = new Point(183, 34);
+            pictureBox65.Location = new Point(261, 57);
+            pictureBox65.Margin = new Padding(4, 5, 4, 5);
             pictureBox65.Name = "pictureBox65";
-            pictureBox65.Size = new Size(25, 25);
+            pictureBox65.Size = new Size(36, 42);
             pictureBox65.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox65.TabIndex = 69;
             pictureBox65.TabStop = false;
@@ -942,9 +991,10 @@
             // pictureBox66
             // 
             pictureBox66.Image = PacMan.PacManResource.coin;
-            pictureBox66.Location = new Point(152, 34);
+            pictureBox66.Location = new Point(217, 57);
+            pictureBox66.Margin = new Padding(4, 5, 4, 5);
             pictureBox66.Name = "pictureBox66";
-            pictureBox66.Size = new Size(25, 25);
+            pictureBox66.Size = new Size(36, 42);
             pictureBox66.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox66.TabIndex = 68;
             pictureBox66.TabStop = false;
@@ -953,9 +1003,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(1276, 108);
+            label1.Location = new Point(1823, 180);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(59, 25);
             label1.TabIndex = 72;
             label1.Text = "label1";
             // 
@@ -965,18 +1016,19 @@
             score.BackColor = SystemColors.ActiveCaptionText;
             score.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point);
             score.ForeColor = SystemColors.ButtonHighlight;
-            score.Location = new Point(612, 9);
+            score.Location = new Point(874, 15);
+            score.Margin = new Padding(4, 0, 4, 0);
             score.Name = "score";
-            score.Size = new Size(92, 29);
+            score.Size = new Size(137, 44);
             score.TabIndex = 73;
             score.Text = "Score: 0";
             // 
             // PacManGame
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1302, 683);
+            ClientSize = new Size(1860, 1138);
             Controls.Add(score);
             Controls.Add(label1);
             Controls.Add(pictureBox63);
@@ -1049,7 +1101,6 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Margin = new Padding(2);
             Name = "PacManGame";
             Text = "Pac_Man";
             KeyDown += keyisdown;

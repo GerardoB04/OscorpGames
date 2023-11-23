@@ -54,7 +54,7 @@
             gameThreeButton.Name = "gameThreeButton";
             gameThreeButton.Size = new Size(188, 85);
             gameThreeButton.TabIndex = 0;
-            gameThreeButton.Text = "Pac-Man";
+            gameThreeButton.Text = "Not Pac-Man";
             gameThreeButton.UseVisualStyleBackColor = true;
             gameThreeButton.Click += gameThreeButton_Click;
             // 
@@ -182,7 +182,7 @@
             // settingsToolStripMenuItem
             // 
             settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            settingsToolStripMenuItem.Size = new Size(270, 34);
+            settingsToolStripMenuItem.Size = new Size(178, 34);
             settingsToolStripMenuItem.Text = "Settings";
             settingsToolStripMenuItem.Click += settingsToolStripMenuItem_Click;
             // 
@@ -197,31 +197,31 @@
             // 
             highScoresToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { minesweeperToolStripMenuItem, snakeToolStripMenuItem, pacManToolStripMenuItem, tetrisToolStripMenuItem });
             highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            highScoresToolStripMenuItem.Size = new Size(270, 34);
+            highScoresToolStripMenuItem.Size = new Size(209, 34);
             highScoresToolStripMenuItem.Text = "High Scores";
             // 
             // minesweeperToolStripMenuItem
             // 
             minesweeperToolStripMenuItem.Name = "minesweeperToolStripMenuItem";
-            minesweeperToolStripMenuItem.Size = new Size(270, 34);
+            minesweeperToolStripMenuItem.Size = new Size(218, 34);
             minesweeperToolStripMenuItem.Text = "Minesweeper";
             // 
             // snakeToolStripMenuItem
             // 
             snakeToolStripMenuItem.Name = "snakeToolStripMenuItem";
-            snakeToolStripMenuItem.Size = new Size(270, 34);
+            snakeToolStripMenuItem.Size = new Size(218, 34);
             snakeToolStripMenuItem.Text = "Snake";
             // 
             // pacManToolStripMenuItem
             // 
             pacManToolStripMenuItem.Name = "pacManToolStripMenuItem";
-            pacManToolStripMenuItem.Size = new Size(270, 34);
+            pacManToolStripMenuItem.Size = new Size(218, 34);
             pacManToolStripMenuItem.Text = "Pac-Man";
             // 
             // tetrisToolStripMenuItem
             // 
             tetrisToolStripMenuItem.Name = "tetrisToolStripMenuItem";
-            tetrisToolStripMenuItem.Size = new Size(270, 34);
+            tetrisToolStripMenuItem.Size = new Size(218, 34);
             tetrisToolStripMenuItem.Text = "Tetris";
             // 
             // Menu

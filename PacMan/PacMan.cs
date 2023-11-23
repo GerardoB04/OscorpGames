@@ -148,18 +148,18 @@ namespace OscorpGames.Pac_Man
 
             if (pacman.Left < -10)
             {
-                pacman.Left = 1328;
+                pacman.Left = this.Width + 10;
             }
-            if (pacman.Left > 1328)
+            if (pacman.Left > this.Width + 10)
             {
                 pacman.Left = -10;
             }
 
             if (pacman.Top < -10)
             {
-                pacman.Top = 732;
+                pacman.Top = this.Height + 10;
             }
-            if (pacman.Top > 732)
+            if (pacman.Top > this.Height + 10)
             {
                 pacman.Top = 0;
             }
