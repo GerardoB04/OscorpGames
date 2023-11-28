@@ -1,4 +1,5 @@
-namespace OscorpGames {
+namespace OscorpGames
+{
     public partial class Menu : Form
     {
         public Menu()
@@ -29,6 +30,11 @@ namespace OscorpGames {
         private void gameOneButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gameTwoButton_Click(object sender, EventArgs e)
+        {
+            OpenGame(new SnakeGame.Snake());
         }
     }
 }

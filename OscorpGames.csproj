@@ -9,8 +9,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Snake\old code\**" />
+    <EmbeddedResource Remove="Snake\old code\**" />
+    <None Remove="Snake\old code\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Minesweeper\Images\" />
     <Folder Include="Snake\Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Menu\OscorpGames.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

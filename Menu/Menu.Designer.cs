@@ -1,20 +1,24 @@
-﻿namespace OscorpGames {
-	partial class Menu {
-		/// <summary>
-		///  Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+﻿namespace OscorpGames
+{
+    partial class Menu
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		///  Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing) {
-			if(disposing && (components != null)) {
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
         #region Windows Form Designer generated code
 
@@ -40,9 +44,10 @@
             // 
             // gameThreeButton
             // 
-            gameThreeButton.Location = new Point(212, 465);
+            gameThreeButton.Location = new Point(148, 279);
+            gameThreeButton.Margin = new Padding(2, 2, 2, 2);
             gameThreeButton.Name = "gameThreeButton";
-            gameThreeButton.Size = new Size(188, 85);
+            gameThreeButton.Size = new Size(132, 51);
             gameThreeButton.TabIndex = 0;
             gameThreeButton.Text = "Pac-Man";
             gameThreeButton.UseVisualStyleBackColor = true;
@@ -51,17 +56,19 @@
             // 
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            titleLabel.Location = new Point(254, 49);
+            titleLabel.Location = new Point(178, 29);
+            titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(481, 106);
+            titleLabel.Size = new Size(322, 72);
             titleLabel.TabIndex = 1;
             titleLabel.Text = "MINIGAMES";
             // 
             // gameOneButton
             // 
-            gameOneButton.Location = new Point(212, 249);
+            gameOneButton.Location = new Point(148, 149);
+            gameOneButton.Margin = new Padding(2, 2, 2, 2);
             gameOneButton.Name = "gameOneButton";
-            gameOneButton.Size = new Size(188, 85);
+            gameOneButton.Size = new Size(132, 51);
             gameOneButton.TabIndex = 2;
             gameOneButton.Text = "Minesweeper";
             gameOneButton.UseVisualStyleBackColor = true;
@@ -69,27 +76,31 @@
             // 
             // gameTwoButton
             // 
-            gameTwoButton.Location = new Point(603, 249);
+            gameTwoButton.Location = new Point(422, 149);
+            gameTwoButton.Margin = new Padding(2, 2, 2, 2);
             gameTwoButton.Name = "gameTwoButton";
-            gameTwoButton.Size = new Size(188, 85);
+            gameTwoButton.Size = new Size(132, 51);
             gameTwoButton.TabIndex = 3;
             gameTwoButton.Text = "Snake";
             gameTwoButton.UseVisualStyleBackColor = true;
+            gameTwoButton.Click += gameTwoButton_Click;
             // 
             // gameFourButton
             // 
-            gameFourButton.Location = new Point(603, 465);
+            gameFourButton.Location = new Point(422, 279);
+            gameFourButton.Margin = new Padding(2, 2, 2, 2);
             gameFourButton.Name = "gameFourButton";
-            gameFourButton.Size = new Size(188, 85);
+            gameFourButton.Size = new Size(132, 51);
             gameFourButton.TabIndex = 4;
             gameFourButton.Text = "Tetris";
             gameFourButton.UseVisualStyleBackColor = true;
             // 
             // exitButton
             // 
-            exitButton.Location = new Point(883, 761);
+            exitButton.Location = new Point(618, 457);
+            exitButton.Margin = new Padding(2, 2, 2, 2);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(112, 34);
+            exitButton.Size = new Size(78, 20);
             exitButton.TabIndex = 5;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = true;
@@ -98,62 +109,68 @@
             // creatorLabel1
             // 
             creatorLabel1.AutoSize = true;
-            creatorLabel1.Location = new Point(12, 612);
+            creatorLabel1.Location = new Point(8, 367);
+            creatorLabel1.Margin = new Padding(2, 0, 2, 0);
             creatorLabel1.Name = "creatorLabel1";
-            creatorLabel1.Size = new Size(113, 25);
+            creatorLabel1.Size = new Size(75, 15);
             creatorLabel1.TabIndex = 6;
             creatorLabel1.Text = "CREATED BY:";
             // 
             // teamMemberLabel5
             // 
             teamMemberLabel5.AutoSize = true;
-            teamMemberLabel5.Location = new Point(12, 737);
+            teamMemberLabel5.Location = new Point(8, 442);
+            teamMemberLabel5.Margin = new Padding(2, 0, 2, 0);
             teamMemberLabel5.Name = "teamMemberLabel5";
-            teamMemberLabel5.Size = new Size(173, 25);
+            teamMemberLabel5.Size = new Size(112, 15);
             teamMemberLabel5.TabIndex = 8;
             teamMemberLabel5.Text = "GERARDO BARAJAS";
             // 
             // teamMemberLabel4
             // 
             teamMemberLabel4.AutoSize = true;
-            teamMemberLabel4.Location = new Point(12, 712);
+            teamMemberLabel4.Location = new Point(8, 427);
+            teamMemberLabel4.Margin = new Padding(2, 0, 2, 0);
             teamMemberLabel4.Name = "teamMemberLabel4";
-            teamMemberLabel4.Size = new Size(117, 25);
+            teamMemberLabel4.Size = new Size(76, 15);
             teamMemberLabel4.TabIndex = 9;
             teamMemberLabel4.Text = "CURTIS LANE";
             // 
             // teamMemberLabel3
             // 
             teamMemberLabel3.AutoSize = true;
-            teamMemberLabel3.Location = new Point(12, 687);
+            teamMemberLabel3.Location = new Point(8, 412);
+            teamMemberLabel3.Margin = new Padding(2, 0, 2, 0);
             teamMemberLabel3.Name = "teamMemberLabel3";
-            teamMemberLabel3.Size = new Size(149, 25);
+            teamMemberLabel3.Size = new Size(98, 15);
             teamMemberLabel3.TabIndex = 10;
             teamMemberLabel3.Text = "WYATT CROCKER";
             // 
             // teamMemberLabel2
             // 
             teamMemberLabel2.AutoSize = true;
-            teamMemberLabel2.Location = new Point(12, 662);
+            teamMemberLabel2.Location = new Point(8, 397);
+            teamMemberLabel2.Margin = new Padding(2, 0, 2, 0);
             teamMemberLabel2.Name = "teamMemberLabel2";
-            teamMemberLabel2.Size = new Size(163, 25);
+            teamMemberLabel2.Size = new Size(106, 15);
             teamMemberLabel2.TabIndex = 11;
             teamMemberLabel2.Text = "SURYA NANDEESH";
             // 
             // teamMemberLabel1
             // 
             teamMemberLabel1.AutoSize = true;
-            teamMemberLabel1.Location = new Point(12, 637);
+            teamMemberLabel1.Location = new Point(8, 382);
+            teamMemberLabel1.Margin = new Padding(2, 0, 2, 0);
             teamMemberLabel1.Name = "teamMemberLabel1";
-            teamMemberLabel1.Size = new Size(133, 25);
+            teamMemberLabel1.Size = new Size(87, 15);
             teamMemberLabel1.TabIndex = 12;
             teamMemberLabel1.Text = "COLLIN GREISS";
             // 
-            // Main
+            // Menu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1007, 807);
+            ClientSize = new Size(705, 484);
             Controls.Add(teamMemberLabel1);
             Controls.Add(teamMemberLabel2);
             Controls.Add(teamMemberLabel3);
@@ -166,7 +183,8 @@
             Controls.Add(gameOneButton);
             Controls.Add(titleLabel);
             Controls.Add(gameThreeButton);
-            Name = "Main";
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "Menu";
             Text = "Minigames";
             Load += MainMenu_Load;
             ResumeLayout(false);
@@ -176,16 +194,16 @@
         #endregion
 
         private Button gameThreeButton;
-		private Label titleLabel;
-		private Button gameOneButton;
-		private Button gameTwoButton;
-		private Button gameFourButton;
-		private Button exitButton;
-		private Label creatorLabel1;
-		private Label teamMemberLabel5;
-		private Label teamMemberLabel4;
-		private Label teamMemberLabel3;
-		private Label teamMemberLabel2;
-		private Label teamMemberLabel1;
-	}
+        private Label titleLabel;
+        private Button gameOneButton;
+        private Button gameTwoButton;
+        private Button gameFourButton;
+        private Button exitButton;
+        private Label creatorLabel1;
+        private Label teamMemberLabel5;
+        private Label teamMemberLabel4;
+        private Label teamMemberLabel3;
+        private Label teamMemberLabel2;
+        private Label teamMemberLabel1;
+    }
 }
