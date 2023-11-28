@@ -15,7 +15,7 @@ namespace OscorpGames.Pac_Man
     {
         bool goup, godown, goleft, goright, isGameOver;
 
-        int scoreCount, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY, redGhostX, redGhostY, yellowGhostX, yellowGhostY;
+        int scoreCount, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY, redGhostX, redGhostY, yellowGhostX, yellowGhostY, totalCoins, timeSeconds, timeTicks;
         public PacManGame()
         {
             InitializeComponent();
@@ -74,7 +74,18 @@ namespace OscorpGames.Pac_Man
 
         private void resetGame()
         {
-
+            string filePath = "PacManScores.txt";
+            if (!System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Create(filePath);
+                using (StreamWriter sw = new StreamWriter(filePath))
+                {
+                    sw.WriteLine("9999");
+                    sw.WriteLine("9999");
+                    sw.WriteLine("9999");
+                }
+            }
+            readLowTimes();
             score.Text = "Score: 0";
             scoreCount = 0;
 
@@ -105,8 +116,42 @@ namespace OscorpGames.Pac_Man
                 }
             }
 
-
+            foreach(Control x in this.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if ((string)x.Tag == "coin")
+                    {
+                        totalCoins++;
+                    }
+                }
+            }
             timer1.Start();
+        }
+
+        private void readLowTimes()
+        {
+            string[] lines = File.ReadAllLines("PacManScores.txt");
+
+            LowTime1.Text = "1)" + lines[0];
+            LowTime2.Text = "2)" + lines[1];
+            LowTime3.Text = "3)" + lines[2];
+        }
+        private void writeLowTimes()
+        {
+            string[] lines = File.ReadAllLines("PacManScores.txt");
+
+            int low1 = int.Parse(lines[0]);
+            int low2 = int.Parse(lines[1]);
+            int low3 = int.Parse(lines[2]);
+            int[] times = { low1, low2, low3, timeSeconds };
+            Array.Sort(times);
+            using (StreamWriter sw = new StreamWriter("PacManScores.txt"))
+            {
+                sw.WriteLine(times[0]);
+                sw.WriteLine(times[1]);
+                sw.WriteLine(times[2]);
+            }
         }
 
         private void gameOver(string message)
@@ -115,9 +160,10 @@ namespace OscorpGames.Pac_Man
             isGameOver = true;
 
             timer1.Stop();
-
             score.Text = "Score: " + scoreCount;
-
+            writeLowTimes();
+            timeSeconds = 0;
+            timeTicks = 0;
             MessageBox.Show(message);
         }
         private bool IntersectsWithWall(PictureBox picture)
@@ -139,6 +185,10 @@ namespace OscorpGames.Pac_Man
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timeTicks += 1;
+            timeSeconds = timeTicks / (1000/timer1.Interval);
+            time_Lbl.Text = "Time: " + timeSeconds;
+
             pacBBTop.Location = new Point(pacman.Location.X, pacman.Location.Y - 15);
             pacBBBottom.Location = new Point(pacman.Location.X, pacman.Location.Y + 64);
             pacBBLeft.Location = new Point(pacman.Location.X - 15, pacman.Location.Y);
@@ -304,7 +354,7 @@ namespace OscorpGames.Pac_Man
             {
                 pinkGhost.Top = 0;
             }
-            if (scoreCount == 56)
+            if (scoreCount == totalCoins)
             {
                 gameOver("You Win!");
             }

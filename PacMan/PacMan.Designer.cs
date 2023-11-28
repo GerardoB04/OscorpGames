@@ -75,6 +75,57 @@
             pictureBox33 = new PictureBox();
             pictureBox34 = new PictureBox();
             pictureBox35 = new PictureBox();
+            pictureBox36 = new PictureBox();
+            pictureBox37 = new PictureBox();
+            pictureBox38 = new PictureBox();
+            pictureBox40 = new PictureBox();
+            pictureBox42 = new PictureBox();
+            pictureBox43 = new PictureBox();
+            pictureBox45 = new PictureBox();
+            pictureBox46 = new PictureBox();
+            pictureBox48 = new PictureBox();
+            pictureBox52 = new PictureBox();
+            pictureBox53 = new PictureBox();
+            pictureBox54 = new PictureBox();
+            pictureBox57 = new PictureBox();
+            pictureBox49 = new PictureBox();
+            pictureBox58 = new PictureBox();
+            pictureBox60 = new PictureBox();
+            pictureBox61 = new PictureBox();
+            pictureBox63 = new PictureBox();
+            pictureBox64 = new PictureBox();
+            pictureBox66 = new PictureBox();
+            pictureBox67 = new PictureBox();
+            pictureBox69 = new PictureBox();
+            pictureBox71 = new PictureBox();
+            pictureBox72 = new PictureBox();
+            pictureBox39 = new PictureBox();
+            pictureBox41 = new PictureBox();
+            pictureBox44 = new PictureBox();
+            pictureBox47 = new PictureBox();
+            pictureBox50 = new PictureBox();
+            pictureBox51 = new PictureBox();
+            pictureBox55 = new PictureBox();
+            pictureBox56 = new PictureBox();
+            pictureBox59 = new PictureBox();
+            pictureBox62 = new PictureBox();
+            pictureBox65 = new PictureBox();
+            pictureBox68 = new PictureBox();
+            pictureBox70 = new PictureBox();
+            pictureBox73 = new PictureBox();
+            pictureBox74 = new PictureBox();
+            pictureBox75 = new PictureBox();
+            pictureBox76 = new PictureBox();
+            pictureBox77 = new PictureBox();
+            pictureBox78 = new PictureBox();
+            pictureBox79 = new PictureBox();
+            pictureBox80 = new PictureBox();
+            pictureBox81 = new PictureBox();
+            label2 = new Label();
+            LowTime1 = new Label();
+            LowTime2 = new Label();
+            LowTime3 = new Label();
+            time_Lbl = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pacman).BeginInit();
             ((System.ComponentModel.ISupportInitialize)yellowGhost).BeginInit();
@@ -118,6 +169,52 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox33).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox34).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox35).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox42).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox43).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox45).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox46).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox48).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox52).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox53).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox54).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox57).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox49).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox58).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox60).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox61).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox63).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox64).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox66).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox67).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox69).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox71).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox72).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox41).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox44).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox47).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox50).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox51).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox55).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox56).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox59).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox62).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox65).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox68).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox70).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox73).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox74).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox75).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox76).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox77).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox78).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox79).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox80).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox81).BeginInit();
             SuspendLayout();
             // 
             // pictureBox8
@@ -159,7 +256,7 @@
             // redGhost
             // 
             redGhost.Image = PacMan.PacManResource.red_guy;
-            redGhost.Location = new Point(931, 772);
+            redGhost.Location = new Point(1515, 791);
             redGhost.Margin = new Padding(4, 5, 4, 5);
             redGhost.Name = "redGhost";
             redGhost.Size = new Size(64, 100);
@@ -189,7 +286,7 @@
             // pictureBox31
             // 
             pictureBox31.Image = PacMan.PacManResource.coin;
-            pictureBox31.Location = new Point(959, 297);
+            pictureBox31.Location = new Point(83, 85);
             pictureBox31.Margin = new Padding(4, 5, 4, 5);
             pictureBox31.Name = "pictureBox31";
             pictureBox31.Size = new Size(36, 42);
@@ -214,7 +311,7 @@
             score.BackColor = SystemColors.ActiveCaptionText;
             score.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point);
             score.ForeColor = SystemColors.ButtonHighlight;
-            score.Location = new Point(651, 66);
+            score.Location = new Point(1255, 233);
             score.Margin = new Padding(4, 0, 4, 0);
             score.Name = "score";
             score.Size = new Size(137, 44);
@@ -592,12 +689,670 @@
             pictureBox35.TabStop = false;
             pictureBox35.Tag = "wall";
             // 
+            // pictureBox36
+            // 
+            pictureBox36.Image = PacMan.PacManResource.coin;
+            pictureBox36.Location = new Point(492, 85);
+            pictureBox36.Margin = new Padding(4, 5, 4, 5);
+            pictureBox36.Name = "pictureBox36";
+            pictureBox36.Size = new Size(36, 42);
+            pictureBox36.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox36.TabIndex = 121;
+            pictureBox36.TabStop = false;
+            pictureBox36.Tag = "coin";
+            // 
+            // pictureBox37
+            // 
+            pictureBox37.Image = PacMan.PacManResource.coin;
+            pictureBox37.Location = new Point(278, 85);
+            pictureBox37.Margin = new Padding(4, 5, 4, 5);
+            pictureBox37.Name = "pictureBox37";
+            pictureBox37.Size = new Size(36, 42);
+            pictureBox37.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox37.TabIndex = 122;
+            pictureBox37.TabStop = false;
+            pictureBox37.Tag = "coin";
+            // 
+            // pictureBox38
+            // 
+            pictureBox38.Image = PacMan.PacManResource.coin;
+            pictureBox38.Location = new Point(578, 689);
+            pictureBox38.Margin = new Padding(4, 5, 4, 5);
+            pictureBox38.Name = "pictureBox38";
+            pictureBox38.Size = new Size(36, 42);
+            pictureBox38.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox38.TabIndex = 123;
+            pictureBox38.TabStop = false;
+            pictureBox38.Tag = "coin";
+            // 
+            // pictureBox40
+            // 
+            pictureBox40.Image = PacMan.PacManResource.coin;
+            pictureBox40.Location = new Point(578, 849);
+            pictureBox40.Margin = new Padding(4, 5, 4, 5);
+            pictureBox40.Name = "pictureBox40";
+            pictureBox40.Size = new Size(36, 42);
+            pictureBox40.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox40.TabIndex = 125;
+            pictureBox40.TabStop = false;
+            pictureBox40.Tag = "coin";
+            // 
+            // pictureBox42
+            // 
+            pictureBox42.Image = PacMan.PacManResource.coin;
+            pictureBox42.Location = new Point(83, 229);
+            pictureBox42.Margin = new Padding(4, 5, 4, 5);
+            pictureBox42.Name = "pictureBox42";
+            pictureBox42.Size = new Size(36, 42);
+            pictureBox42.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox42.TabIndex = 127;
+            pictureBox42.TabStop = false;
+            pictureBox42.Tag = "coin";
+            // 
+            // pictureBox43
+            // 
+            pictureBox43.Image = PacMan.PacManResource.coin;
+            pictureBox43.Location = new Point(704, 85);
+            pictureBox43.Margin = new Padding(4, 5, 4, 5);
+            pictureBox43.Name = "pictureBox43";
+            pictureBox43.Size = new Size(36, 42);
+            pictureBox43.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox43.TabIndex = 128;
+            pictureBox43.TabStop = false;
+            pictureBox43.Tag = "coin";
+            // 
+            // pictureBox45
+            // 
+            pictureBox45.Image = PacMan.PacManResource.coin;
+            pictureBox45.Location = new Point(1274, 810);
+            pictureBox45.Margin = new Padding(4, 5, 4, 5);
+            pictureBox45.Name = "pictureBox45";
+            pictureBox45.Size = new Size(36, 42);
+            pictureBox45.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox45.TabIndex = 130;
+            pictureBox45.TabStop = false;
+            pictureBox45.Tag = "coin";
+            // 
+            // pictureBox46
+            // 
+            pictureBox46.Image = PacMan.PacManResource.coin;
+            pictureBox46.Location = new Point(902, 509);
+            pictureBox46.Margin = new Padding(4, 5, 4, 5);
+            pictureBox46.Name = "pictureBox46";
+            pictureBox46.Size = new Size(36, 42);
+            pictureBox46.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox46.TabIndex = 131;
+            pictureBox46.TabStop = false;
+            pictureBox46.Tag = "coin";
+            // 
+            // pictureBox48
+            // 
+            pictureBox48.Image = PacMan.PacManResource.coin;
+            pictureBox48.Location = new Point(1065, 509);
+            pictureBox48.Margin = new Padding(4, 5, 4, 5);
+            pictureBox48.Name = "pictureBox48";
+            pictureBox48.Size = new Size(36, 42);
+            pictureBox48.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox48.TabIndex = 133;
+            pictureBox48.TabStop = false;
+            pictureBox48.Tag = "coin";
+            // 
+            // pictureBox52
+            // 
+            pictureBox52.Image = PacMan.PacManResource.coin;
+            pictureBox52.Location = new Point(899, 671);
+            pictureBox52.Margin = new Padding(4, 5, 4, 5);
+            pictureBox52.Name = "pictureBox52";
+            pictureBox52.Size = new Size(36, 42);
+            pictureBox52.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox52.TabIndex = 137;
+            pictureBox52.TabStop = false;
+            pictureBox52.Tag = "coin";
+            // 
+            // pictureBox53
+            // 
+            pictureBox53.Image = PacMan.PacManResource.coin;
+            pictureBox53.Location = new Point(1065, 671);
+            pictureBox53.Margin = new Padding(4, 5, 4, 5);
+            pictureBox53.Name = "pictureBox53";
+            pictureBox53.Size = new Size(36, 42);
+            pictureBox53.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox53.TabIndex = 138;
+            pictureBox53.TabStop = false;
+            pictureBox53.Tag = "coin";
+            // 
+            // pictureBox54
+            // 
+            pictureBox54.Image = PacMan.PacManResource.coin;
+            pictureBox54.Location = new Point(1407, 671);
+            pictureBox54.Margin = new Padding(4, 5, 4, 5);
+            pictureBox54.Name = "pictureBox54";
+            pictureBox54.Size = new Size(36, 42);
+            pictureBox54.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox54.TabIndex = 142;
+            pictureBox54.TabStop = false;
+            pictureBox54.Tag = "coin";
+            // 
+            // pictureBox57
+            // 
+            pictureBox57.Image = PacMan.PacManResource.coin;
+            pictureBox57.Location = new Point(1239, 671);
+            pictureBox57.Margin = new Padding(4, 5, 4, 5);
+            pictureBox57.Name = "pictureBox57";
+            pictureBox57.Size = new Size(36, 42);
+            pictureBox57.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox57.TabIndex = 139;
+            pictureBox57.TabStop = false;
+            pictureBox57.Tag = "coin";
+            // 
+            // pictureBox49
+            // 
+            pictureBox49.Image = PacMan.PacManResource.coin;
+            pictureBox49.Location = new Point(1095, 810);
+            pictureBox49.Margin = new Padding(4, 5, 4, 5);
+            pictureBox49.Name = "pictureBox49";
+            pictureBox49.Size = new Size(36, 42);
+            pictureBox49.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox49.TabIndex = 145;
+            pictureBox49.TabStop = false;
+            pictureBox49.Tag = "coin";
+            // 
+            // pictureBox58
+            // 
+            pictureBox58.Image = PacMan.PacManResource.coin;
+            pictureBox58.Location = new Point(1117, 1029);
+            pictureBox58.Margin = new Padding(4, 5, 4, 5);
+            pictureBox58.Name = "pictureBox58";
+            pictureBox58.Size = new Size(36, 42);
+            pictureBox58.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox58.TabIndex = 149;
+            pictureBox58.TabStop = false;
+            pictureBox58.Tag = "coin";
+            // 
+            // pictureBox60
+            // 
+            pictureBox60.Image = PacMan.PacManResource.coin;
+            pictureBox60.Location = new Point(899, 1029);
+            pictureBox60.Margin = new Padding(4, 5, 4, 5);
+            pictureBox60.Name = "pictureBox60";
+            pictureBox60.Size = new Size(36, 42);
+            pictureBox60.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox60.TabIndex = 148;
+            pictureBox60.TabStop = false;
+            pictureBox60.Tag = "coin";
+            // 
+            // pictureBox61
+            // 
+            pictureBox61.Image = PacMan.PacManResource.coin;
+            pictureBox61.Location = new Point(682, 1029);
+            pictureBox61.Margin = new Padding(4, 5, 4, 5);
+            pictureBox61.Name = "pictureBox61";
+            pictureBox61.Size = new Size(36, 42);
+            pictureBox61.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox61.TabIndex = 147;
+            pictureBox61.TabStop = false;
+            pictureBox61.Tag = "coin";
+            // 
+            // pictureBox63
+            // 
+            pictureBox63.Image = PacMan.PacManResource.coin;
+            pictureBox63.Location = new Point(468, 1029);
+            pictureBox63.Margin = new Padding(4, 5, 4, 5);
+            pictureBox63.Name = "pictureBox63";
+            pictureBox63.Size = new Size(36, 42);
+            pictureBox63.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox63.TabIndex = 152;
+            pictureBox63.TabStop = false;
+            pictureBox63.Tag = "coin";
+            // 
+            // pictureBox64
+            // 
+            pictureBox64.Image = PacMan.PacManResource.coin;
+            pictureBox64.Location = new Point(578, 526);
+            pictureBox64.Margin = new Padding(4, 5, 4, 5);
+            pictureBox64.Name = "pictureBox64";
+            pictureBox64.Size = new Size(36, 42);
+            pictureBox64.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox64.TabIndex = 153;
+            pictureBox64.TabStop = false;
+            pictureBox64.Tag = "coin";
+            // 
+            // pictureBox66
+            // 
+            pictureBox66.Image = PacMan.PacManResource.coin;
+            pictureBox66.Location = new Point(422, 526);
+            pictureBox66.Margin = new Padding(4, 5, 4, 5);
+            pictureBox66.Name = "pictureBox66";
+            pictureBox66.Size = new Size(36, 42);
+            pictureBox66.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox66.TabIndex = 155;
+            pictureBox66.TabStop = false;
+            pictureBox66.Tag = "coin";
+            // 
+            // pictureBox67
+            // 
+            pictureBox67.Image = PacMan.PacManResource.coin;
+            pictureBox67.Location = new Point(239, 526);
+            pictureBox67.Margin = new Padding(4, 5, 4, 5);
+            pictureBox67.Name = "pictureBox67";
+            pictureBox67.Size = new Size(36, 42);
+            pictureBox67.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox67.TabIndex = 156;
+            pictureBox67.TabStop = false;
+            pictureBox67.Tag = "coin";
+            // 
+            // pictureBox69
+            // 
+            pictureBox69.Image = PacMan.PacManResource.coin;
+            pictureBox69.Location = new Point(239, 689);
+            pictureBox69.Margin = new Padding(4, 5, 4, 5);
+            pictureBox69.Name = "pictureBox69";
+            pictureBox69.Size = new Size(36, 42);
+            pictureBox69.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox69.TabIndex = 158;
+            pictureBox69.TabStop = false;
+            pictureBox69.Tag = "coin";
+            // 
+            // pictureBox71
+            // 
+            pictureBox71.Image = PacMan.PacManResource.coin;
+            pictureBox71.Location = new Point(68, 791);
+            pictureBox71.Margin = new Padding(4, 5, 4, 5);
+            pictureBox71.Name = "pictureBox71";
+            pictureBox71.Size = new Size(36, 42);
+            pictureBox71.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox71.TabIndex = 160;
+            pictureBox71.TabStop = false;
+            pictureBox71.Tag = "coin";
+            // 
+            // pictureBox72
+            // 
+            pictureBox72.Image = PacMan.PacManResource.coin;
+            pictureBox72.Location = new Point(68, 616);
+            pictureBox72.Margin = new Padding(4, 5, 4, 5);
+            pictureBox72.Name = "pictureBox72";
+            pictureBox72.Size = new Size(36, 42);
+            pictureBox72.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox72.TabIndex = 161;
+            pictureBox72.TabStop = false;
+            pictureBox72.Tag = "coin";
+            // 
+            // pictureBox39
+            // 
+            pictureBox39.Image = PacMan.PacManResource.coin;
+            pictureBox39.Location = new Point(404, 689);
+            pictureBox39.Margin = new Padding(4, 5, 4, 5);
+            pictureBox39.Name = "pictureBox39";
+            pictureBox39.Size = new Size(36, 42);
+            pictureBox39.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox39.TabIndex = 162;
+            pictureBox39.TabStop = false;
+            pictureBox39.Tag = "coin";
+            // 
+            // pictureBox41
+            // 
+            pictureBox41.Image = PacMan.PacManResource.coin;
+            pictureBox41.Location = new Point(404, 849);
+            pictureBox41.Margin = new Padding(4, 5, 4, 5);
+            pictureBox41.Name = "pictureBox41";
+            pictureBox41.Size = new Size(36, 42);
+            pictureBox41.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox41.TabIndex = 163;
+            pictureBox41.TabStop = false;
+            pictureBox41.Tag = "coin";
+            // 
+            // pictureBox44
+            // 
+            pictureBox44.Image = PacMan.PacManResource.coin;
+            pictureBox44.Location = new Point(239, 1029);
+            pictureBox44.Margin = new Padding(4, 5, 4, 5);
+            pictureBox44.Name = "pictureBox44";
+            pictureBox44.Size = new Size(36, 42);
+            pictureBox44.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox44.TabIndex = 164;
+            pictureBox44.TabStop = false;
+            pictureBox44.Tag = "coin";
+            // 
+            // pictureBox47
+            // 
+            pictureBox47.Image = PacMan.PacManResource.coin;
+            pictureBox47.Location = new Point(239, 925);
+            pictureBox47.Margin = new Padding(4, 5, 4, 5);
+            pictureBox47.Name = "pictureBox47";
+            pictureBox47.Size = new Size(36, 42);
+            pictureBox47.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox47.TabIndex = 165;
+            pictureBox47.TabStop = false;
+            pictureBox47.Tag = "coin";
+            // 
+            // pictureBox50
+            // 
+            pictureBox50.Image = PacMan.PacManResource.coin;
+            pictureBox50.Location = new Point(68, 981);
+            pictureBox50.Margin = new Padding(4, 5, 4, 5);
+            pictureBox50.Name = "pictureBox50";
+            pictureBox50.Size = new Size(36, 42);
+            pictureBox50.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox50.TabIndex = 166;
+            pictureBox50.TabStop = false;
+            pictureBox50.Tag = "coin";
+            // 
+            // pictureBox51
+            // 
+            pictureBox51.Image = PacMan.PacManResource.coin;
+            pictureBox51.Location = new Point(1737, 616);
+            pictureBox51.Margin = new Padding(4, 5, 4, 5);
+            pictureBox51.Name = "pictureBox51";
+            pictureBox51.Size = new Size(36, 42);
+            pictureBox51.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox51.TabIndex = 167;
+            pictureBox51.TabStop = false;
+            pictureBox51.Tag = "coin";
+            // 
+            // pictureBox55
+            // 
+            pictureBox55.Image = PacMan.PacManResource.coin;
+            pictureBox55.Location = new Point(1737, 941);
+            pictureBox55.Margin = new Padding(4, 5, 4, 5);
+            pictureBox55.Name = "pictureBox55";
+            pictureBox55.Size = new Size(36, 42);
+            pictureBox55.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox55.TabIndex = 169;
+            pictureBox55.TabStop = false;
+            pictureBox55.Tag = "coin";
+            // 
+            // pictureBox56
+            // 
+            pictureBox56.Image = PacMan.PacManResource.coin;
+            pictureBox56.Location = new Point(1737, 781);
+            pictureBox56.Margin = new Padding(4, 5, 4, 5);
+            pictureBox56.Name = "pictureBox56";
+            pictureBox56.Size = new Size(36, 42);
+            pictureBox56.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox56.TabIndex = 168;
+            pictureBox56.TabStop = false;
+            pictureBox56.Tag = "coin";
+            // 
+            // pictureBox59
+            // 
+            pictureBox59.Image = PacMan.PacManResource.coin;
+            pictureBox59.Location = new Point(1480, 1029);
+            pictureBox59.Margin = new Padding(4, 5, 4, 5);
+            pictureBox59.Name = "pictureBox59";
+            pictureBox59.Size = new Size(36, 42);
+            pictureBox59.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox59.TabIndex = 171;
+            pictureBox59.TabStop = false;
+            pictureBox59.Tag = "coin";
+            // 
+            // pictureBox62
+            // 
+            pictureBox62.Image = PacMan.PacManResource.coin;
+            pictureBox62.Location = new Point(1312, 1029);
+            pictureBox62.Margin = new Padding(4, 5, 4, 5);
+            pictureBox62.Name = "pictureBox62";
+            pictureBox62.Size = new Size(36, 42);
+            pictureBox62.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox62.TabIndex = 170;
+            pictureBox62.TabStop = false;
+            pictureBox62.Tag = "coin";
+            // 
+            // pictureBox65
+            // 
+            pictureBox65.Image = PacMan.PacManResource.coin;
+            pictureBox65.Location = new Point(1556, 229);
+            pictureBox65.Margin = new Padding(4, 5, 4, 5);
+            pictureBox65.Name = "pictureBox65";
+            pictureBox65.Size = new Size(36, 42);
+            pictureBox65.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox65.TabIndex = 175;
+            pictureBox65.TabStop = false;
+            pictureBox65.Tag = "coin";
+            // 
+            // pictureBox68
+            // 
+            pictureBox68.Image = PacMan.PacManResource.coin;
+            pictureBox68.Location = new Point(1556, 66);
+            pictureBox68.Margin = new Padding(4, 5, 4, 5);
+            pictureBox68.Name = "pictureBox68";
+            pictureBox68.Size = new Size(36, 42);
+            pictureBox68.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox68.TabIndex = 174;
+            pictureBox68.TabStop = false;
+            pictureBox68.Tag = "coin";
+            // 
+            // pictureBox70
+            // 
+            pictureBox70.Image = PacMan.PacManResource.coin;
+            pictureBox70.Location = new Point(1747, 149);
+            pictureBox70.Margin = new Padding(4, 5, 4, 5);
+            pictureBox70.Name = "pictureBox70";
+            pictureBox70.Size = new Size(36, 42);
+            pictureBox70.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox70.TabIndex = 173;
+            pictureBox70.TabStop = false;
+            pictureBox70.Tag = "coin";
+            // 
+            // pictureBox73
+            // 
+            pictureBox73.Image = PacMan.PacManResource.coin;
+            pictureBox73.Location = new Point(1337, 66);
+            pictureBox73.Margin = new Padding(4, 5, 4, 5);
+            pictureBox73.Name = "pictureBox73";
+            pictureBox73.Size = new Size(36, 42);
+            pictureBox73.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox73.TabIndex = 172;
+            pictureBox73.TabStop = false;
+            pictureBox73.Tag = "coin";
+            // 
+            // pictureBox74
+            // 
+            pictureBox74.Image = PacMan.PacManResource.coin;
+            pictureBox74.Location = new Point(870, 282);
+            pictureBox74.Margin = new Padding(4, 5, 4, 5);
+            pictureBox74.Name = "pictureBox74";
+            pictureBox74.Size = new Size(36, 42);
+            pictureBox74.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox74.TabIndex = 178;
+            pictureBox74.TabStop = false;
+            pictureBox74.Tag = "coin";
+            // 
+            // pictureBox75
+            // 
+            pictureBox75.Image = PacMan.PacManResource.coin;
+            pictureBox75.Location = new Point(1049, 282);
+            pictureBox75.Margin = new Padding(4, 5, 4, 5);
+            pictureBox75.Name = "pictureBox75";
+            pictureBox75.Size = new Size(36, 42);
+            pictureBox75.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox75.TabIndex = 177;
+            pictureBox75.TabStop = false;
+            pictureBox75.Tag = "coin";
+            // 
+            // pictureBox76
+            // 
+            pictureBox76.Image = PacMan.PacManResource.coin;
+            pictureBox76.Location = new Point(1221, 282);
+            pictureBox76.Margin = new Padding(4, 5, 4, 5);
+            pictureBox76.Name = "pictureBox76";
+            pictureBox76.Size = new Size(36, 42);
+            pictureBox76.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox76.TabIndex = 176;
+            pictureBox76.TabStop = false;
+            pictureBox76.Tag = "coin";
+            // 
+            // pictureBox77
+            // 
+            pictureBox77.Image = PacMan.PacManResource.coin;
+            pictureBox77.Location = new Point(1737, 377);
+            pictureBox77.Margin = new Padding(4, 5, 4, 5);
+            pictureBox77.Name = "pictureBox77";
+            pictureBox77.Size = new Size(36, 42);
+            pictureBox77.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox77.TabIndex = 180;
+            pictureBox77.TabStop = false;
+            pictureBox77.Tag = "coin";
+            // 
+            // pictureBox78
+            // 
+            pictureBox78.Image = PacMan.PacManResource.coin;
+            pictureBox78.Location = new Point(1569, 377);
+            pictureBox78.Margin = new Padding(4, 5, 4, 5);
+            pictureBox78.Name = "pictureBox78";
+            pictureBox78.Size = new Size(36, 42);
+            pictureBox78.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox78.TabIndex = 179;
+            pictureBox78.TabStop = false;
+            pictureBox78.Tag = "coin";
+            // 
+            // pictureBox79
+            // 
+            pictureBox79.Image = PacMan.PacManResource.coin;
+            pictureBox79.Location = new Point(737, 831);
+            pictureBox79.Margin = new Padding(4, 5, 4, 5);
+            pictureBox79.Name = "pictureBox79";
+            pictureBox79.Size = new Size(36, 42);
+            pictureBox79.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox79.TabIndex = 183;
+            pictureBox79.TabStop = false;
+            pictureBox79.Tag = "coin";
+            // 
+            // pictureBox80
+            // 
+            pictureBox80.Image = PacMan.PacManResource.coin;
+            pictureBox80.Location = new Point(737, 671);
+            pictureBox80.Margin = new Padding(4, 5, 4, 5);
+            pictureBox80.Name = "pictureBox80";
+            pictureBox80.Size = new Size(36, 42);
+            pictureBox80.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox80.TabIndex = 182;
+            pictureBox80.TabStop = false;
+            pictureBox80.Tag = "coin";
+            // 
+            // pictureBox81
+            // 
+            pictureBox81.Image = PacMan.PacManResource.coin;
+            pictureBox81.Location = new Point(737, 506);
+            pictureBox81.Margin = new Padding(4, 5, 4, 5);
+            pictureBox81.Name = "pictureBox81";
+            pictureBox81.Size = new Size(36, 42);
+            pictureBox81.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox81.TabIndex = 181;
+            pictureBox81.TabStop = false;
+            pictureBox81.Tag = "coin";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(1239, 329);
+            label2.Name = "label2";
+            label2.Size = new Size(167, 32);
+            label2.TabIndex = 184;
+            label2.Text = "Lowest Times";
+            // 
+            // LowTime1
+            // 
+            LowTime1.AutoSize = true;
+            LowTime1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime1.ForeColor = SystemColors.ButtonFace;
+            LowTime1.Location = new Point(1239, 387);
+            LowTime1.Name = "LowTime1";
+            LowTime1.Size = new Size(44, 32);
+            LowTime1.TabIndex = 185;
+            LowTime1.Text = "1) ";
+            // 
+            // LowTime2
+            // 
+            LowTime2.AutoSize = true;
+            LowTime2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime2.ForeColor = SystemColors.ButtonFace;
+            LowTime2.Location = new Point(1239, 448);
+            LowTime2.Name = "LowTime2";
+            LowTime2.Size = new Size(37, 32);
+            LowTime2.TabIndex = 186;
+            LowTime2.Text = "2)";
+            // 
+            // LowTime3
+            // 
+            LowTime3.AutoSize = true;
+            LowTime3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime3.ForeColor = SystemColors.ButtonFace;
+            LowTime3.Location = new Point(1239, 509);
+            LowTime3.Name = "LowTime3";
+            LowTime3.Size = new Size(37, 32);
+            LowTime3.TabIndex = 187;
+            LowTime3.Text = "3)";
+            // 
+            // time_Lbl
+            // 
+            time_Lbl.AutoSize = true;
+            time_Lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            time_Lbl.ForeColor = SystemColors.ButtonFace;
+            time_Lbl.Location = new Point(1105, 239);
+            time_Lbl.Name = "time_Lbl";
+            time_Lbl.Size = new Size(67, 32);
+            time_Lbl.TabIndex = 188;
+            time_Lbl.Text = "TIME";
+            // 
             // PacManGame
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1860, 1138);
+            Controls.Add(time_Lbl);
+            Controls.Add(LowTime3);
+            Controls.Add(LowTime2);
+            Controls.Add(LowTime1);
+            Controls.Add(label2);
+            Controls.Add(pictureBox79);
+            Controls.Add(pictureBox80);
+            Controls.Add(pictureBox81);
+            Controls.Add(pictureBox77);
+            Controls.Add(pictureBox78);
+            Controls.Add(pictureBox74);
+            Controls.Add(pictureBox75);
+            Controls.Add(pictureBox76);
+            Controls.Add(pictureBox65);
+            Controls.Add(pictureBox68);
+            Controls.Add(pictureBox70);
+            Controls.Add(pictureBox73);
+            Controls.Add(pictureBox59);
+            Controls.Add(pictureBox62);
+            Controls.Add(pictureBox55);
+            Controls.Add(pictureBox56);
+            Controls.Add(pictureBox51);
+            Controls.Add(pictureBox50);
+            Controls.Add(pictureBox47);
+            Controls.Add(pictureBox44);
+            Controls.Add(pictureBox41);
+            Controls.Add(pictureBox39);
+            Controls.Add(pictureBox72);
+            Controls.Add(pictureBox71);
+            Controls.Add(pictureBox69);
+            Controls.Add(pictureBox67);
+            Controls.Add(pictureBox66);
+            Controls.Add(pictureBox64);
+            Controls.Add(pictureBox63);
+            Controls.Add(pictureBox58);
+            Controls.Add(pictureBox60);
+            Controls.Add(pictureBox61);
+            Controls.Add(pictureBox49);
+            Controls.Add(pictureBox54);
+            Controls.Add(pictureBox57);
+            Controls.Add(pictureBox53);
+            Controls.Add(pictureBox52);
+            Controls.Add(pictureBox48);
+            Controls.Add(pictureBox46);
+            Controls.Add(pictureBox45);
+            Controls.Add(pictureBox43);
+            Controls.Add(pictureBox42);
+            Controls.Add(pictureBox40);
+            Controls.Add(pictureBox38);
+            Controls.Add(pictureBox37);
+            Controls.Add(pictureBox36);
             Controls.Add(score);
             Controls.Add(pinkGhost);
             Controls.Add(redGhost);
@@ -691,6 +1446,52 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox33).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox34).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox35).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox36).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox37).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox38).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox40).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox42).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox43).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox45).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox46).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox48).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox52).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox53).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox54).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox57).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox49).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox58).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox60).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox61).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox63).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox64).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox66).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox67).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox69).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox71).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox72).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox39).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox41).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox44).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox47).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox50).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox51).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox55).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox56).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox59).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox62).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox65).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox68).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox70).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox73).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox74).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox75).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox76).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox77).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox78).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox79).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox80).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox81).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -742,5 +1543,56 @@
         private PictureBox pictureBox33;
         private PictureBox pictureBox34;
         private PictureBox pictureBox35;
+        private PictureBox pictureBox36;
+        private PictureBox pictureBox37;
+        private PictureBox pictureBox38;
+        private PictureBox pictureBox40;
+        private PictureBox pictureBox42;
+        private PictureBox pictureBox43;
+        private PictureBox pictureBox45;
+        private PictureBox pictureBox46;
+        private PictureBox pictureBox48;
+        private PictureBox pictureBox52;
+        private PictureBox pictureBox53;
+        private PictureBox pictureBox54;
+        private PictureBox pictureBox57;
+        private PictureBox pictureBox49;
+        private PictureBox pictureBox58;
+        private PictureBox pictureBox60;
+        private PictureBox pictureBox61;
+        private PictureBox pictureBox63;
+        private PictureBox pictureBox64;
+        private PictureBox pictureBox66;
+        private PictureBox pictureBox67;
+        private PictureBox pictureBox69;
+        private PictureBox pictureBox71;
+        private PictureBox pictureBox72;
+        private PictureBox pictureBox39;
+        private PictureBox pictureBox41;
+        private PictureBox pictureBox44;
+        private PictureBox pictureBox47;
+        private PictureBox pictureBox50;
+        private PictureBox pictureBox51;
+        private PictureBox pictureBox55;
+        private PictureBox pictureBox56;
+        private PictureBox pictureBox59;
+        private PictureBox pictureBox62;
+        private PictureBox pictureBox65;
+        private PictureBox pictureBox68;
+        private PictureBox pictureBox70;
+        private PictureBox pictureBox73;
+        private PictureBox pictureBox74;
+        private PictureBox pictureBox75;
+        private PictureBox pictureBox76;
+        private PictureBox pictureBox77;
+        private PictureBox pictureBox78;
+        private PictureBox pictureBox79;
+        private PictureBox pictureBox80;
+        private PictureBox pictureBox81;
+        private Label label2;
+        private Label LowTime1;
+        private Label LowTime2;
+        private Label LowTime3;
+        private Label time_Lbl;
     }
 }
