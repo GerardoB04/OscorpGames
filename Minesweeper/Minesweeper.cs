@@ -32,7 +32,9 @@ namespace OscorpGames {
 		private const int MAX_WIDTH = 20;
 		private const int MAX_HEIGHT = 10;
 
-		private int width = 200, height = 100;
+		private const float MAX_BOMB_RATIO = 0.85f;
+
+		private int width = 16, height = 9;
 		private int numBombs = 30;
 		private bool[,] mineField;
 		private PictureBox[,] tiles;
@@ -50,6 +52,17 @@ namespace OscorpGames {
 			}
 		}
 
+		private int Time;
+		public int time {
+			get {
+				return Time;
+			}
+			set {
+				Time = value;
+				NotifyPropertyChanged();
+			}
+		}
+
 		public Minesweeper() {
 			InitializeComponent();
 
@@ -63,6 +76,7 @@ namespace OscorpGames {
 			bombAdjuster.Maximum = decimal.MaxValue;
 			bombAdjuster.Value = 30;
 			bombsLeftLabel.DataBindings.Add("Text", this, "currentNumBombs", false, DataSourceUpdateMode.OnPropertyChanged);
+			timeLeftLabel.DataBindings.Add("Text", this, "time", false, DataSourceUpdateMode.OnPropertyChanged);
 
 			StartGame();
 		}
@@ -75,15 +89,17 @@ namespace OscorpGames {
 				height = MAX_HEIGHT;
 			}
 
+			time = 0;
 			gameEnded = false;
 			winLoseLabel.Text = "";
+			scoreLeftLabel.Text = "";
 			bombField.Controls.Clear();
 			mineField = new bool[width, height];
 			tiles = new PictureBox[width, height];
 
 			currentNumBombs = numBombs;
-			if(currentNumBombs > ((width * height) * 0.9f)) {
-				currentNumBombs = (int) ((width * height) * 0.9f);
+			if(currentNumBombs > ((width * height) * MAX_BOMB_RATIO)) {
+				currentNumBombs = (int) ((width * height) * MAX_BOMB_RATIO);
 			}
 
 			bombsLeftLabel.Text = currentNumBombs.ToString();
@@ -116,7 +132,9 @@ namespace OscorpGames {
 				}
 			}
 
-#if _DEBUG
+			timer.Start();
+
+			#if _DEBUG
 			for(int i = 0; i < width; i++) {
 				for(int j = 0; j < height; j++) {
 					PictureBox tile = tiles[i, j];
@@ -127,7 +145,7 @@ namespace OscorpGames {
 					}
 				}
 			}
-#elif _RELEASE
+			#elif _RELEASE
 			for(int i = 0; i < width; i++) {
 				for(int j = 0; j < height; j++) {
 					if(CountSurroundingBombs(new Point(i, j)) == 0 && !mineField[i, j]) {
@@ -136,7 +154,7 @@ namespace OscorpGames {
 					}
 				}
 			}
-#endif
+			#endif
 		}
 
 		private int CountSurroundingBombs(Point location) {
@@ -237,13 +255,31 @@ namespace OscorpGames {
 
 		private void GameLost() {
 			gameEnded = true;
+			timer.Stop();
 			winLoseLabel.Text = "Unfortunately, you have clicked on a bomb and have lost the game.";
 		}
 
 		private void GameWon() {
 			if(AreFlagsCorrect()) {
 				gameEnded = true;
+				timer.Stop();
 				winLoseLabel.Text = "You have marked every bomb and won the game! Congratulations!";
+
+				// Calculate Score
+				int maxBombs = (int) (width * height * MAX_BOMB_RATIO);
+				float bombRatio = numBombs / (float) maxBombs;
+				float widthRatio = width / (float) MAX_WIDTH;
+				float heightRatio = height / (float) MAX_HEIGHT;
+
+				float timeMult;
+				if(time <= 180) {
+					timeMult = 1f;
+				} else {
+					timeMult = 1 - ((time - 180) * 0.001f);
+				}
+
+				float score = (bombRatio * 1000) * timeMult * widthRatio * heightRatio;
+				scoreLeftLabel.Text = score.ToString("0");
 			}
 		}
 
@@ -305,6 +341,7 @@ namespace OscorpGames {
 		}
 
 		private void restartButton_Click(object sender, EventArgs e) {
+			timer.Stop();
 			StartGame();
 		}
 
@@ -324,6 +361,15 @@ namespace OscorpGames {
 			if(PropertyChanged != null) {
 				PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+
+		private void timer_Tick(object sender, EventArgs e) {
+			time += 1;
+		}
+
+		private void minesweeper_Closed(object sender, FormClosedEventArgs e) {
+			timer.Stop();
+			timer.Enabled = false;
 		}
 	}
 }

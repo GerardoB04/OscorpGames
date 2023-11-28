@@ -23,6 +23,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+			components = new System.ComponentModel.Container();
 			bombField = new GroupBox();
 			restartButton = new Button();
 			widthAdjuster = new NumericUpDown();
@@ -34,6 +35,11 @@
 			winLoseLabel = new Label();
 			bombsLeftLabel = new Label();
 			bombsLabel = new Label();
+			timer = new System.Windows.Forms.Timer(components);
+			timeLabel = new Label();
+			timeLeftLabel = new Label();
+			scoreLabel = new Label();
+			scoreLeftLabel = new Label();
 			((System.ComponentModel.ISupportInitialize) widthAdjuster).BeginInit();
 			((System.ComponentModel.ISupportInitialize) heightAdjuster).BeginInit();
 			((System.ComponentModel.ISupportInitialize) bombAdjuster).BeginInit();
@@ -137,11 +143,57 @@
 			bombsLabel.TabIndex = 0;
 			bombsLabel.Text = "Flags left:";
 			// 
+			// timer
+			// 
+			timer.Enabled = true;
+			timer.Interval = 1000;
+			timer.Tick += timer_Tick;
+			// 
+			// timeLabel
+			// 
+			timeLabel.AutoSize = true;
+			timeLabel.Location = new Point(281, 16);
+			timeLabel.Name = "timeLabel";
+			timeLabel.Size = new Size(54, 25);
+			timeLabel.TabIndex = 0;
+			timeLabel.Text = "Time:";
+			// 
+			// timeLeftLabel
+			// 
+			timeLeftLabel.AutoSize = true;
+			timeLeftLabel.Location = new Point(341, 16);
+			timeLeftLabel.Name = "timeLeftLabel";
+			timeLeftLabel.Size = new Size(23, 25);
+			timeLeftLabel.TabIndex = 0;
+			timeLeftLabel.Text = "#";
+			// 
+			// scoreLabel
+			// 
+			scoreLabel.AutoSize = true;
+			scoreLabel.Location = new Point(443, 16);
+			scoreLabel.Name = "scoreLabel";
+			scoreLabel.Size = new Size(60, 25);
+			scoreLabel.TabIndex = 0;
+			scoreLabel.Text = "Score:";
+			// 
+			// scoreLeftLabel
+			// 
+			scoreLeftLabel.AutoSize = true;
+			scoreLeftLabel.Location = new Point(509, 16);
+			scoreLeftLabel.Name = "scoreLeftLabel";
+			scoreLeftLabel.Size = new Size(23, 25);
+			scoreLeftLabel.TabIndex = 0;
+			scoreLeftLabel.Text = "#";
+			// 
 			// Minesweeper
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 512);
+			Controls.Add(scoreLeftLabel);
+			Controls.Add(scoreLabel);
+			Controls.Add(timeLeftLabel);
+			Controls.Add(timeLabel);
 			Controls.Add(bombsLabel);
 			Controls.Add(bombsLeftLabel);
 			Controls.Add(winLoseLabel);
@@ -155,6 +207,7 @@
 			Controls.Add(bombField);
 			Name = "Minesweeper";
 			Text = "Minesweeper";
+			FormClosed += minesweeper_Closed;
 			((System.ComponentModel.ISupportInitialize) widthAdjuster).EndInit();
 			((System.ComponentModel.ISupportInitialize) heightAdjuster).EndInit();
 			((System.ComponentModel.ISupportInitialize) bombAdjuster).EndInit();
@@ -175,5 +228,10 @@
 		private Label winLoseLabel;
 		private Label bombsLeftLabel;
 		private Label bombsLabel;
+		private System.Windows.Forms.Timer timer;
+		private Label timeLabel;
+		private Label timeLeftLabel;
+		private Label scoreLabel;
+		private Label scoreLeftLabel;
 	}
 }
