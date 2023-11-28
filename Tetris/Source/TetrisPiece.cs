@@ -61,11 +61,15 @@ public class TetrisPiece {
 	public int[] Position = { 3, 0 };
 	public int RotationState = 0;
 
+	public int ID = -1;
+
 	public TetrisPiece( int piece ) {
 		
 		for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
 			Piece[ i, j ] = _pieces[ piece, i, j ];
+
+		ID = piece;
 
 	}
 
