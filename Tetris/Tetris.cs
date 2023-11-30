@@ -51,6 +51,7 @@ namespace OscorpGames {
 
             }
 
+            controller.ShowBoard();
             controller.GameLoop();
 
             ScoreLbl.Text = controller.Score.ToString();
@@ -86,10 +87,13 @@ namespace OscorpGames {
                 controller.RotatePiece( true );
 
             if ( keyData == Keys.S )
-                controller.DropPiece();
+                controller.DropPiece(1);
 
             if ( keyData == Keys.C )
                 controller.HoldPiece();
+
+            if ( keyData == Keys.Space )
+                controller.HardDrop();
 
             return base.ProcessCmdKey( ref msg, keyData );
 

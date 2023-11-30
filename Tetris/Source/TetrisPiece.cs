@@ -59,7 +59,6 @@ public class TetrisPiece {
 
 	public int[,] Piece = new int[4, 4];
 	public int[] Position = { 3, 0 };
-	public int RotationState = 0;
 
 	public int ID = -1;
 
@@ -91,6 +90,23 @@ public class TetrisPiece {
 		}
 
 		Piece = newPiece;
+
+	}
+
+	public TetrisPiece GetGhost() {
+
+		TetrisPiece piece = new TetrisPiece(ID);
+
+		piece.Piece = (int[,]) Piece.Clone();
+
+		for ( int i = 0; i < Piece.GetLength( 0 ); i++ )
+			for ( int j = 0; j < Piece.GetLength( 1 ); j++ )
+				if ( Piece[i, j] != 0 ) piece.Piece[i, j] = -1;
+
+
+        piece.Position = (int[]) Position.Clone();
+
+		return piece;
 
 	}
 
