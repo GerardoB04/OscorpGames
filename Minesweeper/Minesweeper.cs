@@ -154,6 +154,7 @@ namespace OscorpGames {
 			for(int i = 0; i < width; i++) {
 				for(int j = 0; j < height; j++) {
 					if(CountSurroundingBombs(new Point(i, j)) == 0 && !mineField[i, j]) {
+						tiles[i, j].Image = NO_BOMB;
 						RevealEmptyTiles(new Point(i, j));
 						return;
 					}
