@@ -29,10 +29,15 @@ namespace OscorpGames {
 		private Bitmap SEVEN_BOMB = new Bitmap("../../../Minesweeper/Images/Seven.png");
 		private Bitmap EIGHT_BOMB = new Bitmap("../../../Minesweeper/Images/Eight.png");
 
+		private const int IMAGE_WIDTH = 32;
+		private const int IMAGE_HEIGHT = 32;
+
 		private const int MAX_WIDTH = 20;
 		private const int MAX_HEIGHT = 10;
 
 		private const float MAX_BOMB_RATIO = 0.85f;
+
+		private const int MAX_POINT_TIME_LIMIT = 300;
 
 		private int width = 16, height = 9;
 		private int numBombs = 30;
@@ -122,8 +127,8 @@ namespace OscorpGames {
 					PictureBox pictureBox = new PictureBox();
 
 					pictureBox.Image = UNKNOWN;
-					pictureBox.Size = new Size(NO_BOMB.Width, NO_BOMB.Height);
-					pictureBox.Location = new Point(i * NO_BOMB.Width, j * NO_BOMB.Height);
+					pictureBox.Size = new Size(IMAGE_WIDTH, IMAGE_HEIGHT);
+					pictureBox.Location = new Point(i * IMAGE_WIDTH, j * IMAGE_HEIGHT);
 
 					pictureBox.Click += tile_Click;
 
@@ -272,10 +277,10 @@ namespace OscorpGames {
 				float heightRatio = height / (float) MAX_HEIGHT;
 
 				float timeMult;
-				if(time <= 180) {
+				if(time <= MAX_POINT_TIME_LIMIT) {
 					timeMult = 1f;
 				} else {
-					timeMult = 1 - ((time - 180) * 0.001f);
+					timeMult = 1 - ((time - MAX_POINT_TIME_LIMIT) * 0.001f);
 				}
 
 				float score = (bombRatio * 1000) * timeMult * widthRatio * heightRatio;
