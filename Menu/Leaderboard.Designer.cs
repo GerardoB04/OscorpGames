@@ -1,4 +1,4 @@
-﻿namespace OscorpGames.Menu
+﻿namespace OscorpGames
 {
     partial class Leaderboard
     {

@@ -1,6 +1,5 @@
-using OscorpGames.Pac_Man;
-
-namespace OscorpGames {
+namespace OscorpGames
+{
     public partial class Menu : Form
     {
         public Menu()
@@ -40,7 +39,7 @@ namespace OscorpGames {
         // Pac-Man
         private void gameThreeButton_Click(object sender, EventArgs e)
         {
-            OpenGame(new PacManGame());
+            OpenGame(new Pac_Man.PacManGame());
         }
 
         // Tetris
@@ -51,12 +50,7 @@ namespace OscorpGames {
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
-        {
-
+            _ = new Settings().ShowDialog();
         }
     }
 }
