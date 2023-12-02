@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,18 +17,20 @@ namespace OscorpGames {
 	public partial class Minesweeper : Form, INotifyPropertyChanged {
 		public event PropertyChangedEventHandler? PropertyChanged;
 
-		private Bitmap FLAG = new Bitmap("../../../Minesweeper/Images/Flag.png");
-		private Bitmap BOMB = new Bitmap("../../../Minesweeper/Images/Bomb.png");
-		private Bitmap UNKNOWN = new Bitmap("../../../Minesweeper/Images/Unknown.png");
-		private Bitmap NO_BOMB = new Bitmap("../../../Minesweeper/Images/None.png");
-		private Bitmap ONE_BOMB = new Bitmap("../../../Minesweeper/Images/One.png");
-		private Bitmap TWO_BOMB = new Bitmap("../../../Minesweeper/Images/Two.png");
-		private Bitmap THREE_BOMB = new Bitmap("../../../Minesweeper/Images/Three.png");
-		private Bitmap FOUR_BOMB = new Bitmap("../../../Minesweeper/Images/Four.png");
-		private Bitmap FIVE_BOMB = new Bitmap("../../../Minesweeper/Images/Five.png");
-		private Bitmap SIX_BOMB = new Bitmap("../../../Minesweeper/Images/Six.png");
-		private Bitmap SEVEN_BOMB = new Bitmap("../../../Minesweeper/Images/Seven.png");
-		private Bitmap EIGHT_BOMB = new Bitmap("../../../Minesweeper/Images/Eight.png");
+		private readonly Bitmap FLAG = new Bitmap("../../../Minesweeper/Images/Flag.png");
+		private readonly Bitmap BOMB = new Bitmap("../../../Minesweeper/Images/Bomb.png");
+		private readonly Bitmap UNKNOWN = new Bitmap("../../../Minesweeper/Images/Unknown.png");
+		private readonly Bitmap NO_BOMB = new Bitmap("../../../Minesweeper/Images/None.png");
+		private readonly Bitmap ONE_BOMB = new Bitmap("../../../Minesweeper/Images/One.png");
+		private readonly Bitmap TWO_BOMB = new Bitmap("../../../Minesweeper/Images/Two.png");
+		private readonly Bitmap THREE_BOMB = new Bitmap("../../../Minesweeper/Images/Three.png");
+		private readonly Bitmap FOUR_BOMB = new Bitmap("../../../Minesweeper/Images/Four.png");
+		private readonly Bitmap FIVE_BOMB = new Bitmap("../../../Minesweeper/Images/Five.png");
+		private readonly Bitmap SIX_BOMB = new Bitmap("../../../Minesweeper/Images/Six.png");
+		private readonly Bitmap SEVEN_BOMB = new Bitmap("../../../Minesweeper/Images/Seven.png");
+		private readonly Bitmap EIGHT_BOMB = new Bitmap("../../../Minesweeper/Images/Eight.png");
+
+		private readonly SoundPlayer BACKGROUND_MUSIC = new SoundPlayer("../../../Minesweeper/Sounds/MinesweeperTheme.wav");
 
 		private const int IMAGE_WIDTH = 32;
 		private const int IMAGE_HEIGHT = 32;
@@ -35,7 +38,7 @@ namespace OscorpGames {
 		private const int MAX_WIDTH = 20;
 		private const int MAX_HEIGHT = 10;
 
-		private const float MAX_BOMB_RATIO = 0.85f;
+		private const float MAX_BOMB_RATIO = 0.8f;
 
 		private const int MAX_POINT_TIME_LIMIT = 300;
 
@@ -82,6 +85,8 @@ namespace OscorpGames {
 			bombAdjuster.Value = 30;
 			bombsLeftLabel.DataBindings.Add("Text", this, "currentNumBombs", false, DataSourceUpdateMode.OnPropertyChanged);
 			timeLeftLabel.DataBindings.Add("Text", this, "time", false, DataSourceUpdateMode.OnPropertyChanged);
+
+			BACKGROUND_MUSIC.PlayLooping();
 
 			StartGame();
 		}
@@ -284,6 +289,8 @@ namespace OscorpGames {
 					timeMult = 1 - ((time - MAX_POINT_TIME_LIMIT) * 0.001f);
 				}
 
+				timeMult = Math.Clamp(timeMult, 0, 1);
+
 				float score = (bombRatio * 1000) * timeMult * widthRatio * heightRatio;
 				scoreLeftLabel.Text = score.ToString("0");
 			}
@@ -376,6 +383,8 @@ namespace OscorpGames {
 		private void minesweeper_Closed(object sender, FormClosedEventArgs e) {
 			timer.Stop();
 			timer.Enabled = false;
+
+			BACKGROUND_MUSIC.Stop();
 		}
 	}
 }
