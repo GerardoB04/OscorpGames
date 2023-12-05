@@ -292,18 +292,31 @@ namespace OscorpGames {
 				timeMult = Math.Clamp(timeMult, 0, 1);
 
 				float score = (bombRatio * 1000) * timeMult * widthRatio * heightRatio;
-				scoreLeftLabel.Text = score.ToString("0");
+				string stringScore = score.ToString("0");
+				scoreLeftLabel.Text = stringScore;
 
 				try {
-					var scores = Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME);
-					if(scores.Length == 3) {
-						//scores
+					if(Leaderboard.IsHighestScore(stringScore, Leaderboard.MINE_GAME_NAME)) {
+						var scores = Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME);
+						string[] scoresToSave = new string[3];
+						switch(scores.Length) {
+							case 3:
+							case 2:
+								scoresToSave[2] = scores[1];
+								scoresToSave[1] = scores[0];
+								scoresToSave[0] = stringScore;
+								break;
+							case 1:
+								scoresToSave[2] = string.Empty;
+								scoresToSave[1] = scores[0];
+								scoresToSave[0] = stringScore;
+								break;
+						}
+						Leaderboard.SaveScore(scoresToSave, Leaderboard.MINE_GAME_NAME);
 					}
 				} catch(Exception e) {
-					//
+					Leaderboard.SaveScore(new string[]{stringScore}, Leaderboard.MINE_GAME_NAME);
 				}
-
-				Leaderboard.SaveScore(new string[]{score.ToString("0"), 200.ToString()}, Leaderboard.MINE_GAME_NAME);
 			}
 		}
 
