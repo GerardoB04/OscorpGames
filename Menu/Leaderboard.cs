@@ -109,7 +109,7 @@
 
 			foreach(decimal numericScore in scoresDecimal)
 			{
-				if(numericScore > scoreDecimal)
+				if(numericScore < scoreDecimal)
 				{
 					return true;
 				}
