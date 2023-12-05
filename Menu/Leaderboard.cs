@@ -107,14 +107,15 @@
 				scoresDecimal[i] = decimal.Parse(scores[i]);
 			}
 
+			decimal highest = decimal.MinValue;
 			foreach(decimal numericScore in scoresDecimal)
 			{
-				if(numericScore < scoreDecimal)
+				if(numericScore > highest)
 				{
-					return true;
+					highest = numericScore;
 				}
 			}
-			return false;
+			return (highest < scoreDecimal);
 		}
 	}
 }

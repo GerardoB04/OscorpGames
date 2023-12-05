@@ -315,7 +315,7 @@ namespace OscorpGames {
 						Leaderboard.SaveScore(scoresToSave, Leaderboard.MINE_GAME_NAME);
 					}
 				} catch(Exception e) {
-					Leaderboard.SaveScore(new string[]{stringScore}, Leaderboard.MINE_GAME_NAME);
+					//Leaderboard.SaveScore(new string[]{stringScore}, Leaderboard.MINE_GAME_NAME);
 				}
 			}
 		}
