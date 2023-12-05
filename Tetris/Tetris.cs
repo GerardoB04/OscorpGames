@@ -1,6 +1,5 @@
 ﻿
 using Tetris;
-using static System.Net.Mime.MediaTypeNames;
 using Image = System.Drawing.Image;
 
 namespace OscorpGames;
@@ -67,39 +66,18 @@ public partial class Tetris : Form {
 
     }
 
+    protected override void OnKeyUp( KeyEventArgs e ) {
+        base.OnKeyUp( e );
+
+        KeyManager.Instance.Remove( e.KeyCode );
+
+
+    }
+
     protected override void OnKeyDown( KeyEventArgs e ) {
         base.OnKeyDown( e );
 
-        if ( !controller.GameRunning ) {
-
-            Next1.Image = null;
-            Next2.Image = null;
-            Next3.Image = null;
-            Hold.Image = null;
-
-            if ( e.KeyCode == Keys.Space ) controller.Start();
-            return;
-
-        }
-
-        if ( e.KeyCode == Keys.Left )
-            controller.MovePiece( -1 );
-        else if ( e.KeyCode == Keys.Right )
-            controller.MovePiece( 1 );
-
-        if ( e.KeyCode == Keys.Z )
-            controller.RotatePiece( false );
-        else if ( e.KeyCode == Keys.Up )
-            controller.RotatePiece( true );
-
-        if ( e.KeyCode == Keys.Down )
-            controller.DropPiece( 1 );
-
-        if ( e.KeyCode == Keys.C )
-            controller.HoldPiece();
-
-        if ( e.KeyCode == Keys.Space )
-            controller.HardDrop();
+        KeyManager.Instance.Add( e.KeyCode );
 
     }
 

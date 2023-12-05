@@ -1,7 +1,5 @@
 ﻿
-using System;
 using System.Diagnostics;
-using System.Windows.Forms;
 
 namespace Tetris;
 
@@ -127,7 +125,6 @@ public class TetrisController {
             timer.Restart();
 
         }
-
 
     }
 
@@ -410,7 +407,27 @@ public class TetrisController {
 
         if ( !GameRunning ) return;
 
+        CheckInputs();
+
         Update();
+
+    }
+
+    private void CheckInputs() {
+
+        if ( !GameRunning ) return;
+
+        if ( KeyManager.Instance.IsPressed( Keys.Left ) ) MovePiece( -1 );
+        else if ( KeyManager.Instance.IsPressed( Keys.Right ) ) MovePiece( 1 );
+
+        if ( KeyManager.Instance.IsPressed( Keys.Down ) ) DropPiece( 1 );
+
+        if ( KeyManager.Instance.IsPressed( Keys.Z, true ) ) RotatePiece( false );
+        else if ( KeyManager.Instance.IsPressed( Keys.Up, true ) ) RotatePiece( true );
+
+        if ( KeyManager.Instance.IsPressed( Keys.C, true ) ) HoldPiece();
+
+        if ( KeyManager.Instance.IsPressed( Keys.Space, true ) ) HardDrop();
 
     }
 
