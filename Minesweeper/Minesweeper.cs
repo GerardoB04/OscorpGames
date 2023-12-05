@@ -293,6 +293,17 @@ namespace OscorpGames {
 
 				float score = (bombRatio * 1000) * timeMult * widthRatio * heightRatio;
 				scoreLeftLabel.Text = score.ToString("0");
+
+				try {
+					var scores = Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME);
+					if(scores.Length == 3) {
+						//scores
+					}
+				} catch(Exception e) {
+					//
+				}
+
+				Leaderboard.SaveScore(new string[]{score.ToString("0"), 200.ToString()}, Leaderboard.MINE_GAME_NAME);
 			}
 		}
 
