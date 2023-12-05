@@ -58,6 +58,7 @@ public class TetrisController {
         timer.Stop();
         _pieceActive = false;
         Pieces = new List<int>();
+        HeldPiece = null;
 
         var temp = new int[] { 0, 1, 2, 3, 4, 5, 6 }.ToList();
 

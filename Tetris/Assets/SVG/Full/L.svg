@@ -29,7 +29,7 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="6.7277216"
-     inkscape:cx="53.807221"
+     inkscape:cx="53.88154"
      inkscape:cy="46.523923"
      inkscape:window-width="2560"
      inkscape:window-height="1506"
@@ -157,7 +157,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g36413">
+       id="g36413"
+       transform="translate(0,-7.9375)">
       <rect
          style="fill:#0022a4;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0.820208;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect30322"
@@ -176,7 +177,7 @@
     </g>
     <g
        id="g36419"
-       transform="translate(7.9375)">
+       transform="translate(7.9375,-7.9375)">
       <rect
          style="fill:#0022a4;fill-opacity:0;fill-rule:evenodd;stroke:none;stroke-width:0.820208;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect36415"
