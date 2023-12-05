@@ -297,7 +297,7 @@ namespace OscorpGames {
 				try {
 					var scores = Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME);
 					if(scores.Length == 3) {
-						//scores
+						//scores[]
 					}
 				} catch(Exception e) {
 					//
