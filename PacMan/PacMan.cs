@@ -1,10 +1,13 @@
-﻿using OscorpGames.PacMan;
+﻿using Microsoft.VisualBasic.Devices;
+using OscorpGames.PacMan;
+using OscorpGames.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +22,13 @@ namespace OscorpGames.Pac_Man
         int scoreCount, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY, redGhostX, redGhostY, yellowGhostX, yellowGhostY, totalCoins, timeSeconds, timeTicks;
 
         string filePath = "../../../PacMan/PacManScores.txt";
+
+        SoundPlayer move = new SoundPlayer("../../../PacMan/Resources/move.wav");
+        SoundPlayer coin = new SoundPlayer("../../../PacMan/Resources/coin.wav");
+        SoundPlayer death = new SoundPlayer("../../../PacMan/Resources/death.wav");
+        SoundPlayer win = new SoundPlayer("../../../PacMan/Resources/winav");
+        SoundPlayer ghostBounce = new SoundPlayer("../../../PacMan/Resources/ghostBounce.wav");
+        SoundPlayer pacWall = new SoundPlayer("../../../PacMan/Resources/pacWall.wav");
         public PacManGame()
         {
             InitializeComponent();
@@ -28,6 +38,7 @@ namespace OscorpGames.Pac_Man
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            move.Play();
 
             if (e.KeyCode == Keys.Up)
             {
@@ -58,6 +69,7 @@ namespace OscorpGames.Pac_Man
 
         private void keyisup(object sender, KeyEventArgs e)
         {
+            move.Stop();
             if (e.KeyCode == Keys.Up)
             {
                 goup = false;
@@ -214,12 +226,20 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Left -= playerSpeed;
                 }
+                else
+                {
+                    pacWall.Play();
+                }
             }
             if (goright)
             {
                 if (!IntersectsWithWall(pacBBRight))
                 {
                     pacman.Left += playerSpeed;
+                }
+                else
+                {
+                    pacWall.Play();
                 }
             }
             if (godown)
@@ -228,12 +248,20 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Top += playerSpeed;
                 }
+                else
+                {
+                    pacWall.Play();
+                }
             }
             if (goup)
             {
                 if (!IntersectsWithWall(pacBBTop))
                 {
                     pacman.Top -= playerSpeed;
+                }
+                else
+                {
+                    pacWall.Play();
                 }
             }
 
