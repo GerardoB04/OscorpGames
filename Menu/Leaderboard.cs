@@ -27,6 +27,11 @@
 			StreamWriter sw = new StreamWriter(path);
 			for(int i = 0; i < scores.Length; i++)
 			{
+				if(scores[i] == string.Empty)
+				{
+					i += 1;
+					continue;
+				}
 				sw.Write(scores[i]);
 				if(i < scores.Length - 1) 
 				{
