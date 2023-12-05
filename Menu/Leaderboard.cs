@@ -89,5 +89,27 @@
 			}
 			return true;
 		}
+
+		public static bool IsHighestScore(string score, string gameName)
+		{
+			decimal scoreDecimal = decimal.Parse(score);
+
+			string[] scores = GetScores(gameName);
+			decimal[] scoresDecimal = new decimal[scores.Length];
+
+			for(int i = 0; i < scores.Length; i++)
+			{
+				scoresDecimal[i] = decimal.Parse(scores[i]);
+			}
+
+			foreach(decimal numericScore in scoresDecimal)
+			{
+				if(numericScore > scoreDecimal)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
 	}
 }
