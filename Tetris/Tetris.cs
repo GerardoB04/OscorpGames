@@ -1,4 +1,5 @@
 ﻿
+using System.Reflection.PortableExecutable;
 using Tetris;
 using Image = System.Drawing.Image;
 
@@ -40,6 +41,9 @@ public partial class Tetris : Form {
 
     private void GameLoop_Tick( object sender, EventArgs e ) {
 
+        ARD.Enabled = !controller.GameRunning;
+        ARS.Enabled = !controller.GameRunning;
+
         if ( !controller.GameRunning ) {
 
             Next1.Image = null;
@@ -71,6 +75,15 @@ public partial class Tetris : Form {
 
         KeyManager.Instance.Remove( e.KeyCode );
 
+        switch ( e.KeyCode ) {
+
+            case Keys.Escape:
+
+                controller.GameRunning = !controller.GameRunning;
+
+                break;
+
+        }
 
     }
 
@@ -78,6 +91,21 @@ public partial class Tetris : Form {
         base.OnKeyDown( e );
 
         KeyManager.Instance.Add( e.KeyCode );
+
+    }
+
+    private void checkCharacters( object sender, EventArgs e ) {
+
+        float.TryParse( ARD.Text, out controller.repeatDelay );
+        float.TryParse( ARS.Text, out controller.repeatSpeed );
+
+    }
+    private void TextKeyDown( object sender, KeyEventArgs e ) {
+
+        if ( e.KeyCode != Keys.Enter ) return;
+
+        ARD.Enabled = false;
+        ARS.Enabled = false;
 
     }
 

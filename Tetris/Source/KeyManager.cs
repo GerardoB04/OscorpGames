@@ -29,7 +29,7 @@ class KeyManager {
 
         if ( result && OneTime ) Remove( key );
 
-        return Keys.Contains( key );
+        return result;
 
     }
 

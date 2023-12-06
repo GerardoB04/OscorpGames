@@ -34,10 +34,12 @@
             Next1 = new PictureBox();
             Next2 = new PictureBox();
             Next3 = new PictureBox();
-            ( (System.ComponentModel.ISupportInitialize)  Hold  ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next1  ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next2  ).BeginInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next3  ).BeginInit();
+            ARD = new TextBox();
+            ARS = new TextBox();
+            ( (System.ComponentModel.ISupportInitialize) Hold ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize) Next1 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize) Next2 ).BeginInit();
+            ( (System.ComponentModel.ISupportInitialize) Next3 ).BeginInit();
             SuspendLayout();
             // 
             // ScoreLbl
@@ -88,7 +90,7 @@
             // 
             GameLoop.Enabled = true;
             GameLoop.Interval = 15;
-            GameLoop.Tick += GameLoop_Tick;
+            GameLoop.Tick +=  GameLoop_Tick ;
             // 
             // Hold
             // 
@@ -134,14 +136,46 @@
             Next3.TabIndex = 7;
             Next3.TabStop = false;
             // 
+            // ARD
+            // 
+            ARD.BackColor = Color.FromArgb(   26,   26,   26 );
+            ARD.BorderStyle = BorderStyle.None;
+            ARD.Font = new Font( "Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point );
+            ARD.ForeColor = SystemColors.InactiveBorder;
+            ARD.Location = new Point( 971, 526 );
+            ARD.Name = "ARD";
+            ARD.Size = new Size( 79, 38 );
+            ARD.TabIndex = 8;
+            ARD.Text = "150";
+            ARD.TextAlign = HorizontalAlignment.Center;
+            ARD.TextChanged +=  checkCharacters ;
+            ARD.KeyDown +=  TextKeyDown ;
+            // 
+            // ARS
+            // 
+            ARS.BackColor = Color.FromArgb(   26,   26,   26 );
+            ARS.BorderStyle = BorderStyle.None;
+            ARS.Font = new Font( "Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point );
+            ARS.ForeColor = SystemColors.InactiveBorder;
+            ARS.Location = new Point( 971, 579 );
+            ARS.Name = "ARS";
+            ARS.Size = new Size( 79, 38 );
+            ARS.TabIndex = 9;
+            ARS.Text = "50";
+            ARS.TextAlign = HorizontalAlignment.Center;
+            ARS.TextChanged +=  checkCharacters ;
+            ARS.KeyDown +=  TextKeyDown ;
+            // 
             // Tetris
             // 
             AutoScaleDimensions = new SizeF( 10F, 25F );
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
-            BackgroundImage = (Image)  resources.GetObject( "$this.BackgroundImage" ) ;
+            BackgroundImage = (Image) resources.GetObject( "$this.BackgroundImage" );
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size( 1258, 664 );
+            Controls.Add( ARS );
+            Controls.Add( ARD );
             Controls.Add( Next3 );
             Controls.Add( Next2 );
             Controls.Add( Next1 );
@@ -153,11 +187,12 @@
             DoubleBuffered = true;
             Name = "Tetris";
             Text = "Tetris";
-            ( (System.ComponentModel.ISupportInitialize)  Hold  ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next1  ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next2  ).EndInit();
-            ( (System.ComponentModel.ISupportInitialize)  Next3  ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize) Hold ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize) Next1 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize) Next2 ).EndInit();
+            ( (System.ComponentModel.ISupportInitialize) Next3 ).EndInit();
             ResumeLayout( false );
+            PerformLayout();
         }
 
         #endregion
@@ -171,5 +206,7 @@
         private PictureBox Next1;
         private PictureBox Next2;
         private PictureBox Next3;
+        private TextBox ARD;
+        private TextBox ARS;
     }
 }

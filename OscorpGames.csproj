@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Minesweeper\Images\" />
-    <Folder Include="Tetris\Source\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿
+using OscorpGames;
 using System.Diagnostics;
 
 namespace Tetris;
@@ -26,6 +27,11 @@ public class TetrisController {
     private Stopwatch timer = new Stopwatch();
     private float _dropRate = 0.5f;
 
+    private Stopwatch repeat = new Stopwatch();
+    public float repeatDelay = 170;
+    public float repeatSpeed = 50;
+    private bool repeatStart = true;
+    private bool repeatFirst = true;
 
     public int Score = 0;
     public int Lines = 0;
@@ -54,6 +60,11 @@ public class TetrisController {
         _dropRate = 0.5f;
         GameRunning = false;
         timer.Stop();
+
+        repeat.Stop();
+        repeatStart = true;
+        repeatFirst = true;
+
         _pieceActive = false;
         Pieces = new List<int>();
         HeldPiece = null;
@@ -130,7 +141,7 @@ public class TetrisController {
 
     public void HardDrop() {
 
-        while ( _pieceActive ) DropPiece(2);
+        while ( _pieceActive ) DropPiece( 2 );
 
     }
 
@@ -163,6 +174,8 @@ public class TetrisController {
             if ( _board[i, 1] > 0 ) {
 
                 GameRunning = false;
+
+                Leaderboard.SaveScore( new string[] { Score.ToString() }, Leaderboard.TETRIS_GAME_NAME );
 
                 for ( int x = 0; x < Display.GetLength( 0 ); x++ )
                     for ( int j = 0; j < Display.GetLength( 1 ); j++ )
@@ -355,7 +368,7 @@ public class TetrisController {
 
     }
 
-    public void DropPiece(int manual = 0) {
+    public void DropPiece( int manual = 0 ) {
 
         ClearPiece();
 
@@ -417,8 +430,59 @@ public class TetrisController {
 
         if ( !GameRunning ) return;
 
-        if ( KeyManager.Instance.IsPressed( Keys.Left ) ) MovePiece( -1 );
-        else if ( KeyManager.Instance.IsPressed( Keys.Right ) ) MovePiece( 1 );
+        if ( KeyManager.Instance.IsPressed( Keys.Left ) && KeyManager.Instance.IsPressed( Keys.Right ) ) {
+
+            repeat.Restart();
+            repeat.Stop();
+            repeatStart = true;
+            repeatFirst = true;
+
+        } else if ( !KeyManager.Instance.IsPressed( Keys.Left ) && !KeyManager.Instance.IsPressed( Keys.Right ) ) {
+
+            repeat.Restart();
+            repeat.Stop();
+            repeatStart = true;
+            repeatFirst = true;
+
+        } else if ( KeyManager.Instance.IsPressed( Keys.Left ) ) {
+
+            repeat.Start();
+
+            if (repeatFirst) {
+
+                MovePiece( -1 );
+                repeatFirst = false;
+
+            }
+
+            if ( repeat.ElapsedMilliseconds > ( ( repeatStart ) ? repeatDelay : repeatSpeed ) ) {
+
+                MovePiece( -1 );
+                repeatStart = false;
+                repeat.Restart();
+
+            }
+
+        } else if ( KeyManager.Instance.IsPressed( Keys.Right ) ) {
+
+            repeat.Start();
+
+            if ( repeatFirst ) {
+
+                MovePiece( 1 );
+                repeatFirst = false;
+
+            }
+
+            if ( repeat.ElapsedMilliseconds > ( ( repeatStart ) ? repeatDelay : repeatSpeed ) ) {
+
+                MovePiece( 1 );
+                repeatStart = false;
+                repeat.Restart();
+
+            }
+
+        }
 
         if ( KeyManager.Instance.IsPressed( Keys.Down ) ) DropPiece( 1 );
 
