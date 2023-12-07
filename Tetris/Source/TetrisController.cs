@@ -176,11 +176,24 @@ public class TetrisController {
                 GameRunning = false;
 
                 var scores = Leaderboard.GetScores( Leaderboard.TETRIS_GAME_NAME ).ToList();
-                for ( int j = 0; j < scores.Count; j++ ) {
+
+                int max = scores.Count;
+                if ( max < 5 ) max++;
+
+                bool placed = false;
+
+                for ( int j = 0; j < max; j++ ) {
+
+                    if ( j >= scores.Count ) scores.Add( Score.ToString() );
 
                     if ( int.TryParse( scores[j], out var score ) ) {
 
-                        if ( score < Score ) scores.Insert( j, Score.ToString() );
+                        if ( score < Score && !placed ) {
+
+                            scores.Insert( j, Score.ToString() );
+                            placed = true;
+
+                        }
                     
                     }
 
@@ -189,8 +202,6 @@ public class TetrisController {
                 while ( scores.Count > 5 ) { scores.RemoveAt( scores.Count - 1 ); }
 
                 Leaderboard.SaveScore(scores.ToArray(), Leaderboard.TETRIS_GAME_NAME );
-
-                Leaderboard.SaveScore( new string[] { Score.ToString() }, Leaderboard.TETRIS_GAME_NAME );
 
                 for ( int x = 0; x < Display.GetLength( 0 ); x++ )
                     for ( int j = 0; j < Display.GetLength( 1 ); j++ )

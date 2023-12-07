@@ -75,6 +75,13 @@ public partial class Tetris : Form {
 
         KeyManager.Instance.Remove( e.KeyCode );
 
+    }
+
+    protected override void OnKeyDown( KeyEventArgs e ) {
+        base.OnKeyDown( e );
+
+        KeyManager.Instance.Add( e.KeyCode );
+
         switch ( e.KeyCode ) {
 
             case Keys.Escape:
@@ -83,14 +90,16 @@ public partial class Tetris : Form {
 
                 break;
 
+            case Keys.Space:
+            
+                if ( !controller.GameRunning ) {
+
+                    controller.Start();
+
+                }
+                break;
+
         }
-
-    }
-
-    protected override void OnKeyDown( KeyEventArgs e ) {
-        base.OnKeyDown( e );
-
-        KeyManager.Instance.Add( e.KeyCode );
 
     }
 
