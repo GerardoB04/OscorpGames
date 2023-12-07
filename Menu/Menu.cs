@@ -1,3 +1,5 @@
+using SnakeGame;
+
 namespace OscorpGames
 {
 	public partial class Menu : Form {
