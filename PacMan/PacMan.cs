@@ -1,10 +1,14 @@
-﻿using OscorpGames.PacMan;
+﻿using Microsoft.VisualBasic.Devices;
+using OscorpGames.PacMan;
+using OscorpGames.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +20,15 @@ namespace OscorpGames.Pac_Man
         bool goup, godown, goleft, goright, isGameOver;
 
         int scoreCount, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY, redGhostX, redGhostY, yellowGhostX, yellowGhostY, totalCoins, timeSeconds, timeTicks;
+
+        string filePath = "../../../PacMan/PacManScores.txt";
+
+        SoundPlayer move = new SoundPlayer("../../../PacMan/Resources/move.wav");
+        SoundPlayer coin = new SoundPlayer("../../../PacMan/Resources/coin.wav");
+        SoundPlayer death = new SoundPlayer("../../../PacMan/Resources/death.wav");
+        SoundPlayer win = new SoundPlayer("../../../PacMan/Resources/winav");
+        SoundPlayer ghostBounce = new SoundPlayer("../../../PacMan/Resources/ghostBounce.wav");
+        SoundPlayer pacWall = new SoundPlayer("../../../PacMan/Resources/pacWall.wav");
         public PacManGame()
         {
             InitializeComponent();
@@ -25,31 +38,38 @@ namespace OscorpGames.Pac_Man
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            move.Play();
 
             if (e.KeyCode == Keys.Up)
             {
                 goup = true;
+                if (pacman.Image != PacManResource.Up) { pacman.Image = PacManResource.Up; }
             }
             if (e.KeyCode == Keys.Down)
             {
                 godown = true;
+                if (pacman.Image != PacManResource.down) { pacman.Image = PacManResource.down; }
             }
             if (e.KeyCode == Keys.Left)
             {
                 goleft = true;
+                if (pacman.Image != PacManResource.left) { pacman.Image = PacManResource.left; }
             }
             if (e.KeyCode == Keys.Right)
             {
                 goright = true;
+                if (pacman.Image != PacManResource.right) { pacman.Image = PacManResource.right; }
             }
             if (e.KeyCode == Keys.Enter)
             {
+                timer1.Stop();
                 this.Close();
             }
         }
 
         private void keyisup(object sender, KeyEventArgs e)
         {
+            move.Stop();
             if (e.KeyCode == Keys.Up)
             {
                 goup = false;
@@ -74,10 +94,15 @@ namespace OscorpGames.Pac_Man
 
         private void resetGame()
         {
-            string filePath = "PacManScores.txt";
-            if (!System.IO.File.Exists(filePath))
+
+            
+            if ((!System.IO.File.Exists(filePath)))
             {
                 System.IO.File.Create(filePath);
+            }
+
+            if (System.IO.File.Exists(filePath))
+            {
                 using (StreamWriter sw = new StreamWriter(filePath))
                 {
                     sw.WriteLine("9999");
@@ -85,28 +110,31 @@ namespace OscorpGames.Pac_Man
                     sw.WriteLine("9999");
                 }
             }
+            pacBBBottom.Visible = false;
+            pacBBLeft.Visible = false;
+            pacBBRight.Visible = false;
+            pacBBTop.Visible = false;
             readLowTimes();
             score.Text = "Score: 0";
             scoreCount = 0;
 
-            redGhostSpeed = 5;
+            
+            redGhostX = new Random().Next(5,11);
+            redGhostY = 10 - redGhostX;
+            pinkGhostX = new Random().Next(3, 6);
+            pinkGhostY = 20 - pinkGhostX;
+
             yellowGhostSpeed = 2;
-            pinkGhostX = 5;
-            pinkGhostY = 5;
-            playerSpeed = 10;
+            playerSpeed = 15;
 
             isGameOver = false;
 
             pacman.Location = new Point(40, 365);
 
-            redGhost.Left = 612;
-            redGhost.Top = 345;
+            redGhost.Location = new Point(redGhost.Location.X, redGhost.Location.Y);
+            yellowGhost.Location = new Point(yellowGhost.Location.X, yellowGhost.Location.Y);
+            pinkGhost.Location = new Point(pinkGhost.Location.X, pinkGhost.Location.Y);
 
-            yellowGhost.Left = 497;
-            yellowGhost.Top = 492;
-
-            pinkGhost.Left = 755;
-            pinkGhost.Top = 82;
 
             foreach (Control x in this.Controls)
             {
@@ -131,7 +159,7 @@ namespace OscorpGames.Pac_Man
 
         private void readLowTimes()
         {
-            string[] lines = File.ReadAllLines("PacManScores.txt");
+            string[] lines = File.ReadAllLines(filePath);
 
             LowTime1.Text = "1)" + lines[0];
             LowTime2.Text = "2)" + lines[1];
@@ -139,14 +167,14 @@ namespace OscorpGames.Pac_Man
         }
         private void writeLowTimes()
         {
-            string[] lines = File.ReadAllLines("PacManScores.txt");
+            string[] lines = File.ReadAllLines(filePath);
 
             int low1 = int.Parse(lines[0]);
             int low2 = int.Parse(lines[1]);
             int low3 = int.Parse(lines[2]);
             int[] times = { low1, low2, low3, timeSeconds };
             Array.Sort(times);
-            using (StreamWriter sw = new StreamWriter("PacManScores.txt"))
+            using (StreamWriter sw = new StreamWriter(filePath))
             {
                 sw.WriteLine(times[0]);
                 sw.WriteLine(times[1]);
@@ -189,10 +217,7 @@ namespace OscorpGames.Pac_Man
             timeSeconds = timeTicks / (1000/timer1.Interval);
             time_Lbl.Text = "Time: " + timeSeconds;
 
-            pacBBTop.Location = new Point(pacman.Location.X, pacman.Location.Y - 15);
-            pacBBBottom.Location = new Point(pacman.Location.X, pacman.Location.Y + 64);
-            pacBBLeft.Location = new Point(pacman.Location.X - 15, pacman.Location.Y);
-            pacBBRight.Location = new Point(pacman.Location.X + 64, pacman.Location.Y);
+            
 
             score.Text = "Score: " + scoreCount;
             if (goleft)
@@ -201,7 +226,10 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Left -= playerSpeed;
                 }
-                if (pacman.Image != PacManResource.left) pacman.Image = PacManResource.left;
+                else
+                {
+                    pacWall.Play();
+                }
             }
             if (goright)
             {
@@ -209,7 +237,10 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Left += playerSpeed;
                 }
-                if (pacman.Image != PacManResource.right) pacman.Image = PacManResource.right;
+                else
+                {
+                    pacWall.Play();
+                }
             }
             if (godown)
             {
@@ -217,7 +248,10 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Top += playerSpeed;
                 }
-                if (pacman.Image != PacManResource.down) pacman.Image = PacManResource.down;
+                else
+                {
+                    pacWall.Play();
+                }
             }
             if (goup)
             {
@@ -225,7 +259,10 @@ namespace OscorpGames.Pac_Man
                 {
                     pacman.Top -= playerSpeed;
                 }
-                if (pacman.Image != PacManResource.Up) pacman.Image = PacManResource.Up;
+                else
+                {
+                    pacWall.Play();
+                }
             }
 
             if (pacman.Left < -10)
@@ -263,14 +300,11 @@ namespace OscorpGames.Pac_Man
                     {
                         if (pinkGhost.Bounds.IntersectsWith(x.Bounds))
                         {
-                            pinkGhostX = -pinkGhostX;
                             pinkGhostY = -pinkGhostY;
                         }
                         if (redGhost.Bounds.IntersectsWith(x.Bounds))
                         {
                             redGhostX = -redGhostX;
-                            redGhostY = -redGhostY;
-                            redGhostSpeed *= -1;
                         }
                     }
 
@@ -288,73 +322,117 @@ namespace OscorpGames.Pac_Man
 
 
             // moving ghosts
+            //pink
+            //create a switch statement for the pink ghost
 
-            redGhost.Left -= redGhostSpeed;
-            redGhost.Top += redGhostSpeed;
+            if (IntersectsWithWall(pgBBLeft) || IntersectsWithWall(pgBBRight))
+            {
+                pinkGhostX = -pinkGhostX;
+            }
+
+            if (IntersectsWithWall(pgBBTop) || IntersectsWithWall(pgBBBottom))
+            {
+                pinkGhostY = -pinkGhostY;
+            }
+
+            //red
+            if (IntersectsWithWall(rgBBLeft) || IntersectsWithWall(rgBBRight)){
+                redGhostX = -redGhostX;
+            }
+
+            if (IntersectsWithWall(rgBBTop) || IntersectsWithWall(rgBBBottom)){
+                redGhostY = -redGhostY;
+            }
+
+
+            redGhost.Left += redGhostX;
+            redGhost.Top += redGhostY;
+
+            pinkGhost.Left += pinkGhostX;
+            pinkGhost.Top += pinkGhostY;
 
             yellowGhost.Left += yellowGhostSpeed;
             yellowGhost.Top -= yellowGhostSpeed;
 
-            pinkGhost.Left -= pinkGhostX;
-            pinkGhost.Top -= pinkGhostY;
+
+            //moving collision boxes
+            pacBBTop.Location = new Point(pacman.Location.X, pacman.Location.Y - 15);
+            pacBBBottom.Location = new Point(pacman.Location.X, pacman.Location.Y + 64);
+            pacBBLeft.Location = new Point(pacman.Location.X - 15, pacman.Location.Y);
+            pacBBRight.Location = new Point(pacman.Location.X + 64, pacman.Location.Y);
+
+            pgBBTop.Location = new Point(pinkGhost.Location.X, pinkGhost.Location.Y - 15);
+            pgBBBottom.Location = new Point(pinkGhost.Location.X, pinkGhost.Location.Y + 60);
+            pgBBLeft.Location = new Point(pinkGhost.Location.X - 15, pinkGhost.Location.Y);
+            pgBBRight.Location = new Point(pinkGhost.Location.X + 50, pinkGhost.Location.Y);
+
+            rgBBTop.Location = new Point(redGhost.Location.X, redGhost.Location.Y - 15);
+            rgBBBottom.Location = new Point(redGhost.Location.X, redGhost.Location.Y + 60);
+            rgBBLeft.Location = new Point(redGhost.Location.X - 15, redGhost.Location.Y);
+            rgBBRight.Location = new Point(redGhost.Location.X + 50, redGhost.Location.Y);
 
 
             //yellow
             if (yellowGhost.Left < -10)
             {
-                yellowGhost.Left = 1328;
+                yellowGhost.Left = this.Width + 10;
             }
-            if (yellowGhost.Left > 1328)
+            if (yellowGhost.Left > this.Width + 10)
             {
                 yellowGhost.Left = -10;
             }
 
             if (yellowGhost.Top < -10)
             {
-                yellowGhost.Top = 732;
+                yellowGhost.Top = this.Height + 10;
             }
-            if (yellowGhost.Top > 732)
+            if (yellowGhost.Top > this.Height + 10)
             {
-                yellowGhost.Top = 0;
+                yellowGhost.Top = -10;
             }
 
             //red
             if (redGhost.Left < -10)
             {
-                redGhost.Left = 1328;
+                redGhost.Left = this.Width + 10;
             }
-            if (redGhost.Left > 1328)
+            if (redGhost.Left > this.Width + 10)
             {
                 redGhost.Left = -10;
             }
 
             if (redGhost.Top < -10)
             {
-                redGhost.Top = 732;
+                redGhost.Top = this.Height + 10;
             }
-            if (redGhost.Top > 732)
+            if (redGhost.Top > this.Height + 10)
             {
-                redGhost.Top = 0;
+                redGhost.Top = -10;
             }
             //pink
             if (pinkGhost.Left < -10)
             {
-                pinkGhost.Left = 1328;
+                pinkGhost.Left = this.Width + 10;
             }
-            if (pinkGhost.Left > 1328)
+            if (pinkGhost.Left > this.Width + 10)
             {
                 pinkGhost.Left = -10;
             }
 
             if (pinkGhost.Top < -10)
             {
-                pinkGhost.Top = 732;
+                pinkGhost.Top = this.Height + 10;
             }
-            if (pinkGhost.Top > 732)
+            if (pinkGhost.Top > this.Height + 10)
             {
-                pinkGhost.Top = 0;
+                pinkGhost.Top = -10;
             }
-            if (scoreCount == totalCoins)
+            if (scoreCount >= totalCoins
+                
+                
+                
+                
+                )
             {
                 gameOver("You Win!");
             }

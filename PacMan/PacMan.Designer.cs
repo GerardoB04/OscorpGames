@@ -126,6 +126,17 @@
             LowTime2 = new Label();
             LowTime3 = new Label();
             time_Lbl = new Label();
+            pgBBLeft = new PictureBox();
+            pgBBTop = new PictureBox();
+            pgBBRight = new PictureBox();
+            rgBBLeft = new PictureBox();
+            rgBBTop = new PictureBox();
+            rgBBRight = new PictureBox();
+            rgBBBottom = new PictureBox();
+            pgBBBottom = new PictureBox();
+            pictureBox82 = new PictureBox();
+            pictureBox83 = new PictureBox();
+            pictureBox84 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pacman).BeginInit();
             ((System.ComponentModel.ISupportInitialize)yellowGhost).BeginInit();
@@ -215,6 +226,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox79).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox80).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox81).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBLeft).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBTop).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBRight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBLeft).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBTop).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBRight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBBottom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBBottom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox82).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox83).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox84).BeginInit();
             SuspendLayout();
             // 
             // pictureBox8
@@ -238,16 +260,15 @@
             pacman.SizeMode = PictureBoxSizeMode.StretchImage;
             pacman.TabIndex = 10;
             pacman.TabStop = false;
-            pacman.WaitOnLoad = true;
             pacman.Click += pacman_Click;
             // 
             // yellowGhost
             // 
             yellowGhost.Image = PacMan.PacManResource.yellow_guy;
-            yellowGhost.Location = new Point(853, 903);
+            yellowGhost.Location = new Point(853, 849);
             yellowGhost.Margin = new Padding(4, 5, 4, 5);
             yellowGhost.Name = "yellowGhost";
-            yellowGhost.Size = new Size(64, 100);
+            yellowGhost.Size = new Size(106, 134);
             yellowGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             yellowGhost.TabIndex = 12;
             yellowGhost.TabStop = false;
@@ -256,10 +277,10 @@
             // redGhost
             // 
             redGhost.Image = PacMan.PacManResource.red_guy;
-            redGhost.Location = new Point(1515, 791);
+            redGhost.Location = new Point(1515, 790);
             redGhost.Margin = new Padding(4, 5, 4, 5);
             redGhost.Name = "redGhost";
-            redGhost.Size = new Size(64, 100);
+            redGhost.Size = new Size(50, 60);
             redGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             redGhost.TabIndex = 14;
             redGhost.TabStop = false;
@@ -268,10 +289,10 @@
             // pinkGhost
             // 
             pinkGhost.Image = PacMan.PacManResource.pink_guy;
-            pinkGhost.Location = new Point(959, 155);
+            pinkGhost.Location = new Point(769, 297);
             pinkGhost.Margin = new Padding(4, 5, 4, 5);
             pinkGhost.Name = "pinkGhost";
-            pinkGhost.Size = new Size(64, 100);
+            pinkGhost.Size = new Size(50, 60);
             pinkGhost.SizeMode = PictureBoxSizeMode.StretchImage;
             pinkGhost.TabIndex = 15;
             pinkGhost.TabStop = false;
@@ -372,9 +393,9 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = SystemColors.HotTrack;
-            pictureBox3.Location = new Point(40, 297);
+            pictureBox3.Location = new Point(-232, 297);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(291, 50);
+            pictureBox3.Size = new Size(546, 50);
             pictureBox3.TabIndex = 79;
             pictureBox3.TabStop = false;
             pictureBox3.Tag = "wall";
@@ -462,9 +483,9 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.HotTrack;
-            pictureBox1.Location = new Point(40, 448);
+            pictureBox1.Location = new Point(-206, 449);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(171, 50);
+            pictureBox1.Size = new Size(405, 50);
             pictureBox1.TabIndex = 96;
             pictureBox1.TabStop = false;
             pictureBox1.Tag = "wall";
@@ -524,7 +545,7 @@
             pictureBox15.BackColor = SystemColors.HotTrack;
             pictureBox15.Location = new Point(1480, 297);
             pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(336, 50);
+            pictureBox15.Size = new Size(457, 50);
             pictureBox15.TabIndex = 104;
             pictureBox15.TabStop = false;
             pictureBox15.Tag = "wall";
@@ -534,7 +555,7 @@
             pictureBox21.BackColor = SystemColors.HotTrack;
             pictureBox21.Location = new Point(1480, 448);
             pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(336, 50);
+            pictureBox21.Size = new Size(457, 50);
             pictureBox21.TabIndex = 105;
             pictureBox21.TabStop = false;
             pictureBox21.Tag = "wall";
@@ -602,9 +623,9 @@
             // pictureBox28
             // 
             pictureBox28.BackColor = SystemColors.HotTrack;
-            pictureBox28.Location = new Point(870, 47);
+            pictureBox28.Location = new Point(870, -227);
             pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(47, 158);
+            pictureBox28.Size = new Size(47, 432);
             pictureBox28.TabIndex = 112;
             pictureBox28.TabStop = false;
             pictureBox28.Tag = "wall";
@@ -1296,12 +1317,133 @@
             time_Lbl.TabIndex = 188;
             time_Lbl.Text = "TIME";
             // 
+            // pgBBLeft
+            // 
+            pgBBLeft.BackColor = SystemColors.ActiveCaption;
+            pgBBLeft.Location = new Point(764, 297);
+            pgBBLeft.Name = "pgBBLeft";
+            pgBBLeft.Size = new Size(15, 60);
+            pgBBLeft.SizeMode = PictureBoxSizeMode.StretchImage;
+            pgBBLeft.TabIndex = 192;
+            pgBBLeft.TabStop = false;
+            // 
+            // pgBBTop
+            // 
+            pgBBTop.BackColor = SystemColors.ActiveCaption;
+            pgBBTop.Location = new Point(769, 291);
+            pgBBTop.Name = "pgBBTop";
+            pgBBTop.Size = new Size(50, 15);
+            pgBBTop.SizeMode = PictureBoxSizeMode.StretchImage;
+            pgBBTop.TabIndex = 189;
+            pgBBTop.TabStop = false;
+            // 
+            // pgBBRight
+            // 
+            pgBBRight.BackColor = SystemColors.ActiveCaption;
+            pgBBRight.Location = new Point(821, 299);
+            pgBBRight.Name = "pgBBRight";
+            pgBBRight.Size = new Size(15, 60);
+            pgBBRight.SizeMode = PictureBoxSizeMode.StretchImage;
+            pgBBRight.TabIndex = 191;
+            pgBBRight.TabStop = false;
+            // 
+            // rgBBLeft
+            // 
+            rgBBLeft.BackColor = SystemColors.ActiveCaption;
+            rgBBLeft.Location = new Point(1500, 790);
+            rgBBLeft.Name = "rgBBLeft";
+            rgBBLeft.Size = new Size(15, 60);
+            rgBBLeft.SizeMode = PictureBoxSizeMode.StretchImage;
+            rgBBLeft.TabIndex = 196;
+            rgBBLeft.TabStop = false;
+            // 
+            // rgBBTop
+            // 
+            rgBBTop.BackColor = SystemColors.ActiveCaption;
+            rgBBTop.Location = new Point(1515, 776);
+            rgBBTop.Name = "rgBBTop";
+            rgBBTop.Size = new Size(50, 15);
+            rgBBTop.SizeMode = PictureBoxSizeMode.StretchImage;
+            rgBBTop.TabIndex = 193;
+            rgBBTop.TabStop = false;
+            // 
+            // rgBBRight
+            // 
+            rgBBRight.BackColor = SystemColors.ActiveCaption;
+            rgBBRight.Location = new Point(1565, 790);
+            rgBBRight.Name = "rgBBRight";
+            rgBBRight.Size = new Size(15, 60);
+            rgBBRight.SizeMode = PictureBoxSizeMode.StretchImage;
+            rgBBRight.TabIndex = 195;
+            rgBBRight.TabStop = false;
+            // 
+            // rgBBBottom
+            // 
+            rgBBBottom.BackColor = SystemColors.ActiveCaption;
+            rgBBBottom.Location = new Point(1515, 849);
+            rgBBBottom.Name = "rgBBBottom";
+            rgBBBottom.Size = new Size(50, 15);
+            rgBBBottom.SizeMode = PictureBoxSizeMode.StretchImage;
+            rgBBBottom.TabIndex = 194;
+            rgBBBottom.TabStop = false;
+            // 
+            // pgBBBottom
+            // 
+            pgBBBottom.BackColor = SystemColors.ActiveCaption;
+            pgBBBottom.Location = new Point(769, 359);
+            pgBBBottom.Name = "pgBBBottom";
+            pgBBBottom.Size = new Size(50, 15);
+            pgBBBottom.SizeMode = PictureBoxSizeMode.StretchImage;
+            pgBBBottom.TabIndex = 190;
+            pgBBBottom.TabStop = false;
+            // 
+            // pictureBox82
+            // 
+            pictureBox82.BackColor = SystemColors.HotTrack;
+            pictureBox82.Location = new Point(1049, -250);
+            pictureBox82.Name = "pictureBox82";
+            pictureBox82.Size = new Size(47, 299);
+            pictureBox82.TabIndex = 197;
+            pictureBox82.TabStop = false;
+            pictureBox82.Tag = "wall";
+            // 
+            // pictureBox83
+            // 
+            pictureBox83.BackColor = SystemColors.HotTrack;
+            pictureBox83.Location = new Point(891, 1090);
+            pictureBox83.Name = "pictureBox83";
+            pictureBox83.Size = new Size(47, 268);
+            pictureBox83.TabIndex = 198;
+            pictureBox83.TabStop = false;
+            pictureBox83.Tag = "wall";
+            // 
+            // pictureBox84
+            // 
+            pictureBox84.BackColor = SystemColors.HotTrack;
+            pictureBox84.Location = new Point(1049, 1090);
+            pictureBox84.Name = "pictureBox84";
+            pictureBox84.Size = new Size(47, 254);
+            pictureBox84.TabIndex = 199;
+            pictureBox84.TabStop = false;
+            pictureBox84.Tag = "wall";
+            // 
             // PacManGame
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1860, 1138);
+            Controls.Add(pictureBox84);
+            Controls.Add(pictureBox83);
+            Controls.Add(pictureBox82);
+            Controls.Add(rgBBLeft);
+            Controls.Add(rgBBTop);
+            Controls.Add(rgBBRight);
+            Controls.Add(rgBBBottom);
+            Controls.Add(pgBBLeft);
+            Controls.Add(pgBBTop);
+            Controls.Add(pgBBRight);
+            Controls.Add(pgBBBottom);
             Controls.Add(time_Lbl);
             Controls.Add(LowTime3);
             Controls.Add(LowTime2);
@@ -1492,6 +1634,17 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox79).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox80).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox81).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBLeft).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBTop).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBRight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBLeft).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBTop).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBRight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rgBBBottom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pgBBBottom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox82).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox83).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox84).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1594,5 +1747,16 @@
         private Label LowTime2;
         private Label LowTime3;
         private Label time_Lbl;
+        private PictureBox pgBBLeft;
+        private PictureBox pgBBTop;
+        private PictureBox pgBBRight;
+        private PictureBox rgBBLeft;
+        private PictureBox rgBBTop;
+        private PictureBox rgBBRight;
+        private PictureBox rgBBBottom;
+        private PictureBox pgBBBottom;
+        private PictureBox pictureBox82;
+        private PictureBox pictureBox83;
+        private PictureBox pictureBox84;
     }
 }
