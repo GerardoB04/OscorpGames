@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Drawing.Imaging; // add this for the JPG compressor
 using static System.Windows.Forms.LinkLabel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using OscorpGames;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace SnakeGame
 {
@@ -238,6 +240,38 @@ namespace SnakeGame
             snapButton.Enabled = true;
             if (score > highScore)
             {
+
+                var scores = Leaderboard.GetScores( Leaderboard.SNAKE_GAME_NAME ).ToList();
+
+                int max = scores.Count;
+                if ( max < 5 ) max++;
+
+                bool placed = false;
+                for ( int j = 0; j < max; j++ ) {
+
+                    if ( j >= scores.Count ) {
+
+                        scores.Add( score.ToString() );
+                        break;
+
+                    }
+
+                    if ( int.TryParse( scores[j], out var Score ) ) {
+                        if ( Score < score && !placed ) {
+
+                            scores.Insert( j, score.ToString() );
+                            placed = true;
+
+                        }
+
+                    }
+
+                }
+
+                while ( scores.Count > 5 ) { scores.RemoveAt( scores.Count - 1 ); }
+
+                Leaderboard.SaveScore( scores.ToArray(), Leaderboard.SNAKE_GAME_NAME );
+
                 highScore = score;
                 highScoreLabel.Text = "High Score: " + Environment.NewLine + highScore;
                 highScoreLabel.ForeColor = Color.Maroon;
