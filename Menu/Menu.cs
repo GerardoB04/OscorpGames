@@ -22,7 +22,7 @@ namespace OscorpGames
 
 		// Snake
 		private void gameTwoButton_Click(object sender, EventArgs e) {
-			//OpenGame(new Snake());
+			OpenGame(new Snake());
 		}
 
 		// Pac-Man
