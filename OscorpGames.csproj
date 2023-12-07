@@ -7,7 +7,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Menu\Images\" />
     <Folder Include="Minesweeper\Images\" />
+    <Folder Include="Resources\" />
     <Folder Include="Tetris\Source\" />
   </ItemGroup>
   <ItemGroup>
