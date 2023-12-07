@@ -260,7 +260,6 @@
             pacman.SizeMode = PictureBoxSizeMode.StretchImage;
             pacman.TabIndex = 10;
             pacman.TabStop = false;
-            pacman.Click += pacman_Click;
             // 
             // yellowGhost
             // 
@@ -338,7 +337,6 @@
             score.Size = new Size(137, 44);
             score.TabIndex = 73;
             score.Text = "Score: 0";
-            score.Click += score_Click;
             // 
             // pacBBTop
             // 
@@ -1542,7 +1540,6 @@
             Controls.Add(pictureBox8);
             Name = "PacManGame";
             Text = "Pac_Man";
-            Load += PacManGame_Load;
             KeyDown += keyisdown;
             KeyUp += keyisup;
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

@@ -417,20 +417,5 @@ namespace OscorpGames.Pac_Man
                 gameOver("You Win!");
             }
         }
-
-        private void PacManGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pacman_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void score_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
