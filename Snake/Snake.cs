@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing.Imaging; // add this for the JPG compressor
-using static System.Windows.Forms.LinkLabel;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing.Imaging; // add this for the JPG compressor
 using OscorpGames;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace SnakeGame
 {
@@ -121,7 +109,7 @@ namespace SnakeGame
             // end of directions
             for (int i = Snakesnake.Count - 1; i >= 0; i--)
             {
-                
+
                 if (i == 0)
                 {
                     switch (Settings.directions)
@@ -175,7 +163,7 @@ namespace SnakeGame
             }
             picCanvas.Invalidate();
         }
-        
+
 
 
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
@@ -241,25 +229,29 @@ namespace SnakeGame
             if (score > highScore)
             {
 
-                var scores = Leaderboard.GetScores( Leaderboard.SNAKE_GAME_NAME ).ToList();
+                var scores = Leaderboard.GetScores(Leaderboard.SNAKE_GAME_NAME).ToList();
 
                 int max = scores.Count;
-                if ( max < 5 ) max++;
+                if (max < 5) max++;
 
                 bool placed = false;
-                for ( int j = 0; j < max; j++ ) {
+                for (int j = 0; j < max; j++)
+                {
 
-                    if ( j >= scores.Count ) {
+                    if (j >= scores.Count)
+                    {
 
-                        scores.Add( score.ToString() );
+                        scores.Add(score.ToString());
                         break;
 
                     }
 
-                    if ( int.TryParse( scores[j], out var Score ) ) {
-                        if ( Score < score && !placed ) {
+                    if (int.TryParse(scores[j], out var Score))
+                    {
+                        if (Score < score && !placed)
+                        {
 
-                            scores.Insert( j, score.ToString() );
+                            scores.Insert(j, score.ToString());
                             placed = true;
 
                         }
@@ -268,9 +260,9 @@ namespace SnakeGame
 
                 }
 
-                while ( scores.Count > 5 ) { scores.RemoveAt( scores.Count - 1 ); }
+                while (scores.Count > 5) { scores.RemoveAt(scores.Count - 1); }
 
-                Leaderboard.SaveScore( scores.ToArray(), Leaderboard.SNAKE_GAME_NAME );
+                Leaderboard.SaveScore(scores.ToArray(), Leaderboard.SNAKE_GAME_NAME);
 
                 highScore = score;
                 highScoreLabel.Text = "High Score: " + Environment.NewLine + highScore;

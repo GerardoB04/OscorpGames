@@ -1,17 +1,5 @@
-﻿using Microsoft.VisualBasic.Devices;
-using OscorpGames.PacMan;
-using OscorpGames.Properties;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using OscorpGames.PacMan;
 using System.Media;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace OscorpGames.Pac_Man
 {
@@ -117,8 +105,8 @@ namespace OscorpGames.Pac_Man
             score.Text = "Score: 0";
             scoreCount = 0;
 
-            
-            redGhostX = new Random().Next(5,11);
+
+            redGhostX = new Random().Next(5, 11);
             redGhostY = 10 - redGhostX;
             pinkGhostX = new Random().Next(3, 6);
             pinkGhostY = 20 - pinkGhostX;
@@ -143,11 +131,11 @@ namespace OscorpGames.Pac_Man
                 }
             }
 
-            foreach(Control x in this.Controls)
+            foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "coin")
+                    if (x.Tag as string == "coin")
                     {
                         totalCoins++;
                     }
@@ -173,7 +161,7 @@ namespace OscorpGames.Pac_Man
             int low3 = int.Parse(lines[2]);
             int[] times = { low1, low2, low3, timeSeconds };
             Array.Sort(times);
-            
+
             Leaderboard.SaveScore(new string[] { times[0].ToString(), times[1].ToString(), times[2].ToString() }, Leaderboard.PACMAN_GAME_NAME);
         }
 
@@ -195,7 +183,7 @@ namespace OscorpGames.Pac_Man
             {
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "wall")
+                    if (x.Tag as string == "wall")
                     {
                         if (picture.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -209,10 +197,10 @@ namespace OscorpGames.Pac_Man
         private void timer1_Tick(object sender, EventArgs e)
         {
             timeTicks += 1;
-            timeSeconds = timeTicks / (1000/timer1.Interval);
+            timeSeconds = timeTicks / (1000 / timer1.Interval);
             time_Lbl.Text = "Time: " + timeSeconds;
 
-            
+
 
             score.Text = "Score: " + scoreCount;
             if (goleft)
@@ -282,7 +270,7 @@ namespace OscorpGames.Pac_Man
             {
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "coin" && x.Visible == true)
+                    if (x.Tag as string == "coin" && x.Visible == true)
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -291,7 +279,7 @@ namespace OscorpGames.Pac_Man
                         }
                     }
 
-                    if ((string)x.Tag == "wall")
+                    if (x.Tag as string == "wall")
                     {
                         if (pinkGhost.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -304,7 +292,7 @@ namespace OscorpGames.Pac_Man
                     }
 
 
-                    if ((string)x.Tag == "ghost")
+                    if (x.Tag as string == "ghost")
                     {
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -420,10 +408,10 @@ namespace OscorpGames.Pac_Man
                 pinkGhost.Top = -10;
             }
             if (scoreCount >= totalCoins
-                
-                
-                
-                
+
+
+
+
                 )
             {
                 gameOver("You Win!");
