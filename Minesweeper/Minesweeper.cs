@@ -295,7 +295,7 @@ namespace OscorpGames {
 				string stringScore = score.ToString("0");
 				scoreLeftLabel.Text = stringScore;
 
-				try {
+				if(Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME)[0] != "0") {
 					if(Leaderboard.IsHighestScore(stringScore, Leaderboard.MINE_GAME_NAME)) {
 						var scores = Leaderboard.GetScores(Leaderboard.MINE_GAME_NAME);
 						string[] scoresToSave = new string[3];
@@ -314,7 +314,7 @@ namespace OscorpGames {
 						}
 						Leaderboard.SaveScore(scoresToSave, Leaderboard.MINE_GAME_NAME);
 					}
-				} catch(Exception e) {
+				} else {
 					Leaderboard.SaveScore(new string[]{stringScore}, Leaderboard.MINE_GAME_NAME);
 				}
 			}
