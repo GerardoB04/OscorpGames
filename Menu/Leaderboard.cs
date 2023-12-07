@@ -61,7 +61,7 @@
 		public static string[] GetScores(string gameName) {
 			string path = "../../../" + gameName + "/Scores/scores.csv";
 			if(!File.Exists(path)) {
-				throw new Exception("Tried to get the scores for a game that has no scores");
+				SaveScore(new string[]{"0"}, gameName);
 			}
 
 			StreamReader sr = new StreamReader(path);
