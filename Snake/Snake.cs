@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging; // add this for the JPG compressor
+using static System.Windows.Forms.LinkLabel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace SnakeGame
 {
     public partial class Snake : Form
@@ -20,7 +23,7 @@ namespace SnakeGame
         int highScore;
         Random rand = new Random();
         bool goLeft, goRight, goDown, goUp;
-        bool ShouldPause = false;
+        //bool isGamePaused = false;
         public Snake()
         {
             InitializeComponent();
@@ -71,12 +74,12 @@ namespace SnakeGame
         private void snapButton_Click(object sender, EventArgs e)
         {
             Label caption = new Label();
-            caption.Text = "I scored: " + score + " and my Highscore is " + highScore + " on the Snake Game from MOO ICT";
+            caption.Text = "I scored: " + score + " and my Highscore is " + highScore;
             caption.Font = new Font("Ariel", 12, FontStyle.Bold);
-            caption.ForeColor = Color.Purple;
+            caption.ForeColor = Color.Blue;
             caption.AutoSize = false;
             caption.Width = picCanvas.Width;
-            caption.Height = 30;
+            caption.Height = 32;
             caption.TextAlign = ContentAlignment.MiddleCenter;
             picCanvas.Controls.Add(caption);
             SaveFileDialog dialog = new SaveFileDialog();
@@ -116,6 +119,7 @@ namespace SnakeGame
             // end of directions
             for (int i = Snakesnake.Count - 1; i >= 0; i--)
             {
+                
                 if (i == 0)
                 {
                     switch (Settings.directions)
@@ -169,6 +173,9 @@ namespace SnakeGame
             }
             picCanvas.Invalidate();
         }
+        
+
+
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
             Graphics canvas = e.Graphics;
@@ -181,10 +188,10 @@ namespace SnakeGame
                 { snakeColor = Brushes.DarkGreen; }
 
                 canvas.FillEllipse(snakeColor, new Rectangle
-                    ( Snakesnake[i].X * Settings.Width, Snakesnake[i].Y * Settings.Height, Settings.Width, Settings.Height ));
+                    (Snakesnake[i].X * Settings.Width, Snakesnake[i].Y * Settings.Height, Settings.Width, Settings.Height));
             }
             canvas.FillEllipse(Brushes.DarkRed, new Rectangle
-            ( food.X * Settings.Width, food.Y * Settings.Height, Settings.Width, Settings.Height ));
+            (food.X * Settings.Width, food.Y * Settings.Height, Settings.Width, Settings.Height));
         }
         private void RestartGame()
         {
@@ -227,20 +234,33 @@ namespace SnakeGame
         {
             gameTimer.Stop();
             startButton.Enabled = true;
-            pauseButton.Enabled = true;
+            pauseButton.Enabled = false;
             snapButton.Enabled = true;
             if (score > highScore)
             {
                 highScore = score;
                 highScoreLabel.Text = "High Score: " + Environment.NewLine + highScore;
                 highScoreLabel.ForeColor = Color.Maroon;
-                highScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
             }
         }
-
+        //for whatever reason, game breaks when pause button is active
         private void Pause(object sender, EventArgs e)
         {
+            //if (isGamePaused)
+            //{
+            //    // Resume the game
+            //    gameTimer.Start(); // Assuming you are using a Timer for game updates
+            //    isGamePaused = false;
+            //    pauseButton.Text = "Pause"; // Update the button text to indicate it can be used to pause the game
 
+            //}
+            //else
+            //{
+            //    // Pause the game
+            //    gameTimer.Stop();
+            //    isGamePaused = true;
+            //    pauseButton.Text = "Resume"; // Update the button text to indicate it can be used to resume the game
+            //}
         }
     }
 }
