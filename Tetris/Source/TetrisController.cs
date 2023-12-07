@@ -175,6 +175,21 @@ public class TetrisController {
 
                 GameRunning = false;
 
+                var scores = Leaderboard.GetScores( Leaderboard.TETRIS_GAME_NAME ).ToList();
+                for ( int j = 0; j < scores.Count; j++ ) {
+
+                    if ( int.TryParse( scores[j], out var score ) ) {
+
+                        if ( score < Score ) scores.Insert( j, Score.ToString() );
+                    
+                    }
+
+                }
+
+                while ( scores.Count > 5 ) { scores.RemoveAt( scores.Count - 1 ); }
+
+                Leaderboard.SaveScore(scores.ToArray(), Leaderboard.TETRIS_GAME_NAME );
+
                 Leaderboard.SaveScore( new string[] { Score.ToString() }, Leaderboard.TETRIS_GAME_NAME );
 
                 for ( int x = 0; x < Display.GetLength( 0 ); x++ )
