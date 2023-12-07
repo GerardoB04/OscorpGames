@@ -95,25 +95,24 @@ namespace OscorpGames.Pac_Man
         private void resetGame()
         {
 
-            
-            if ((!System.IO.File.Exists(filePath)))
-            {
-                System.IO.File.Create(filePath);
-            }
+            Leaderboard.SaveScore(new string[] { "9999", "9999", "9999" }, Leaderboard.PACMAN_GAME_NAME);
 
-            if (System.IO.File.Exists(filePath))
-            {
-                using (StreamWriter sw = new StreamWriter(filePath))
-                {
-                    sw.WriteLine("9999");
-                    sw.WriteLine("9999");
-                    sw.WriteLine("9999");
-                }
-            }
+
             pacBBBottom.Visible = false;
             pacBBLeft.Visible = false;
             pacBBRight.Visible = false;
             pacBBTop.Visible = false;
+
+            pgBBBottom.Visible = false;
+            pgBBLeft.Visible = false;
+            pgBBRight.Visible = false;
+            pgBBTop.Visible = false;
+
+            rgBBBottom.Visible = false;
+            rgBBLeft.Visible = false;
+            rgBBRight.Visible = false;
+            rgBBTop.Visible = false;
+
             readLowTimes();
             score.Text = "Score: 0";
             scoreCount = 0;
@@ -159,7 +158,7 @@ namespace OscorpGames.Pac_Man
 
         private void readLowTimes()
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = Leaderboard.GetScores(Leaderboard.PACMAN_GAME_NAME);
 
             LowTime1.Text = "1)" + lines[0];
             LowTime2.Text = "2)" + lines[1];
@@ -167,19 +166,15 @@ namespace OscorpGames.Pac_Man
         }
         private void writeLowTimes()
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = Leaderboard.GetScores(Leaderboard.PACMAN_GAME_NAME);
 
             int low1 = int.Parse(lines[0]);
             int low2 = int.Parse(lines[1]);
             int low3 = int.Parse(lines[2]);
             int[] times = { low1, low2, low3, timeSeconds };
             Array.Sort(times);
-            using (StreamWriter sw = new StreamWriter(filePath))
-            {
-                sw.WriteLine(times[0]);
-                sw.WriteLine(times[1]);
-                sw.WriteLine(times[2]);
-            }
+            
+            Leaderboard.SaveScore(new string[] { times[0].ToString(), times[1].ToString(), times[2].ToString() }, Leaderboard.PACMAN_GAME_NAME);
         }
 
         private void gameOver(string message)
@@ -322,8 +317,7 @@ namespace OscorpGames.Pac_Man
 
 
             // moving ghosts
-            //pink
-            //create a switch statement for the pink ghost
+
 
             if (IntersectsWithWall(pgBBLeft) || IntersectsWithWall(pgBBRight))
             {
@@ -336,24 +330,22 @@ namespace OscorpGames.Pac_Man
             }
 
             //red
-            if (IntersectsWithWall(rgBBLeft) || IntersectsWithWall(rgBBRight)){
+            if (IntersectsWithWall(rgBBLeft) || IntersectsWithWall(rgBBRight))
+            {
                 redGhostX = -redGhostX;
             }
 
-            if (IntersectsWithWall(rgBBTop) || IntersectsWithWall(rgBBBottom)){
+            if (IntersectsWithWall(rgBBTop) || IntersectsWithWall(rgBBBottom))
+            {
                 redGhostY = -redGhostY;
             }
 
-
             redGhost.Left += redGhostX;
             redGhost.Top += redGhostY;
-
             pinkGhost.Left += pinkGhostX;
             pinkGhost.Top += pinkGhostY;
-
             yellowGhost.Left += yellowGhostSpeed;
             yellowGhost.Top -= yellowGhostSpeed;
-
 
             //moving collision boxes
             pacBBTop.Location = new Point(pacman.Location.X, pacman.Location.Y - 15);
