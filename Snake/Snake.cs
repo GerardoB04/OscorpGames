@@ -1,5 +1,5 @@
-﻿using System.Drawing.Imaging; // add this for the JPG compressor
-using OscorpGames;
+﻿using OscorpGames;
+using System.Drawing.Imaging; // add this for the JPG compressor
 
 namespace SnakeGame
 {

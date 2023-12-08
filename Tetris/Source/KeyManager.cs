@@ -1,16 +1,19 @@
 ﻿namespace Tetris;
 
-class KeyManager {
+class KeyManager
+{
 
     private KeyManager() { }
 
     private static KeyManager instance = null;
 
-    public static KeyManager Instance {
+    public static KeyManager Instance
+    {
 
-        get {
+        get
+        {
 
-            if ( instance == null ) instance = new KeyManager();
+            if (instance == null) instance = new KeyManager();
             return instance;
 
         }
@@ -19,15 +22,16 @@ class KeyManager {
 
     private List<Keys> Keys = new List<Keys>();
 
-    public void Add( Keys key ) { if ( !Keys.Contains( key ) ) Keys.Add( key ); }
+    public void Add(Keys key) { if (!Keys.Contains(key)) Keys.Add(key); }
 
-    public void Remove( Keys key ) { Keys.Remove( key ); }
+    public void Remove(Keys key) { Keys.Remove(key); }
 
-    public bool IsPressed( Keys key, bool OneTime = false ) {
+    public bool IsPressed(Keys key, bool OneTime = false)
+    {
 
-        bool result = Keys.Contains( key ); ;
+        bool result = Keys.Contains(key); ;
 
-        if ( result && OneTime ) Remove( key );
+        if (result && OneTime) Remove(key);
 
         return result;
 
