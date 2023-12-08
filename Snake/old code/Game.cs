@@ -36,7 +36,7 @@ namespace SnakeGame
         {
             int r = Rows / 2;
 
-            for(int c = 1 ; c <= 3; c++) 
+            for (int c = 1; c <= 3; c++)
             {
                 Grid[r, c] = GridValue.Snake;
                 _positions.AddFirst(new Position(r, c));
@@ -45,11 +45,11 @@ namespace SnakeGame
 
         private IEnumerable<Position> EmptyPositions()
         {
-            for(int r = 0; r < Rows; r++)
+            for (int r = 0; r < Rows; r++)
             {
                 for (int c = 0; c < Columns; c++)
                 {
-                    if (Grid[r,c] == GridValue.Empty)
+                    if (Grid[r, c] == GridValue.Empty)
                     {
                         yield return new Position(r, c);
                     }
@@ -61,7 +61,7 @@ namespace SnakeGame
         {
             List<Position> empty = new List<Position>(EmptyPositions());
 
-            if(empty.Count == 0) { return; }
+            if (empty.Count == 0) { return; }
             Position position = empty[_random.Next(empty.Count)];
             Grid[position.Row, position.Column] = GridValue.Food;
         }
@@ -111,16 +111,16 @@ namespace SnakeGame
             Position newHeadPos = HeadPosition().Translate(Dir);
             GridValue hit = WillHit(newHeadPos);
 
-            if(hit == GridValue.Outside || hit == GridValue.Snake)
+            if (hit == GridValue.Outside || hit == GridValue.Snake)
             {
                 GameOver = true;
-            } 
-            else if (hit == GridValue.Empty) 
+            }
+            else if (hit == GridValue.Empty)
             {
                 RemoveTail();
                 AddHead(newHeadPos);
             }
-            else if (hit == GridValue.Food) 
+            else if (hit == GridValue.Food)
             {
                 AddHead(newHeadPos);
                 Score++;

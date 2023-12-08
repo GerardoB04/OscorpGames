@@ -13,7 +13,7 @@ namespace SnakeGame
         /// </summary>
         public int Row { get; }
         public int Column { get; }
-        public Position(int row, int column) {  Row = row; Column = column; }
+        public Position(int row, int column) { Row = row; Column = column; }
         public Position Translate(Direction dir) { return new Position(Row + dir.RowOffest, Column + dir.ColumnOffest); }
         //ctrl + . for this again
         public override bool Equals(object? obj)

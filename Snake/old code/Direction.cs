@@ -25,7 +25,7 @@ namespace SnakeGame
             ColumnOffest = columnOffest;
         }
         //used ctrl + . to get these (no way i would have otherwise lol)
-        public Direction Opposite() 
+        public Direction Opposite()
         {
             return new Direction(-RowOffest, -ColumnOffest);
         }
