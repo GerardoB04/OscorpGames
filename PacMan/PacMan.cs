@@ -95,13 +95,11 @@ namespace OscorpGames.Pac_Man
 
         private void resetGame()
         {
-            if(System.IO.File.Exists(filePath) == false)
+
+            if(Leaderboard.GetScores(Leaderboard.PACMAN_GAME_NAME) == new string[] { "0" })
             {
                 Leaderboard.SaveScore(new string[] { "9999", "9999", "9999" }, Leaderboard.PACMAN_GAME_NAME);
             }
-
-
-            
 
             readLowTimes();
             score.Text = "Score: 0";
@@ -409,12 +407,7 @@ namespace OscorpGames.Pac_Man
             {
                 pinkGhost.Top = -10;
             }
-            if (scoreCount >= totalCoins
-
-
-
-
-                )
+            if (scoreCount >= totalCoins)
             {
                 gameOver("You Win!");
             }
