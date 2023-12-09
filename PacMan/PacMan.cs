@@ -20,7 +20,20 @@ namespace OscorpGames.Pac_Man
         public PacManGame()
         {
             InitializeComponent();
+            pacBBBottom.Visible = false;
+            pacBBLeft.Visible = false;
+            pacBBRight.Visible = false;
+            pacBBTop.Visible = false;
 
+            pgBBBottom.Visible = false;
+            pgBBLeft.Visible = false;
+            pgBBRight.Visible = false;
+            pgBBTop.Visible = false;
+
+            rgBBBottom.Visible = false;
+            rgBBLeft.Visible = false;
+            rgBBRight.Visible = false;
+            rgBBTop.Visible = false;
             resetGame();
         }
 
@@ -82,24 +95,13 @@ namespace OscorpGames.Pac_Man
 
         private void resetGame()
         {
+            if(System.IO.File.Exists(filePath) == false)
+            {
+                Leaderboard.SaveScore(new string[] { "9999", "9999", "9999" }, Leaderboard.PACMAN_GAME_NAME);
+            }
 
-            Leaderboard.SaveScore(new string[] { "9999", "9999", "9999" }, Leaderboard.PACMAN_GAME_NAME);
 
-
-            pacBBBottom.Visible = false;
-            pacBBLeft.Visible = false;
-            pacBBRight.Visible = false;
-            pacBBTop.Visible = false;
-
-            pgBBBottom.Visible = false;
-            pgBBLeft.Visible = false;
-            pgBBRight.Visible = false;
-            pgBBTop.Visible = false;
-
-            rgBBBottom.Visible = false;
-            rgBBLeft.Visible = false;
-            rgBBRight.Visible = false;
-            rgBBTop.Visible = false;
+            
 
             readLowTimes();
             score.Text = "Score: 0";

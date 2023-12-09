@@ -329,7 +329,7 @@
             // 
             score.AutoSize = true;
             score.BackColor = SystemColors.ActiveCaptionText;
-            score.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            score.Font = new Font("Impact", 18F);
             score.ForeColor = SystemColors.ButtonHighlight;
             score.Location = new Point(1255, 233);
             score.Margin = new Padding(4, 0, 4, 0);
@@ -340,7 +340,7 @@
             // 
             // pacBBTop
             // 
-            pacBBTop.BackColor = SystemColors.ActiveCaption;
+            pacBBTop.BackColor = SystemColors.ActiveCaptionText;
             pacBBTop.Location = new Point(40, 353);
             pacBBTop.Name = "pacBBTop";
             pacBBTop.Size = new Size(64, 15);
@@ -350,7 +350,7 @@
             // 
             // pacBBBottom
             // 
-            pacBBBottom.BackColor = SystemColors.ActiveCaption;
+            pacBBBottom.BackColor = SystemColors.ActiveCaptionText;
             pacBBBottom.Location = new Point(40, 428);
             pacBBBottom.Name = "pacBBBottom";
             pacBBBottom.Size = new Size(64, 15);
@@ -360,7 +360,7 @@
             // 
             // pacBBRight
             // 
-            pacBBRight.BackColor = SystemColors.ActiveCaption;
+            pacBBRight.BackColor = SystemColors.ActiveCaptionText;
             pacBBRight.Location = new Point(104, 366);
             pacBBRight.Name = "pacBBRight";
             pacBBRight.Size = new Size(15, 64);
@@ -370,7 +370,7 @@
             // 
             // pacBBLeft
             // 
-            pacBBLeft.BackColor = SystemColors.ActiveCaption;
+            pacBBLeft.BackColor = SystemColors.ActiveCaptionText;
             pacBBLeft.Location = new Point(27, 366);
             pacBBLeft.Name = "pacBBLeft";
             pacBBLeft.Size = new Size(15, 64);
@@ -1263,7 +1263,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ButtonFace;
             label2.Location = new Point(1239, 329);
             label2.Name = "label2";
@@ -1274,7 +1274,7 @@
             // LowTime1
             // 
             LowTime1.AutoSize = true;
-            LowTime1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             LowTime1.ForeColor = SystemColors.ButtonFace;
             LowTime1.Location = new Point(1239, 387);
             LowTime1.Name = "LowTime1";
@@ -1285,7 +1285,7 @@
             // LowTime2
             // 
             LowTime2.AutoSize = true;
-            LowTime2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             LowTime2.ForeColor = SystemColors.ButtonFace;
             LowTime2.Location = new Point(1239, 448);
             LowTime2.Name = "LowTime2";
@@ -1296,7 +1296,7 @@
             // LowTime3
             // 
             LowTime3.AutoSize = true;
-            LowTime3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LowTime3.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             LowTime3.ForeColor = SystemColors.ButtonFace;
             LowTime3.Location = new Point(1239, 509);
             LowTime3.Name = "LowTime3";
@@ -1307,7 +1307,7 @@
             // time_Lbl
             // 
             time_Lbl.AutoSize = true;
-            time_Lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            time_Lbl.Font = new Font("Segoe UI", 12F);
             time_Lbl.ForeColor = SystemColors.ButtonFace;
             time_Lbl.Location = new Point(1105, 239);
             time_Lbl.Name = "time_Lbl";
@@ -1317,7 +1317,7 @@
             // 
             // pgBBLeft
             // 
-            pgBBLeft.BackColor = SystemColors.ActiveCaption;
+            pgBBLeft.BackColor = SystemColors.ActiveCaptionText;
             pgBBLeft.Location = new Point(764, 297);
             pgBBLeft.Name = "pgBBLeft";
             pgBBLeft.Size = new Size(15, 60);
@@ -1327,7 +1327,7 @@
             // 
             // pgBBTop
             // 
-            pgBBTop.BackColor = SystemColors.ActiveCaption;
+            pgBBTop.BackColor = SystemColors.ActiveCaptionText;
             pgBBTop.Location = new Point(769, 291);
             pgBBTop.Name = "pgBBTop";
             pgBBTop.Size = new Size(50, 15);
@@ -1337,7 +1337,7 @@
             // 
             // pgBBRight
             // 
-            pgBBRight.BackColor = SystemColors.ActiveCaption;
+            pgBBRight.BackColor = SystemColors.ActiveCaptionText;
             pgBBRight.Location = new Point(821, 299);
             pgBBRight.Name = "pgBBRight";
             pgBBRight.Size = new Size(15, 60);
@@ -1347,7 +1347,7 @@
             // 
             // rgBBLeft
             // 
-            rgBBLeft.BackColor = SystemColors.ActiveCaption;
+            rgBBLeft.BackColor = SystemColors.ActiveCaptionText;
             rgBBLeft.Location = new Point(1500, 790);
             rgBBLeft.Name = "rgBBLeft";
             rgBBLeft.Size = new Size(15, 60);
@@ -1357,7 +1357,7 @@
             // 
             // rgBBTop
             // 
-            rgBBTop.BackColor = SystemColors.ActiveCaption;
+            rgBBTop.BackColor = SystemColors.ActiveCaptionText;
             rgBBTop.Location = new Point(1515, 776);
             rgBBTop.Name = "rgBBTop";
             rgBBTop.Size = new Size(50, 15);
@@ -1367,7 +1367,7 @@
             // 
             // rgBBRight
             // 
-            rgBBRight.BackColor = SystemColors.ActiveCaption;
+            rgBBRight.BackColor = SystemColors.ActiveCaptionText;
             rgBBRight.Location = new Point(1565, 790);
             rgBBRight.Name = "rgBBRight";
             rgBBRight.Size = new Size(15, 60);
@@ -1377,7 +1377,7 @@
             // 
             // rgBBBottom
             // 
-            rgBBBottom.BackColor = SystemColors.ActiveCaption;
+            rgBBBottom.BackColor = SystemColors.ActiveCaptionText;
             rgBBBottom.Location = new Point(1515, 849);
             rgBBBottom.Name = "rgBBBottom";
             rgBBBottom.Size = new Size(50, 15);
@@ -1387,7 +1387,7 @@
             // 
             // pgBBBottom
             // 
-            pgBBBottom.BackColor = SystemColors.ActiveCaption;
+            pgBBBottom.BackColor = SystemColors.ActiveCaptionText;
             pgBBBottom.Location = new Point(769, 359);
             pgBBBottom.Name = "pgBBBottom";
             pgBBBottom.Size = new Size(50, 15);
